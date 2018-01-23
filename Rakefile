@@ -28,9 +28,8 @@ task proof_external: 'build' do
     './_site', \
     assume_extension: true, \
     check_html: true, \
-	external_only: false, \
+	external_only: true, \
 	verbose: true, \
-	url_ignore: '/add', \
     cache: { timeframe: '1w' }, \
     hydra: { max_concurrency: 1 }
   ).run
