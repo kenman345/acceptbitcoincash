@@ -34,7 +34,7 @@ task proof_external: 'build' do
 	verbose: true, \
 	log_level: 'debug', \
 	url_ignore: ['/add'], \
-	http_status_ignore: [503, 403], \
+	http_status_ignore: [0, 301, 302, 403, 503], \
     cache: { timeframe: '1w' }, \
     hydra: { max_concurrency: 1 }
   ).run
