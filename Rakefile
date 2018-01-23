@@ -30,7 +30,7 @@ task proof_external: 'build' do
     check_html: true, \
 	external_only: false, \
 	verbose: true, \
-	url_ignore: {'/add'}, \
+	url_ignore: '/add', \
     cache: { timeframe: '1w' }, \
     hydra: { max_concurrency: 1 }
   ).run
