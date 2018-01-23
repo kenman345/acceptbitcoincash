@@ -28,7 +28,8 @@ task proof_external: 'build' do
     './_site', \
     assume_extension: true, \
     check_html: true, \
-	external_only: true, \
+	external_only: false, \
+    disable_external: true, \
 	verbose: true, \
 	log_level: 'debug', \
     cache: { timeframe: '1w' }, \
