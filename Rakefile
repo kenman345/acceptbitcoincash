@@ -19,6 +19,8 @@ task proof: 'build' do
     assume_extension: true, \
     check_html: true, \
     disable_external: true, \
+	log_level: 'debug', \
+	url_ignore: ['/add'], \
 	verbose: true
   ).run
 end
