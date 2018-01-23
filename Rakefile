@@ -18,7 +18,8 @@ task proof: 'build' do
     './_site', \
     assume_extension: true, \
     check_html: true, \
-    disable_external: true
+    disable_external: true, \
+	verbose: true
   ).run
 end
 
@@ -27,6 +28,7 @@ task proof_external: 'build' do
     './_site', \
     assume_extension: true, \
     check_html: true, \
+	verbose: true, \
     cache: { timeframe: '1w' }, \
     hydra: { max_concurrency: 12 }
   ).run
