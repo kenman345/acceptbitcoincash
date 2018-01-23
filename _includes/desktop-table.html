@@ -64,7 +64,7 @@
           <td {% if website.bch %}class="main positive"{% else %}class="main negative"{% endif %}>
             <div class="title">
               {% if website.img %}
-                <noscript data-proofer-ignore><img src="/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
+                <noscript><img src="/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
                 <img src="/img/placeholder.png" data-src="/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}">
               {% else %}
                 <noscript><img src="/img/placeholder.png" class="icon" alt="{{ website.name }}"></noscript>
