@@ -30,6 +30,7 @@ task proof_external: 'build' do
     check_html: true, \
 	external_only: true, \
 	verbose: true, \
+	log_level: 'debug', \
     cache: { timeframe: '1w' }, \
     hydra: { max_concurrency: 1 }
   ).run
