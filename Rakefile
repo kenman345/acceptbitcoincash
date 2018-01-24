@@ -32,7 +32,7 @@ task proof_external: 'build' do
     check_html: true, \
 	external_only: false, \
 	verbose: true, \
-	log_level: 'debug', \
+	log_level: 'info', \
 	url_ignore: ['/add'], \
 	http_status_ignore: [0, 301, 302, 403, 503], \
     cache: { timeframe: '1w' }, \
