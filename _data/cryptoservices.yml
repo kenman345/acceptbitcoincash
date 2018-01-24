@@ -148,6 +148,15 @@ websites:
     img: cryptograffiti.png
     bch: Yes
 
+  - name: Cryptonize.it
+    url: https://www.cryptonize.it
+    twitter: cryptonize_it
+    img: cryptonizeit.png
+    bch: yes
+    btc: no
+    othercrypto: no
+    doc: https://www.reddit.com/r/btc/comments/7jmcyz/pay_for_anything_online_with_bch_cryptonizeit/
+
   - name: eGifter
     url: https://www.egifter.com/Default.aspx
     img: egifter.png
@@ -165,7 +174,7 @@ websites:
     bch: Yes
     btc: Yes
     othercrypto: Yes
-    
+
   - name: Gyft
     url: https://www.gyft.com/
     img: gyft.png
@@ -174,7 +183,7 @@ websites:
     bch: No
     btc: Yes
     othercrypto: No
-    
+
   - name: Incognito Deals
     url: https://www.incognitodeals.com/index.html
     img: incognitoDeals.png
@@ -182,7 +191,7 @@ websites:
     bch: Yes
     btc: No
     othercrypto: Yes
-    
+
   - name: Insight
     url: https://insight.bitpay.com/
     img: insight.png
@@ -221,7 +230,6 @@ websites:
 
   - name: LocalBitcoinCash
     url: https://localbitcoincash.org
-    img: generic.png
     bch: Yes
 
   - name: Living Room of Satoshi
@@ -264,6 +272,19 @@ websites:
     othercrypto: yes
     doc: https://www.privcoin.io/bitcoincash/
 
+
+  - name: Purse
+    url: https://purse.io/
+    img: purse.png
+    twitter: PurseIO
+    facebook: PurseIO
+    email_address: support@purse.io?subject=BitcoinCashSupport
+    bch: No
+    btc: Yes
+    docs: https://blog.purse.io/announcement-update-bitcoin-cash/
+    exceptions:
+      text: "Withdrawal support only"
+
   - name: Rocketr
     url: https://rocketr.net
     img: rocketr.png
@@ -277,8 +298,8 @@ websites:
     bch: No
     btc: Yes
     othercrypto: No
-    facebook: http://www.facebook.com/satoshitangoargentina
-    twitter: http://www.twitter.com/satoshitango
+    facebook: satoshitangoargentina
+    twitter: satoshitango
     email_address: support@satoshitango.com
 
   - name: Shapeshift

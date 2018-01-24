@@ -7,7 +7,8 @@ services:
   - docker
 cache:
   bundler: true
-  directories: $TRAVIS_BUILD_DIR/tmp/.htmlproofer
+  directories: 
+  - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 addons:
   apt:
     packages:
@@ -25,7 +26,6 @@ matrix:
       env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
       - rake docker:build
-  allow_failures:
-    - script: 
       - bundle exec rake proof_external
-      - bundle exec rake
+      allow_failures:
+      - script: bundle exec rake proof_external

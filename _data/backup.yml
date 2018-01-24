@@ -44,6 +44,14 @@ websites:
     btc: No
     othercrypto: No
 
+  - name: Boxcryptor
+    url: https://www.boxcryptor.com
+    img: boxcryptor.png
+    bch: No
+    twitter: boxcryptor
+    facebook: boxcryptor
+    email_address: info@boxcryptor.com
+
   - name: CloudApp
     url: https://www.getcloudapp.com/
     twitter: cloudapp
@@ -85,15 +93,6 @@ websites:
     twitter: FileThisCompany
     img: filethis.png
     facebook: FileThis
-    bch: No
-    btc: No
-    othercrypto: No
-
-  - name: Frostbox
-    url: http://frostbox.com
-    img: frostbox.png
-    twitter: frostboxcom
-    facebook: frostboxcom
     bch: No
     btc: No
     othercrypto: No
@@ -246,15 +245,6 @@ websites:
     url: https://tresorit.com/
     twitter: tresorit
     img: tresorit.png
-    bch: No
-    btc: No
-    othercrypto: No
-
-  - name: XXL Cloud
-    url: https://xxlcloud.com
-    twitter: xxlcloud
-    img: xxlcloud.png
-    facebook: xxlcloud
     bch: No
     btc: No
     othercrypto: No
