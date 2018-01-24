@@ -23,7 +23,8 @@ matrix:
       dist: trusty
       gemfile: Gemfile
       env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - script: rake docker:build
-    - script: bundle exec rake proof_external
-  allow_failures:
-    - script: bundle exec rake proof_external
+      script:
+      - rake docker:build
+      - bundle exec rake proof_external
+      allow_failures:
+      - script: bundle exec rake proof_external
