@@ -32,5 +32,5 @@ matrix:
       allow_failures:
       - script: 
         - bundle exec rake proof_external
-        - ./verify.rb
+        - ./verify_images.rb
         - bundle exec rake verify_images
