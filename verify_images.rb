@@ -23,7 +23,7 @@ require 'kwalify'
 # Send error message
 def error(msg)
   @output += 1
-  puts "<------------ ERROR ------------>\n" if @output == 1
+#  puts "<------------ ERROR ------------>\n" if @output == 1
   puts "#{@output}. #{msg}"
 end
 
@@ -60,6 +60,7 @@ def process_sections_file(path)
   schema = YAML.load_file(File.join(__dir__, 'websites_schema.yml'))
   validator = Kwalify::Validator.new(schema)
   sections.each do |section|
+    err_count = @output
     data = YAML.load_file(File.join(__dir__, "_data/#{section['id']}.yml"))
 	puts "Checking: #{section['id']}.yml\n"
 	
@@ -88,6 +89,9 @@ def process_sections_file(path)
 	  next unless img.nil? 
 	  error("#{img} is not used") 
     end	  
+	
+	
+	puts "  No errors found\n" if @output == err_count 
   end
 end
 
