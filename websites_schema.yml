@@ -17,6 +17,7 @@ mapping:
             unique: yes
           "img":
             type: str
+            pattern: /*\.(?:png)/
           "bch":
             type: bool
             required: yes
@@ -45,4 +46,12 @@ mapping:
             type: str
             pattern: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/
           "lang":
+            type: str
+          "region":
+            type: str
+            pattern: /(\w){2}$/
+          "country":
+            type: str
+            pattern: /(\w){2}$/
+          "city": 
             type: str
