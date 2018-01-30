@@ -26,7 +26,5 @@ matrix:
       script:
       - rake docker:build
       - bundle exec rake proof_external
-  allow_failures:
-    - script: 
-      - bundle exec rake proof_external
-      - bundle exec rake
+      allow_failures:
+      - script: bundle exec rake proof_external
