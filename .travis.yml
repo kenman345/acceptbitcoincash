@@ -20,9 +20,18 @@ matrix:
     - os: linux
       dist: trusty
       gemfile: Gemfile
-      env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+      env: build_docker=true
       script:
       - rake docker:build
+      - git commit -m 'Updates site count' ./_site/_includes/count_support.html
+      allow_failures:
+    - os: linux
+      dist: trusty
+      gemfile: Gemfile
+      env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+      script:
+      - gem update --system --no-doc
+      - bundle install --gemfile=Gemfile
       - bundle exec rake proof_external
       allow_failures:
       - script: bundle exec rake proof_external
