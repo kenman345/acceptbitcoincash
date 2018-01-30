@@ -85,6 +85,8 @@ def process_sections_file(path)
     # for unused or orphaned images
     imgs.each { |img| next unless img.nil? error("#{img} is not used") }
   end
+  
+  return @output
 end
 
 
