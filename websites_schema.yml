@@ -21,7 +21,6 @@ mapping:
           "bch":
             type: bool
             required: yes
-            pattern: '/true/'
           "btc":
             type: bool
           "othercrypto":
