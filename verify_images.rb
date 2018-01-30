@@ -59,7 +59,7 @@ end
 def process_sections_file(path)
   err_count = @output
   sections = YAML.load_file(path)
-  puts "Processing: #{path}\n"
+  puts "Processing: #{path['name']}\n"
   
   # Check sections.yml alphabetization
   error("#{path} is not alphabetized by name") \

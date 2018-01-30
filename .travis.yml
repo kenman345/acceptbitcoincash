@@ -15,13 +15,13 @@ addons:
     - libcurl4-openssl-dev
     - ca-certificates
 before_install: 
-    - gem update --system --no-doc
-    - bundle install --gemfile=Gemfile
     - pip install --user pathlib
 matrix:
   include:
     - env: build_docker=true
       script:
+      - gem update --system --no-doc
+      - bundle install --gemfile=Gemfile
       - rake docker:build
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then \"git commit -m 'Updates site count' ./_includes/count_support.html\" fi
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then \"git push origin HEAD:master\" fi
