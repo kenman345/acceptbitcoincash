@@ -60,6 +60,8 @@ def process_sections_file(path)
   validator = Kwalify::Validator.new(schema)
   sections.each do |section|
     data = YAML.load_file(File.join(__dir__, "_data/#{section['id']}.yml"))
+	puts "Checking: #{section['id']}.yml\n"
+	
     websites = data['websites']
     errors = validator.validate(data)
 
