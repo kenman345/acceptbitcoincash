@@ -79,7 +79,7 @@ def process_sections_file(path)
 
     websites.each do |website|
       test_img("img/#{section['id']}/#{website['img']}", website['name'],
-               imgs) unless img.nil?
+               imgs) unless website['img'].nil?
     end
 
     # After removing images associated with entries in test_img, alert
