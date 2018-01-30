@@ -32,6 +32,7 @@ matrix:
       allow_failures:
       - script: 
         - bundle exec rake proof_external
+        - /home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby ./verify.rb
         - bundle exec rake verify_images
   allow_failures:
     - script: bundle exec rake proof_external
