@@ -29,7 +29,7 @@ end
 
 def outputOrdered(websites)
   websites.each do |site|
-    puts "#{site}\n"
+    puts "#{site['name']}\n"
   end
 end
 
@@ -59,7 +59,7 @@ end
 def process_sections_file(path)
   err_count = @output
   sections = YAML.load_file(path)
-  puts "Processing: #{path['name']}\n"
+  puts "Processing: #{path}\n"
   
   # Check sections.yml alphabetization
   error("#{path} is not alphabetized by name") \
