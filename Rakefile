@@ -58,4 +58,8 @@ task :verify do
   ruby './verify.rb'
 end
 
+task :verify_images do
+  ruby './verify_images.rb'
+end
+
 RuboCop::RakeTask.new

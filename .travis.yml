@@ -28,5 +28,6 @@ matrix:
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
       - bundle exec rake proof_external
+      - bundle exec rake verify_images
   allow_failures:
     - script: bundle exec rake proof_external
