@@ -88,8 +88,6 @@ def process_sections_file(path)
 	  error("#{img} is not used") 
     end	  
   end
-  
-  return @output
 end
 
 
