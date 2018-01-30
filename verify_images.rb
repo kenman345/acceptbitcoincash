@@ -27,6 +27,12 @@ def error(msg)
   puts "  #{@output}. #{msg}"
 end
 
+def outputOrdered(websites)
+  websites.each do |site|
+    puts "#{site}\n"
+  end
+end
+
 # rubocop:disable AbcSize,CyclomaticComplexity
 def test_img(img, name, imgs)
   # Exception if image file not found
@@ -71,6 +77,9 @@ def process_sections_file(path)
 
     # Check section alphabetization
     error("_data/#{section['id']}.yml is not alphabetized by name") \
+      if websites != (websites.sort_by { |website| website['name'].downcase })
+	  
+	outputOrdered(websites.sort_by { |website| website['name'].downcase }) \
       if websites != (websites.sort_by { |website| website['name'].downcase })
 
     # Collect list of all images for section

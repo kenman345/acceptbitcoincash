@@ -1,7 +1,7 @@
 sudo: required
 language: ruby
 rvm: 2.4.0
-
+os: linux
 python:
   - "3.4"
 services:
@@ -21,13 +21,11 @@ before_install:
 matrix:
   include:
     - env: build_docker=true
-      os: linux
       script:
       - rake docker:build
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then \"git commit -m 'Updates site count' ./_includes/count_support.html\" fi
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then \"git push origin HEAD:master\" fi
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-      os: linux
       script: 
       - bundle exec rake verify_images
       - bundle exec rake proof_external
