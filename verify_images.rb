@@ -51,6 +51,7 @@ end
 
 def process_sections_file(path)
   sections = YAML.load_file(path)
+  puts "Processing: #{path}\n"
   
   # Check sections.yml alphabetization
   error('section.yml is not alphabetized by name') \
@@ -88,10 +89,13 @@ end
 # Load each section, check for errors such as invalid syntax
 # as well as if an image is missing
 begin
-  @section_files.each do |file|
-    process_sections_file(file)
-  end
+  #@section_files.each do |file|
+  #  process_sections_file(file)
+  #end
 
+  process_sections_file('_data/sections.yml')
+  process_sections_file('_data/adult-sections.yml')
+  
   exit 1 if @output > 0
 rescue Psych::SyntaxError => e
   puts "<------------ ERROR in a YAML file ------------>\n"
