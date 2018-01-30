@@ -4,7 +4,8 @@ require 'kwalify'
 @output = 0
 
 # Image max size (in bytes)
-@img_max_size = 2500
+#@img_max_size = 2500
+@img_max_size = 3000
 
 # Image dimensions
 @img_dimensions = [32, 32]

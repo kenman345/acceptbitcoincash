@@ -17,7 +17,6 @@ mapping:
             unique: yes
           "img":
             type: str
-            required: yes
           "bch":
             type: bool
             required: yes
