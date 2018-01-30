@@ -17,10 +17,11 @@ mapping:
             unique: yes
           "img":
             type: str
-            pattern: /*\.(?:png)/
+            pattern: /*\.png/
           "bch":
             type: bool
             required: yes
+            pattern: /(true|false)/
           "btc":
             type: bool
           "othercrypto":
