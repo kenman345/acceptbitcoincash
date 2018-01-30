@@ -24,7 +24,7 @@ require 'kwalify'
 def error(msg)
   @output += 1
 #  puts "<------------ ERROR ------------>\n" if @output == 1
-  puts "#{@output}. #{msg}"
+  puts "  #{@output}. #{msg}"
 end
 
 # rubocop:disable AbcSize,CyclomaticComplexity

@@ -27,7 +27,11 @@ matrix:
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then \"git push origin HEAD:master\" fi
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
+      - bundle exec rake verify
       - bundle exec rake proof_external
-      - bundle exec rake verify_images
+      allow_failures:
+      - script: 
+        - bundle exec rake proof_external
+        - bundle exec rake verify
   allow_failures:
     - script: bundle exec rake proof_external
