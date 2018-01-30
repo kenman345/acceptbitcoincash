@@ -4,35 +4,35 @@ websites:
       img: avg.png
       twitter: avgfree
       facebook: AVG
-      bch: No
-      btc: No
-      othercrypto: No
+      bch: no
+      btc: no
+      othercrypto: no
       
     - name: Avira
       url: https://www.avira.com/
       img: avira.png
       twitter: avira
       facebook: avira
-      bch: No
-      btc: No
-      othercrypto: No
+      bch: no
+      btc: no
+      othercrypto: no
       
     - name: BitDefender
       url: https://bitdefender.com
       img: bitdefender.png
       twitter: Bitdefender
-      bch: No
-      btc: No
-      othercrypto: No
+      bch: no
+      btc: no
+      othercrypto: no
       
     - name: BullGuard
       url: https://www.bullguard.com
       img: bullguard.png
       twitter: BullGuard
       facebook: BullGuard
-      bch: No
-      btc: No
-      othercrypto: No
+      bch: no
+      btc: no
+      othercrypto: no
 
     - name: ESET NOD32
       url: https://www.eset.com/
