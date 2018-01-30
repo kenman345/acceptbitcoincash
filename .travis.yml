@@ -27,11 +27,11 @@ matrix:
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then \"git commit -m 'Updates site count' ./_includes/count_support.html\" fi
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then \"git push origin HEAD:master\" fi
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-      os: osx
+      os: linux
       script: 
       - bundle exec rake verify_images
       - bundle exec rake proof_external
-      allow_failures:
-      - script: 
-        - bundle exec rake verify_images
-        - bundle exec rake proof_external
+  allow_failures:
+    - script: 
+      - bundle exec rake verify_images
+      - bundle exec rake proof_external
