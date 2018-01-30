@@ -23,7 +23,7 @@ matrix:
       env: build_docker=true
       script:
       - rake docker:build
-      - git commit -m 'Updates site count' ./_site/_includes/count_support.html
+      - git commit -m 'Updates site count' ./_includes/count_support.html
       allow_failures:
     - os: linux
       dist: trusty
