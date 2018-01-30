@@ -456,15 +456,6 @@ websites:
       facebook: MercadoLibre
       twitter: MercadoLibre
 
-    - name: Mermaid Tail Store
-      url: https://mermaidtailstore.com
-      twitter: tail_store
-      facebook: mermaidtailstore
-      img: mermaidtailstore.png
-      bch: yes
-      btc: no
-      othercrypto: no
-
     - name: Mineralz.nl
       url: https://mineralz.nl
       img: mineralz.png
@@ -552,6 +543,12 @@ websites:
       btc: Yes
       othercrypto: Yes
 
+    - name: Rakuten
+      url: https://www.rakuten.com/
+      twitter: AskRakutenUS
+      img: rakuten.png
+      bch: No
+
     - name: Renjer Wild Jerky
       url: https://www.renjer.ky
       img: renjer.png
@@ -563,12 +560,6 @@ websites:
       btc: Yes
       othercrypto: Yes
       doc: https://www.reddit.com/r/Bitcoincash/comments/7r8l4s/our_company_producing_wild_jerky_out_of_reindeer/
-
-    - name: Rakuten
-      url: https://www.rakuten.com/
-      twitter: AskRakutenUS
-      img: rakuten.png
-      bch: No
 
     - name: Reservoir Mugs
       url: https://reservoirmugs.com
