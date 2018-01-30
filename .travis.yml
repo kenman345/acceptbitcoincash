@@ -24,6 +24,7 @@ matrix:
       script:
       - rake docker:build
       - git commit -m 'Updates site count' ./_includes/count_support.html
+      - git push
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
       - bundle exec rake proof_external
