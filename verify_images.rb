@@ -83,7 +83,10 @@ def process_sections_file(path)
 
     # After removing images associated with entries in test_img, alert
     # for unused or orphaned images
-    imgs.each { |img| next unless img.nil? error("#{img} is not used") }
+    imgs.each do |img| 
+	  next unless img.nil? 
+	  error("#{img} is not used") 
+    end	  
   end
   
   return @output
