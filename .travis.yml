@@ -14,8 +14,6 @@ addons:
     - libcurl4-openssl-dev
     - ca-certificates
 before_install: 
-    - gem update --system --no-doc
-    - bundle install --gemfile=Gemfile
     - pip install --user pathlib
 matrix:
   include:

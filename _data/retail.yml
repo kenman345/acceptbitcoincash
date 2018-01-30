@@ -448,15 +448,6 @@ websites:
       facebook: MercadoLibre
       twitter: MercadoLibre
 
-    - name: Mermaid Tail Store
-      url: https://mermaidtailstore.com
-      twitter: tail_store
-      facebook: mermaidtailstore
-      img: mermaidtailstore.png
-      bch: yes
-      btc: no
-      othercrypto: no
-
     - name: Mineralz.nl
       url: https://mineralz.nl
       img: mineralz.png
