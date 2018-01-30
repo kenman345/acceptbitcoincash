@@ -1,6 +1,7 @@
 sudo: required
 language: ruby
 rvm: 2.4.0
+os: linux
 python:
   - "3.4"
 services:
@@ -14,24 +15,17 @@ addons:
     - libcurl4-openssl-dev
     - ca-certificates
 before_install: 
+    - gem update --system --no-doc
+    - bundle install --gemfile=Gemfile
     - pip install --user pathlib
 matrix:
   include:
-    - os: linux
-      dist: trusty
-      gemfile: Gemfile
-      env: build_docker=true
+    - env: build_docker=true
       script:
       - rake docker:build
       - git commit -m 'Updates site count' ./_includes/count_support.html
-      allow_failures:
-    - os: linux
-      dist: trusty
-      gemfile: Gemfile
-      env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
-      - gem update --system --no-doc
-      - bundle install --gemfile=Gemfile
       - bundle exec rake proof_external
-      allow_failures:
-      - script: bundle exec rake proof_external
+  allow_failures:
+    - script: bundle exec rake proof_external
