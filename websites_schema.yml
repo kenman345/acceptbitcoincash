@@ -20,13 +20,12 @@ mapping:
             required: yes
           "bch":
             type: bool
-            pattern: /true/
+            required: yes
+            pattern: 'true'
           "btc":
             type: bool
-            pattern: /true/
           "othercrypto":
             type: bool
-            pattern: /true/
           "exceptions":
             type: map
             mapping:

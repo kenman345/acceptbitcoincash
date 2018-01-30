@@ -4,9 +4,9 @@ websites:
       img: avg.png
       twitter: avgfree
       facebook: AVG
-      bch: false
-      btc: false
-      othercrypto: false
+      bch: no
+      btc: no
+      othercrypto: no
       
     - name: Avira
       url: https://www.avira.com/
