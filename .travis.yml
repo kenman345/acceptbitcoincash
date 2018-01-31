@@ -27,6 +27,7 @@ matrix:
     - env: build_docker=true
       script:
       - rake docker:build
+      - echo "$TRAVIS_PULL_REQUEST"
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         git commit -m 'Updates site count' ./_includes/count_support.html;
         git push origin HEAD:master;
@@ -42,6 +43,7 @@ matrix:
 after_success:
   - echo "$TRAVIS_BRANCH"
   - if ["$TRAVIS_BRANCH" == "master"]; then
+      echo "Yes";
       if ["$build_docker" == "true"]; then
       docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
       docker push kenman345/acceptbitcoincashdocker;
