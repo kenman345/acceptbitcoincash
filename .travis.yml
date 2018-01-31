@@ -27,7 +27,7 @@ matrix:
     - env: build_docker=true
       script:
       - rake docker:build
-      - echo "$TRAVIS_PULL_REQUEST"
+      #- echo "$TRAVIS_PULL_REQUEST"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         # git commit -m 'Updates site count' ./_includes/count_support.html;
         # git push origin HEAD:master;
