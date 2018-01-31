@@ -42,11 +42,11 @@
           <td class="main progress">
             <div class="title">
               {% if website.img %}
-                <noscript><img src="/acceptbitcoincash/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
-                <img src="/acceptbitcoincash/img/placeholder.png" data-src="/acceptbitcoincash/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}">
+                <noscript><img src="./img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
+                <img src="./img/placeholder.png" data-src="./img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}">
               {% else %}
-                <noscript><img src="/acceptbitcoincash/img/placeholder.png" class="icon" alt="{{ website.name }}"></noscript>
-                <img src="/acceptbitcoincash/img/placeholder.png" data-src="//acceptbitcoincashimg/placeholder.png" class="icon" alt="{{ website.name }}">
+                <noscript><img src="./img/placeholder.png" class="icon" alt="{{ website.name }}"></noscript>
+                <img src="./img/placeholder.png" data-src="//acceptbitcoincashimg/placeholder.png" class="icon" alt="{{ website.name }}">
               {% endif %}
               <a class="name" href="{{ website.url }}" target="_blank">{{ website.name }}</a>
               {% include exception.html website=website %}
@@ -64,11 +64,11 @@
           <td {% if website.bch %}class="main positive"{% else %}class="main negative"{% endif %}>
             <div class="title">
               {% if website.img %}
-                <noscript><img src="/acceptbitcoincash/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
-                <img src="/acceptbitcoincash/img/placeholder.png" data-src="/acceptbitcoincash/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}">
+                <noscript><img src="./img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
+                <img src="./img/placeholder.png" data-src="./img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}">
               {% else %}
-                <noscript><img src="/acceptbitcoincash/img/placeholder.png" class="icon" alt="{{ website.name }}"></noscript>
-                <img src="/acceptbitcoincash/img/placeholder.png" data-src="/acceptbitcoincash/img/placeholder.png" class="icon" alt="{{ website.name }}">
+                <noscript><img src="./img/placeholder.png" class="icon" alt="{{ website.name }}"></noscript>
+                <img src="./img/placeholder.png" data-src="./img/placeholder.png" class="icon" alt="{{ website.name }}">
               {% endif %}
               <a class="name" href="{{ website.url }}" target="_blank">{{ website.name }}</a>
               {% include exception.html website=website %}
@@ -115,11 +115,11 @@
           <td class="main negative">
             <div class="title">
               {% if website.img %}
-                <noscript><img src="/acceptbitcoincash/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
-                <img src="/acceptbitcoincash/img/placeholder.png" data-src="/acceptbitcoincash/img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}">
+                <noscript><img src="./img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}"></noscript>
+                <img src="./img/placeholder.png" data-src="./img/{{ section_id }}/{{ website.img }}" class="icon" alt="{{ website.name }}">
               {% else %}
-                <noscript><img src="/acceptbitcoincash/img/placeholder.png" class="icon" alt="{{ website.name }}"></noscript>
-                <img src="/acceptbitcoincash/img/placeholder.png" data-src="/acceptbitcoincash/img/placeholder.png" class="icon" alt="{{ website.name }}">
+                <noscript><img src="./img/placeholder.png" class="icon" alt="{{ website.name }}"></noscript>
+                <img src="./img/placeholder.png" data-src="./img/placeholder.png" class="icon" alt="{{ website.name }}">
               {% endif %}
               <a class="name" href="{{ website.url }}" target="_blank">{{ website.name }}</a>
               {% include exception.html website=website %}
