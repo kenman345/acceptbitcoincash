@@ -1,20 +1,65 @@
-sudo: false
+sudo: required
 language: ruby
 rvm: 2.4.0
+os: linux
+env:
+  global: 
+    - DOCKER_USERNAME=kenman345
+    - secure: C7mCh9Pl4mxH/YtnjhMueSTyulbQdADfw2LCsPCwxwT30Ic/DTj3if12y0QItDnW7fwwR83Y+vZsLUYDyrwMRAFbi8pR2nZN74Ri2CWAviynxQ2Z/dEh73Gss6eCw617eMAI5OGAZ2809vXE6zwag9j6sIksvAA7bd/n2DRSNXwOrBTs7Y+Q5J3MP4bUs2hQ65PkEbIIbHWC7wCSY4t3KAp8q7v0DMxDuKdxExRE61RlsYe2A+fBsAHepXeCXIvzCmxTxaiYRKRV1VZi6jJtFI9QB6HmKBNC/QuQZcJRptmDEY22/u+AtN8kpViDZzq26fy6uD5GYDuYWipwsrVhUSi5IakL01jzG1nDIq/Q+U0OzES9oow+2FEzyjMS/faP/I0shPDmyHwecZHimlg7ue0cVJIpwCocqXfkcY3ShmcWA3qih64uFTetSjtP3UJrpAUo+rfGktAH51dzxqmEY+I6TmfA6t7p0ztURFoR/dRENbIw7ouTcmRyWl6y/OxHnki6g3X3kxZPZZmQbMi0y6OmkKDtefGaJdvM1clGhqwlxOPs3yIGSG7jBCKe4cLzWT7TOwkO3GDaW9rTrgHaYTjq+HUkIrkU2ZEJLMN4ufuwSFJ4l+VvwFmi7buiiV1vSR+29kasGFdUNcAeuuZhsliD9AzK23+HNB1wTm12JtM=
+python:
+  - "3.4"
+services:
+  - docker
 cache:
   bundler: true
   directories: $TRAVIS_BUILD_DIR/tmp/.htmlproofer
-before_install: gem update --system --no-doc
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+    - ca-certificates
+before_install: 
+    - gem update --system --no-doc
+    - bundle install --gemfile=Gemfile
+    - pip install --user pathlib
 matrix:
   include:
-    - os: linux
-      dist: trusty
-    - os: osx
-      script: bundle exec rake proof_external
-      env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - env: build_docker=true
+      script:
+      - rake docker:build
+      - echo "$TRAVIS_PULL_REQUEST"
+      # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
+        # git commit -m 'Updates site count' ./_includes/count_support.html;
+        # git push origin HEAD:master;
+        # fi
+    - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+      script:
+      - bundle exec rake verify_images
+      - bundle exec rake proof_external
   allow_failures:
-    - script: bundle exec rake proof_external
-notifications:
-    email: false
-    slack:
-      secure: OB043wpK+Oje7NnO24ZFJGbtPUTKafvB/h2TkfRuiFHa8jyZ3R9+pLFL6P5zpwYYVgKwZ/xW13aY0ZU8BNh6lkR13X4azY2J/IjRXxz9eZ+MfMA3MEJpB0Fsw7T3xBAxjVEEhF3JDHx187AanOMQcMd7YCdaV+eDjFZ+/KJUn18=
+    - script: 
+      - bundle exec rake verify_images
+      - bundle exec rake proof_external
+#after_success:
+#  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+#      if [ "$build_docker" == "true" ]; then
+#        docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+#        docker push kenman345/acceptbitcoincashdocker;
+#      fi
+#    fi
+deploy:
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+    keep-history: true
+    on: 
+      branch: master
+      condition: $build_docker
+  - provider: script
+    skip-cleanup: true
+    script:
+    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
+    on: 
+      branch: master
+      #tags: true
+      condition: $build_docker

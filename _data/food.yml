@@ -1,29 +1,134 @@
 websites:
-    - name: Dutch Bros
-      url: https://dutchbros.com/
-      img: dutchbros.png
-      tfa: No
-      twitter: DutchBros
-      facebook: dutchbros
+    - name: Artisanhoney
+      url: https://Artisanhoney.net
+      img: artisanhoney.png
+      twitter: rain_vc
+      region: as
+      country: JP
+      city: Tokyo
+      bch: yes
+      btc: no
+      othercrypto: no
 
-    - name: Max
-      url: https://max.se/
-      img: max.png
-      tfa: No
-      twitter: maxhamburgare
-      facebook: maxhamburgare
-      lang: sv
+    - name: Bar Foxx
+      url: http://barfoxx.com
+      img: barfoxx.png
+      facebook: BarFoxx
+      bch: yes
+      btc: no
+      othercrypto: no
+
+    - name: Bees Brothers
+      url: http://beesbros.com
+      img: beesbrothers.png
+      facebook: beesbros
+      email_address: beesbrothers@gmail.com
+      bch: yes
+      btc: yes
+      othercrypto: no
+      exceptions:
+        text: "Bitcoin Cash is a manual payment at this time. Contact Bees Brothers: beesbrothers@gmail.com"
+
+    - name: Blue Apron
+      url: https://www.blueapron.com/
+      img: blueapron.png
+      twitter: blueapron
+      facebook: blueapron
+      bch: No
+      btc: No
+      othercrypto: No
+
+    - name: Crypto Mercado
+      url: https://www.cryptomercado.com/
+      img: cryptomercado.png
+      twitter: cryptomercado1
+      facebook: cryptomercadodotcom
+      region: na
+      country: US
+      bch: yes
+      btc: yes
+      othercrypto: yes
+
+    - name: DoorDash
+      url: https://www.doordash.com
+      img: doordash.png
+      bch: No
+      twitter: doordash
+
+    - name: Dunkin' Donuts
+      url: https://www.dunkindonuts.com
+      img: dunkin.png
+      twitter: DunkinDonuts
+      bch: No
+      btc: No
+      othercrypto: No
+
+    - name: Hungry.dk
+      url: https://www.hungry.dk/
+      twitter: Hungrydk
+      img: hungrydk.png
+      bch: yes
+      btc: yes
+      othercrypto: yes
+
+    - name: Menufy
+      url: https://www.menufy.com
+      facebook: menufy
+      twitter: menufy
+      img: menufy.png
+      bch: no
+      btc: yes
+      othercrypto: yes
+      doc: https://www.menufy.com/bitcoin
+
+    - name: PizzaForCoins
+      url: https://pizzaforcoins.com/
+      img: pizzaforcoins.png
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Starbucks
       url: http://www.starbucks.com/
       img: starbucks.png
-      tfa: No
+      bch: No
+      btc: No
+      othercrypto: No
       twitter: Starbucks
       facebook: Starbucks
+
+    - name: Sutton Honey
+      url: http://suttonhoney.com
+      img: SuttonHoney.png
+      region: na
+      country: CA
+      city: Sutton
+      bch: yes
+      btc: yes
+      othercrypto: yes
 
     - name: Taco Bell
       url: https://www.tacobell.com
       img: tacobell.png
-      tfa: No
+      bch: No
+      btc: No
+      othercrypto: No
       twitter: tacobell
       facebook: tacobell
+
+    - name: Takeaway.com
+      url: https://www.takeaway.com
+      img: takeaway.png
+      twitter: takeaway
+      bch: no
+      btc: yes
+      othercrypto: no
+
+    - name: The Dog is Hot
+      region: eu
+      country: es
+      city: Barcelona
+      url: http://thedogishot.com/
+      facebook: thedogishot
+      img: thedogishot.png
+      bch: yes
