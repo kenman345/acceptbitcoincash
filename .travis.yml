@@ -11,7 +11,6 @@ python:
 services:
   - docker
 cache:
-  pip: true
   bundler: true
   directories: $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 addons:
@@ -29,10 +28,10 @@ matrix:
       script:
       - rake docker:build
       - echo "$TRAVIS_PULL_REQUEST"
-      - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
-        git commit -m 'Updates site count' ./_includes/count_support.html;
-        git push origin HEAD:$TRAVIS_BRANCH;
-        fi
+      # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
+        # git commit -m 'Updates site count' ./_includes/count_support.html;
+        # git push origin HEAD:master;
+        # fi
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
       - bundle exec rake verify_images
