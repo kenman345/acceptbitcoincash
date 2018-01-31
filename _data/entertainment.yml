@@ -1,4 +1,15 @@
 websites:
+    - name: Anarchapulco
+      url: https://anarchapulco.com/
+      twitter: Anarchapulco
+      facebook: anarchapulco
+      img: anarchapulco.png
+      country: MX
+      city: Acapulco
+      bch: yes
+      btc: yes
+      othercrypto: no
+
     - name: Bandcamp
       url: https://bandcamp.com
       img: bandcamp.png
@@ -22,6 +33,15 @@ websites:
       bch: No
       twitter: cdbaby
       facebook: cdbaby
+
+    - name: Counter Markets
+      url: http://countermarkets.com/
+      twitter: countermarkets
+      facebook: CounterMarkets
+      img: countermarkets.png
+      bch: yes
+      btc: no
+      othercrypto: yes
 
     - name: Crunchyroll
       url: http://www.crunchyroll.com/
@@ -136,6 +156,14 @@ websites:
       twitter: RokuSupport
       facebook: roku
 
+    - name: Satoshi's Vision conference
+      url: https://satoshisvisionconference.com/
+      twitter: satoshis_vision
+      img: satoshisvisionconference.png
+      bch: yes
+      btc: yes
+      othercrypto: no
+
     - name: Sling TV
       url: https://www.sling.com/
       img: sling.png
@@ -163,6 +191,15 @@ websites:
       bch: No
       twitter: spotifycares
       facebook: spotify
+
+    - name: The Dollar Vigilante
+      url: https://dollarvigilante.com/
+      twitter: DollarVigilante
+      facebook: DollarVigilante
+      img: dollarvigilante.png
+      bch: yes
+      btc: yes
+      othercrypto: yes
 
     - name: TIDAL
       url: https://tidal.com/
