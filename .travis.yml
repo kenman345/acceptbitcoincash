@@ -40,13 +40,20 @@ matrix:
     - script: 
       - bundle exec rake verify_images
       - bundle exec rake proof_external
-after_success:
-  - echo "$TRAVIS_BRANCH" == "master"
-  - echo "$build_docker"
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      echo "Yes";
-      if [ "$build_docker" == "true" ]; then
-        docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-        docker push kenman345/acceptbitcoincashdocker;
-      fi
-    fi
+#after_success:
+#  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+#      if [ "$build_docker" == "true" ]; then
+#        docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+#        docker push kenman345/acceptbitcoincashdocker;
+#      fi
+#    fi
+deploy:
+  - provider: script
+    skip-cleanup: true
+    script:
+    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+    - docker push kenman345/acceptbitcoincashdocker
+    on: 
+      branch: master
+      #tags: true
+      condition: $build_docker
