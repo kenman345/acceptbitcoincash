@@ -11,6 +11,7 @@ python:
 services:
   - docker
 cache:
+  pip: true
   bundler: true
   directories: $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 addons:
@@ -30,7 +31,7 @@ matrix:
       - echo "$TRAVIS_PULL_REQUEST"
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         git commit -m 'Updates site count' ./_includes/count_support.html;
-        git push origin HEAD:master;
+        git push origin HEAD:$TRAVIS_BRANCH;
         fi
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
@@ -48,10 +49,10 @@ matrix:
 #      fi
 #    fi
 deploy:
-  - provider: script
-    skip-cleanup: true
+  - skip-cleanup: true
+    provider: script
     script:
-    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
+    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker:1
     on: 
       branch: master
       #tags: true
