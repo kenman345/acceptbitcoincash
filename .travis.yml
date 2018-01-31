@@ -29,18 +29,18 @@ matrix:
       - rake docker:build
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         git commit -m 'Updates site count' ./_includes/count_support.html;
-        git push origin HEAD:master ;
+        git push origin HEAD:master;
         fi
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
-      - bundle exec rake proof_external
       - bundle exec rake verify_images
+      - bundle exec rake proof_external
   allow_failures:
     - script: 
       - bundle exec rake verify_images
       - bundle exec rake proof_external
-  after_success:
-    - if ["$TRAVIS_BRANCH" == "master" && "$build_docker" == "true"]; then
-      docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-      docker push kenman345/acceptbitcoincashdocker;
-      fi
+after_success:
+  - if ["$TRAVIS_BRANCH" == "master" && "$build_docker" == "true"]; then
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push kenman345/acceptbitcoincashdocker;
+    fi
