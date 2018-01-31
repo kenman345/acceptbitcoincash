@@ -44,8 +44,4 @@ after_success:
   - echo "$TRAVIS_BRANCH"
   - if ["$TRAVIS_BRANCH" == "master"]; then
       echo "Yes";
-      if ["$build_docker" == "true"]; then
-      docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-      docker push kenman345/acceptbitcoincashdocker;
-    fi
     fi
