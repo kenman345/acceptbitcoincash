@@ -29,7 +29,7 @@ matrix:
       - rake docker:build
       - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         git commit -m 'Updates site count' ./_includes/count_support.html;
-        git push origin HEAD:master;
+        git push origin;
         fi
     - env: NOKOGIRI_USE_SYSTEM_LIBRARIES=true
       script:
