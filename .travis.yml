@@ -28,8 +28,9 @@ matrix:
   include:
     - env: 
       - build_docker=false
-      - NEXT_BUILD_TAG=test
+      - NEXT_BUILD_TAG=latest
       script:
+      - date +"%m-%d-%Y"
       - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG="$TRAVIS_TAG"; fi
       - rake docker:build[$NEXT_BUILD_TAG]
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi

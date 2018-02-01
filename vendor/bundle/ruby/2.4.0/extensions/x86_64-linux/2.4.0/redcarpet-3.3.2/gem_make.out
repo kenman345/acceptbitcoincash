@@ -1,5 +1,5 @@
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/redcarpet-3.3.2/ext/redcarpet
-/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180201-9974-9dxaym.rb extconf.rb
+/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180201-10074-7v71n8.rb extconf.rb
 creating Makefile
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/redcarpet-3.3.2/ext/redcarpet
@@ -99,4 +99,4 @@ linking shared-object redcarpet.so
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/redcarpet-3.3.2/ext/redcarpet
 make "DESTDIR=" install
-/usr/bin/install -m 0755 redcarpet.so ./.gem.20180201-9974-ee7lt1
+/usr/bin/install -m 0755 redcarpet.so ./.gem.20180201-10074-lwogd9
