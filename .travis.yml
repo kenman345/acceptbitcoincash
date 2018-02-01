@@ -33,7 +33,7 @@ matrix:
       - date +"%m-%d-%Y"
       - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
       #- if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG="$TRAVIS_TAG"; fi
-      #- rake docker:build[$NEXT_BUILD_TAG]
+      - rake docker:build[$NEXT_BUILD_TAG]
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
       - echo "$NEXT_BUILD_TAG"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
@@ -61,13 +61,13 @@ deploy:
     keep-history: true
     on: 
       branch: master
-      #tags: true
-      condition: $build_docker
+      tags: true
+      condition: $build_docker == "true"
   - provider: script
     skip-cleanup: true
     script:
     - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
     on: 
       branch: master
-      #tags: true
-      condition: $build_docker
+      tags: true
+      condition: $build_docker == "true"
