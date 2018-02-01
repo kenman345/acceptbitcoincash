@@ -31,7 +31,7 @@ matrix:
       - NEXT_BUILD_TAG=latest
       script:
       - date +"%m-%d-%Y"
-      - NEXT_BUILD_TAG= date +"%m-%d-%Y";
+      - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
       #- if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG="$TRAVIS_TAG"; fi
       #- rake docker:build[$NEXT_BUILD_TAG]
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
