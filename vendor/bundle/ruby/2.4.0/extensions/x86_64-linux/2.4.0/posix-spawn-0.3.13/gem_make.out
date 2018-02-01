@@ -1,5 +1,5 @@
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/posix-spawn-0.3.13/ext
-/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180201-9790-euq0x7.rb extconf.rb
+/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180201-10106-1uuqq7a.rb extconf.rb
 creating Makefile
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/posix-spawn-0.3.13/ext
@@ -21,4 +21,4 @@ linking shared-object posix_spawn_ext.so
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/posix-spawn-0.3.13/ext
 make "DESTDIR=" install
-/usr/bin/install -m 0755 posix_spawn_ext.so ./.gem.20180201-9790-1mmbn13
+/usr/bin/install -m 0755 posix_spawn_ext.so ./.gem.20180201-10106-easawp

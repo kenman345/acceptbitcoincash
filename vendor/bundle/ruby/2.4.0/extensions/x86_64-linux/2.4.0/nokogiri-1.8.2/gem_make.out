@@ -1,5 +1,5 @@
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ext/nokogiri
-/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180201-9790-2uvfoc.rb extconf.rb
+/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180201-10106-1sb6vj2.rb extconf.rb
 checking if the C compiler accepts ... yes
 Building nokogiri using system libraries.
 WARNING: libxml2 version 2.9.3 or later is highly recommended, but proceeding anyway.
@@ -239,4 +239,4 @@ rm -rf /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/g
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.2/ext/nokogiri
 make "DESTDIR=" install
-/usr/bin/install -m 0755 nokogiri.so ./.gem.20180201-9790-z2ycr/nokogiri
+/usr/bin/install -m 0755 nokogiri.so ./.gem.20180201-10106-3r3ahj/nokogiri
