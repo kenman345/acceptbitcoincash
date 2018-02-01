@@ -44,6 +44,7 @@ namespace :docker do
   desc "build docker images"
   
   task :build do
+    puts "Base :build"
     Rake::Task["docker:build"].invoke("latest")
   end
   
