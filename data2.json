@@ -3,10 +3,9 @@
 {
     {% for section in site.data.sections %}
     {% assign section_file = site.data[section.id] %}
-	{% assign filtered_sites = section_file.websites | where:"bch",false %}
-	
+	{% assign filtered_sites = section_file.websites | where:"bch","false" %}
     "{{ section.title }}": {
-                        {% for website in filtered_sites | where:"bch",false  %}{% if website.bch == false %}
+                        {% for website in filtered_sites | where:"bch",false  %}
                                 "{{ website.name }}": {
                                     {%for tag in website %}
                                     {%if tag[0] != "exceptions"%}"{{ tag[0] }}": {% if tag[1] == true or tag[1] == false %}{{tag[1]}}{%else%}"{{ tag[1] }}"{%endif%}{%else%}"{{ tag[0] }}": {
@@ -15,7 +14,7 @@
                                 {%endfor%}}{%endif%}{%if forloop.last != true%},{%endif%}
                                     {%endfor%}
                                }{% if forloop.last != true %},{% endif %}
-                        {% endif %}{% endfor %}
+                        {% endfor %}
                         }{% if forloop.last != true %},{% endif %}
     {% endfor %}
 }
