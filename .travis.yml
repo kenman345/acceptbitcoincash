@@ -30,12 +30,13 @@ matrix:
       - build_docker=false
       - NEXT_BUILD_TAG=latest
       script:
-      - date +"%m-%d-%Y"
       - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
       #- if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG="$TRAVIS_TAG"; fi
       - rake docker:build[$NEXT_BUILD_TAG]
+      - echo ".git" > .dockerignore
+      - rake docker:build[$NEXT_BUILD_TAG]
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
-      - echo "$NEXT_BUILD_TAG"
+      #- echo "$NEXT_BUILD_TAG"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         # git commit -m 'Updates site count' ./_includes/count_support.html;
         # git push origin HEAD:master;
