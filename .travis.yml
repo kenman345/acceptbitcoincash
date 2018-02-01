@@ -27,12 +27,12 @@ matrix:
   fast_finish: true
   include:
     - env: 
-      - build_docker=false
+      - BUILD_DOCKER=false
       - NEXT_BUILD_TAG=latest
       script:
-      - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
-      #- if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG="$TRAVIS_TAG"; fi
-      - rake docker:build[$NEXT_BUILD_TAG]
+      #- NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
+      - BUILD_DOCKER="true"
+      - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG=`date +"%m-%d-%Y"`; BUILD_DOCKER="true"; fi
       - echo ".git" > .dockerignore
       - rake docker:build[$NEXT_BUILD_TAG]
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
@@ -48,13 +48,6 @@ matrix:
     - script: 
       - bundle exec rake verify_images
       - bundle exec rake proof_external
-#after_success:
-#  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-#      if [ "$build_docker" == "true" ]; then
-#        docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
-#        docker push kenman345/acceptbitcoincashdocker;
-#      fi
-#    fi
 deploy:
   - provider: pages
     skip-cleanup: true
@@ -63,12 +56,11 @@ deploy:
     on: 
       branch: master
       tags: true
-      condition: $build_docker == "true"
+      condition: $BUILD_DOCKER == "true"
   - provider: script
     skip-cleanup: true
     script:
     - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
     on: 
       branch: master
-      tags: true
-      condition: $build_docker == "true"
+      condition: $BUILD_DOCKER == "true"
