@@ -7,9 +7,9 @@
     "{{ section.title }}": {
                         {% for website in filtered_sites | where:"bch",false  %}
                                 "{{ website.name }}": {
-									twitter: "{{ website.twitter }}",
-									email: "{{ website.email_address }}",
-									url: "{{ website.url }}"
+									"twitter": "{{ website.twitter }}",
+									"email": "{{ website.email_address }}",
+									"url": "{{ website.url }}"
                                }{% if forloop.last != true %},{% endif %}
                         {% endfor %}
                         }{% if forloop.last != true %},{% endif %}
