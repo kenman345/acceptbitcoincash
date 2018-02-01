@@ -45,7 +45,7 @@ namespace :docker do
   
   task :build do
     puts "Base :build"
-    Rake::Task["docker:build"].invoke("${NEXT_BUILD_TAG}")
+    Rake::Task["docker:build"].invoke("latest")
   end
   
   task :build, [:tag] do |t, args|
