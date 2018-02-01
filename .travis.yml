@@ -31,10 +31,10 @@ matrix:
       - NEXT_BUILD_TAG=test
       script:
       - echo "$NEXT_BUILD_TAG"
-      - $NEXT_BUILD_TAG=tester
+      - NEXT_BUILD_TAG="tester"
       - echo "$NEXT_BUILD_TAG"
       - if [ "$TRAVIS_TAG" != "" ]; then $NEXT_BUILD_TAG= "$TRAVIS_TAG"; fi
-      - rake docker:build $(NEXT_BUILD_TAG)
+      - rake docker:build ${NEXT_BUILD_TAG}
       #- echo "$TRAVIS_PULL_REQUEST"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         # git commit -m 'Updates site count' ./_includes/count_support.html;
