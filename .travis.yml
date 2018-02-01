@@ -31,10 +31,7 @@ matrix:
       - NEXT_BUILD_TAG=test
       script:
       - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG="$TRAVIS_TAG"; fi
-      #- echo "$NEXT_BUILD_TAG"
-      #- if [ "$NEXT_BUILD_TAG" != "" ]; then rake docker:build[$NEXT_BUILD_TAG]; fi
       - rake docker:build[$NEXT_BUILD_TAG]
-      - rake docker:build
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
       #- echo "$TRAVIS_PULL_REQUEST"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
@@ -63,7 +60,7 @@ deploy:
     on: 
       branch: master
       #tags: true
-      condition: $build_docker==true
+      condition: $build_docker
   - provider: script
     skip-cleanup: true
     script:
@@ -71,4 +68,4 @@ deploy:
     on: 
       branch: master
       #tags: true
-      condition: $build_docker==true
+      condition: $build_docker

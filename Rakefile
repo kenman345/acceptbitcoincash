@@ -49,10 +49,9 @@ namespace :docker do
     Dir.chdir(File.join('.', 'scripts', 'python')) do
       puts `python ./bchAccepted.py`
     end
-	puts "tagged: #{args.tag}"
     puts "Generating static files for nginx"
     puts `bundle exec jekyll build`
-    puts "Building acceptbitcoincash docker image"
+    puts "Building acceptbitcoincash docker image with tag #{args.tag}"
     puts `docker build -t kenman345/acceptbitcoincashdocker:#{args.tag} .`
   end
 end
