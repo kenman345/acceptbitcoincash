@@ -1,5 +1,5 @@
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/fast-stemmer-1.0.2/ext
-/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180130-8408-gk95d3.rb extconf.rb
+/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180201-9428-alo917.rb extconf.rb
 creating Makefile
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/fast-stemmer-1.0.2/ext
@@ -566,4 +566,4 @@ linking shared-object stemmer.so
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/fast-stemmer-1.0.2/ext
 make "DESTDIR=" install
-/usr/bin/install -m 0755 stemmer.so ./.gem.20180130-8408-1bltm03
+/usr/bin/install -m 0755 stemmer.so ./.gem.20180201-9428-rqqm8

@@ -25,9 +25,12 @@ before_install:
     - pip install --user pathlib
 matrix:
   include:
-    - env: build_docker=true
+    - env: 
+      - build_docker=true
+      - next_build=latest
       script:
-      - rake docker:build
+      - if [ "$TRAVIS_TAG" != "" ]; then $next_build=$TRAVIS_TAG; fi
+      - rake docker:build[$next_build]
       #- echo "$TRAVIS_PULL_REQUEST"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         # git commit -m 'Updates site count' ./_includes/count_support.html;
