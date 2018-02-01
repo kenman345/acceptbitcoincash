@@ -43,11 +43,6 @@ end
 namespace :docker do
   desc "build docker images"
   
-  task :build do
-    puts "Base :build"
-    Rake::Task["docker:build"].invoke("latest")
-  end
-  
   task :build, [:tag] do |t, args|
     args.with_defaults(:tag => "latest")
     puts "Generating stats (HTML partial) of websites supporting Bitcoin Cash"
@@ -59,6 +54,11 @@ namespace :docker do
     puts `bundle exec jekyll build`
     puts "Building acceptbitcoincash docker image"
     puts `docker build -t kenman345/acceptbitcoincashdocker:#{args.tag} .`
+  end
+  
+  task :build do
+    puts "Base :build"
+    Rake::Task["docker:build"].invoke("latest")
   end
 end
 

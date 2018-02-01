@@ -27,11 +27,13 @@ matrix:
   fast_finish: true
   include:
     - env: 
-      - build_docker=true
+      - build_docker=false
       - NEXT_BUILD_TAG=test
       script:
-      - if [ "$TRAVIS_TAG" != "" ]; then $NEXT_BUILD_TAG= "$TRAVIS_TAG" ; fi
-      - rake docker:build[$NEXT_BUILD_TAG]
+      - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG="$TRAVIS_TAG"; fi
+      - echo "$NEXT_BUILD_TAG"
+      #- if [ "$NEXT_BUILD_TAG" != "" ]; then rake docker:build[test]; fi
+      - if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
       #- echo "$TRAVIS_PULL_REQUEST"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         # git commit -m 'Updates site count' ./_includes/count_support.html;
