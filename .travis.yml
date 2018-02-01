@@ -60,7 +60,8 @@ deploy:
   - provider: script
     skip-cleanup: true
     script:
-    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
+    #- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push kenman345/acceptbitcoincashdocker
     on: 
       branch: master
       condition: $BUILD_DOCKER == "true"
