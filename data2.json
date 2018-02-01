@@ -4,14 +4,15 @@
     {% for section in site.data.sections %}
     {% assign section_file = site.data[section.id] %}
 	{% assign filtered_sites = section_file.websites | where:"bch","false" %}
-    "{{ section.title }}": {
+    "{{ section.title }}": [
                         {% for website in filtered_sites | where:"bch",false  %}
-                                "{{ website.name }}": {
+                                {
+									"name": "{{ website.name }}",
 									"twitter": "{{ website.twitter }}",
 									"email": "{{ website.email_address }}",
 									"url": "{{ website.url }}"
                                }{% if forloop.last != true %},{% endif %}
                         {% endfor %}
-                        }{% if forloop.last != true %},{% endif %}
+                        ]{% if forloop.last != true %},{% endif %}
     {% endfor %}
 }
