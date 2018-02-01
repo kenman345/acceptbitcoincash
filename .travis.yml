@@ -30,8 +30,8 @@ matrix:
       - build_docker=true
       - NEXT_BUILD_TAG=latest
       script:
-      - if [ "$TRAVIS_TAG" != "" ]; then $NEXT_BUILD_TAG=$TRAVIS_TAG; fi
-      - rake docker:build "$NEXT_BUILD_TAG"
+      - if [ "$TRAVIS_TAG" != "" ]; then $NEXT_BUILD_TAG= "$TRAVIS_TAG" ; fi
+      - rake docker:build[$NEXT_BUILD_TAG]
       #- echo "$TRAVIS_PULL_REQUEST"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         # git commit -m 'Updates site count' ./_includes/count_support.html;
