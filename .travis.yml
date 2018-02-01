@@ -33,7 +33,8 @@ matrix:
       - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG="$TRAVIS_TAG"; fi
       - echo "$NEXT_BUILD_TAG"
       - if [ "$NEXT_BUILD_TAG" != "" ]; then rake docker:build[$NEXT_BUILD_TAG]; fi
-      - if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
+      - rake docker:build[$NEXT_BUILD_TAG]
+      #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
       #- echo "$TRAVIS_PULL_REQUEST"
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         # git commit -m 'Updates site count' ./_includes/count_support.html;
@@ -60,7 +61,8 @@ deploy:
     keep-history: true
     on: 
       branch: master
-      condition: $build_docker
+      #tags: true
+      condition: $build_docker==true
   - provider: script
     skip-cleanup: true
     script:
@@ -68,4 +70,4 @@ deploy:
     on: 
       branch: master
       #tags: true
-      condition: $build_docker
+      condition: $build_docker==true
