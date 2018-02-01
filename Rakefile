@@ -48,11 +48,12 @@ namespace :docker do
   end
   
   task :build, [:tag] do |t, args|
+    args.with_defaults(:tag => "latest")
     puts "Generating stats (HTML partial) of websites supporting Bitcoin Cash"
     Dir.chdir(File.join('.', 'scripts', 'python')) do
       puts `python ./bchAccepted.py`
     end
-	puts "tagged: #{args[:tag]}"
+	puts "tagged: #{args.tag}"
     puts "Generating static files for nginx"
     puts `bundle exec jekyll build`
     puts "Building acceptbitcoincash docker image"
