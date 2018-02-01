@@ -55,11 +55,6 @@ namespace :docker do
     puts "Building acceptbitcoincash docker image"
     puts `docker build -t kenman345/acceptbitcoincashdocker:#{args.tag} .`
   end
-  
-  task :build do
-    puts "Base :build"
-    Rake::Task["docker:build"].invoke("latest")
-  end
 end
 
 task :verify do
