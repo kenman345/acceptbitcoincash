@@ -47,7 +47,7 @@ namespace :docker do
     Rake::Task["docker:build"].invoke("latest")
   end
   
-  task :build, [:tag] do |t|
+  task :build, [:tag] do |t, args|
     puts "Generating stats (HTML partial) of websites supporting Bitcoin Cash"
     Dir.chdir(File.join('.', 'scripts', 'python')) do
       puts `python ./bchAccepted.py`
@@ -55,7 +55,7 @@ namespace :docker do
     puts "Generating static files for nginx"
     puts `bundle exec jekyll build`
     puts "Building acceptbitcoincash docker image"
-    puts `docker build -t kenman345/acceptbitcoincashdocker:#{t.tag} .`
+    puts `docker build -t kenman345/acceptbitcoincashdocker:#{args.tag} .`
   end
 end
 
