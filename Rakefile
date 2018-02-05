@@ -35,7 +35,7 @@ task proof_external: 'build' do
 	report_script_embeds: true, \
 	external_only: false, \
 	verbose: true, \
-	log_level: 'info', \
+	log_level: 'debug', \
 	url_ignore: ['/add'], \
 	http_status_ignore: [0, 301, 302, 403, 503], \
     cache: { timeframe: '1w' }, \

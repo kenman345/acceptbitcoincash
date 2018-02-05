@@ -30,7 +30,7 @@ matrix:
       - BUILD_DOCKER=false
       - NEXT_BUILD_TAG=latest
       script:
-      - BUILD_DOCKER="true"
+      #- BUILD_DOCKER="true"
       - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG=`date +"%m-%d-%Y"`; BUILD_DOCKER="true"; fi
       - echo ".git" > .dockerignore
       - bundle exec rake docker:build[$NEXT_BUILD_TAG]
