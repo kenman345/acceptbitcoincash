@@ -30,6 +30,9 @@ task proof_external: 'build' do
     './_site', \
     assume_extension: true, \
     check_html: true, \
+	report_invalid_tags: true, \
+	report_missing_names: true, \
+	report_script_embeds: true, \
 	external_only: false, \
 	verbose: true, \
 	log_level: 'info', \
