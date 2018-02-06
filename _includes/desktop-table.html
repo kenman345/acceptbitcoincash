@@ -1,12 +1,12 @@
-{% assign section_id = include.id-param %}
-{% assign section_title = include.title-param %}
-{% assign section_file = site.data[section_id] %}
-{% assign count_bch = 0 %}
-{% for website in section_file.websites %}
-  {% if website.bch %}
-    {% assign count_bch = count_bch | plus: '1' %}
-  {% endif %}
-{% endfor %}
+{%- assign section_id = include.id-param -%}
+{%- assign section_title = include.title-param -%}
+{%- assign section_file = site.data[section_id] -%}
+{%- assign count_bch = 0 -%}
+{%- for website in section_file.websites -%}
+  {%- if website.bch -%}
+    {%- assign count_bch = count_bch | plus: '1' -%}
+  {%- endif -%}
+{%- endfor -%}
 
 <div class="website-table desktop-table {{ section_id }}-table" id="{{ section_id }}-desktoptable" style="display:none">
   <table class="ui celled table content-wrapper">
@@ -28,15 +28,15 @@
           <p>Try <span class="clear-bch-only">clearing the Bitcoin Cash only filter</span> to see all merchants listed, then reach out to them over social media or e-mail <i class="announcement icon"></i></p>
         </td>
       </tr>
-      {% endif %}
-      {% for website in section_file.websites %}
-      {% if website.lang and site.data.languages[website.lang] %}
-        {% assign progress_tweet = site.data.languages[website.lang].progress_tweet %}
-        {% assign workonit_tweet = site.data.languages[website.lang].work_tweet %}
-      {% else %}
-        {% assign progress_tweet = page.progress_tweet %}
-        {% assign workonit_tweet = page.workonit_tweet %}
-      {% endif %}
+      {% endif -%}
+      {%- for website in section_file.websites -%}
+      {%- if website.lang and site.data.languages[website.lang] -%}
+        {%- assign progress_tweet = site.data.languages[website.lang].progress_tweet -%}
+        {%- assign workonit_tweet = site.data.languages[website.lang].work_tweet -%}
+      {%- else -%}
+        {%- assign progress_tweet = page.progress_tweet -%}
+        {%- assign workonit_tweet = page.workonit_tweet -%}
+      {%- endif -%}
       <tr class="desktop-tr{% if website.bch == false %} no-bch{% endif %}">
         {% if website.status %}
           <td class="main progress">
@@ -76,7 +76,6 @@
               {% if website.facebook and website.bch %}<a class="social-name" href="https://facebook.com/{{ website.facebook }}" target="_blank" data-tooltip="fb.com/{{ website.facebook }}" data-position="top center" data-inverted=""><i class="facebook f icon"></i></a>{% endif %}
             </div>
           </td>
-
           <td {% if website.bch %}class="positive icon"{% else %}class="negative icon"{% endif %}>
             {% if website.bch %}
             <div class="coin-wrap green-coin-wrap" data-tooltip="Bitcoin Cash accepted at {{ website.name }}" data-position="top center" data-inverted="">
@@ -95,8 +94,6 @@
             </div>
             {% endif %}
           </td>
-
-
           <td {% if website.othercrypto %}class="positive icon"{% else %}class="negative icon"{% endif %}>
             {% if website.othercrypto %}
             <span data-tooltip="Other cryptocurrencies are accepted at {{ website.name }}" data-position="top center" data-inverted="">
@@ -110,7 +107,6 @@
             <a href="{{ website.doc }}" target="_blank" data-tooltip="{{page.rtfm}} {{ website.name }}" data-position="top center" data-inverted=""><i class="file text large icon"></i></a>
             {% endif %}
           </td>
-
         {% else %}
           <td class="main negative">
             <div class="title">
