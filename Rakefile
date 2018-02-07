@@ -31,7 +31,7 @@ task proof_external: 'build' do
     assume_extension: true, \
     check_html: true, \
 	validation: { \
-		report_invalid_tags: true, \
+		report_invalid_tags: false, \
 		report_missing_names: true, \
 		report_script_embeds: true, \
 	}, \
