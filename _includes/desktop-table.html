@@ -1,12 +1,12 @@
 {% assign section_id = include.id-param %}
-{%- assign section_title = include.title-param -%}
-{%- assign section_file = site.data[section_id] -%}
-{%- assign count_bch = 0 -%}
-{%- for website in section_file.websites -%}
-  {%- if website.bch -%}
-    {%- assign count_bch = count_bch | plus: '1' -%}
-  {%- endif -%}
-{%- endfor -%}
+{% assign section_title = include.title-param %}
+{% assign section_file = site.data[section_id] %}
+{% assign count_bch = 0 %}
+{% for website in section_file.websites %}
+  {% if website.bch %}
+    {% assign count_bch = count_bch | plus: '1' %}
+  {% endif %}
+{% endfor %}
 
 <div class="website-table desktop-table {{ section_id }}-table" id="{{ section_id }}-desktoptable" style="display:none">
   <table class="ui celled table content-wrapper">
@@ -28,15 +28,15 @@
           <p>Try <span class="clear-bch-only">clearing the Bitcoin Cash only filter</span> to see all merchants listed, then reach out to them over social media or e-mail <i class="announcement icon"></i></p>
         </td>
       </tr>
-      {% endif -%}
-      {%- for website in section_file.websites -%}
-      {%- if website.lang and site.data.languages[website.lang] -%}
-        {%- assign progress_tweet = site.data.languages[website.lang].progress_tweet -%}
-        {%- assign workonit_tweet = site.data.languages[website.lang].work_tweet -%}
-      {%- else -%}
-        {%- assign progress_tweet = page.progress_tweet -%}
-        {%- assign workonit_tweet = page.workonit_tweet -%}
-      {%- endif -%}
+      {% endif %}
+      {% for website in section_file.websites %}
+      {% if website.lang and site.data.languages[website.lang] %}
+        {% assign progress_tweet = site.data.languages[website.lang].progress_tweet %}
+        {% assign workonit_tweet = site.data.languages[website.lang].work_tweet %}
+      {% else %}
+        {% assign progress_tweet = page.progress_tweet %}
+        {% assign workonit_tweet = page.workonit_tweet %}
+      {% endif %}
       <tr class="desktop-tr{% if website.bch == false %} no-bch{% endif %}">
         {% if website.status %}
           <td class="main progress">
