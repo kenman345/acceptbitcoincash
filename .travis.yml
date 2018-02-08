@@ -32,6 +32,7 @@ matrix:
       script:
       #- BUILD_DOCKER="true"
       - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG=`date +"%m-%d-%Y"`; BUILD_DOCKER="true"; fi
+      - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
       - echo ".git" > .dockerignore
       - bundle exec rake docker:build[$NEXT_BUILD_TAG]
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
@@ -50,20 +51,20 @@ matrix:
       - bundle exec rake proof_external
     - script: 
       - bundle exec rake proof
-deploy:
-  - provider: pages
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-    keep-history: true
-    on: 
-      branch: master
-      #tags: true
-      condition: $BUILD_DOCKER == "true"
-  - provider: script
-    skip-cleanup: true
-    script:
-    #- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push kenman345/acceptbitcoincashdocker
-    on: 
-      branch: master
-      condition: $BUILD_DOCKER == "true"
+# deploy:
+  # - provider: pages
+    # skip-cleanup: true
+    # github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+    # keep-history: true
+    # on: 
+      # branch: master
+      # #tags: true
+      # condition: $BUILD_DOCKER == "true"
+  # - provider: script
+    # skip-cleanup: true
+    # script:
+    # #- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
+    # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push kenman345/acceptbitcoincashdocker
+    # on: 
+      # branch: master
+      # condition: $BUILD_DOCKER == "true"
