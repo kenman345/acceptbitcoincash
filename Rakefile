@@ -51,18 +51,15 @@ end
 
 namespace :docker do
   desc "build docker images"
-  
-  task :build, [:tag] do |t, args|
-    args.with_defaults(:tag => "latest")
+  task :build do
     puts "Generating stats (HTML partial) of websites supporting Bitcoin Cash"
     Dir.chdir(File.join('.', 'scripts', 'python')) do
       puts `python ./bchAccepted.py`
     end
     puts "Generating static files for nginx"
     puts `bundle exec jekyll build`
-    puts "Building acceptbitcoincash docker image with tag #{args.tag}"
+    puts "Building acceptbitcoincash docker image"
     puts `docker build -t kenman345/acceptbitcoincashdocker .`
-	puts `docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:#{args.tag}`
   end
 end
 
