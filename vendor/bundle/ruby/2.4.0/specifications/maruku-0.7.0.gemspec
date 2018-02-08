@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/bhollis/maruku".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8.7".freeze)
-  s.rubygems_version = "2.7.4".freeze
+  s.rubygems_version = "2.7.5".freeze
   s.summary = "Maruku is a Markdown-superset interpreter written in Ruby.".freeze
 
-  s.installed_by_version = "2.7.4" if s.respond_to? :installed_by_version
+  s.installed_by_version = "2.7.5" if s.respond_to? :installed_by_version
 end

@@ -76,7 +76,6 @@
               {% if website.facebook and website.bch %}<a class="social-name" href="https://facebook.com/{{ website.facebook }}" target="_blank" data-tooltip="fb.com/{{ website.facebook }}" data-position="top center" data-inverted=""><i class="facebook f icon"></i></a>{% endif %}
             </div>
           </td>
-
           <td {% if website.bch %}class="positive icon"{% else %}class="negative icon"{% endif %}>
             {% if website.bch %}
             <div class="coin-wrap green-coin-wrap" data-tooltip="Bitcoin Cash accepted at {{ website.name }}" data-position="top center" data-inverted="">
@@ -95,8 +94,6 @@
             </div>
             {% endif %}
           </td>
-
-
           <td {% if website.othercrypto %}class="positive icon"{% else %}class="negative icon"{% endif %}>
             {% if website.othercrypto %}
             <span data-tooltip="Other cryptocurrencies are accepted at {{ website.name }}" data-position="top center" data-inverted="">
@@ -110,7 +107,6 @@
             <a href="{{ website.doc }}" target="_blank" data-tooltip="{{page.rtfm}} {{ website.name }}" data-position="top center" data-inverted=""><i class="file text large icon"></i></a>
             {% endif %}
           </td>
-
         {% else %}
           <td class="main negative">
             <div class="title">

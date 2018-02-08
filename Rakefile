@@ -30,15 +30,21 @@ task proof_external: 'build' do
     './_site', \
     assume_extension: true, \
     check_html: true, \
-	report_invalid_tags: true, \
-	report_missing_names: true, \
-	report_script_embeds: true, \
+	validation: { \
+		report_invalid_tags: false, \
+		report_missing_names: true, \
+		report_script_embeds: true, \
+	}, \
+	check_sri: true, \
 	external_only: false, \
 	verbose: true, \
-	log_level: 'info', \
+	log_level: 'debug', \
 	url_ignore: ['/add'], \
 	http_status_ignore: [0, 301, 302, 403, 503], \
     cache: { timeframe: '1w' }, \
+	typhoeus: { \
+		followlocation: true, \
+	}, \
     hydra: { max_concurrency: 12 }
   ).run
 end
@@ -55,7 +61,8 @@ namespace :docker do
     puts "Generating static files for nginx"
     puts `bundle exec jekyll build`
     puts "Building acceptbitcoincash docker image with tag #{args.tag}"
-    puts `docker build -t kenman345/acceptbitcoincashdocker:#{args.tag} .`
+    puts `docker build -t kenman345/acceptbitcoincashdocker .`
+	puts `docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:#{args.tag}`
   end
 end
 

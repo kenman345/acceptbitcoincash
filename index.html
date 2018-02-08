@@ -153,7 +153,6 @@ hash: acceptBitcoinCash
       {% for section in site.data.sections %}
         {% assign current_section = site.data[section.id] %}
         {% assign rowend = forloop.index | modulo: 5 %}
-
         {% assign count_bch = 0 %}
         {% for website in current_section.websites %}
           {% if website.bch %}

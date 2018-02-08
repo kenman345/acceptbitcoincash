@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
   s.homepage = "http://dafoster.net/projects/rdiscount/".freeze
   s.required_ruby_version = Gem::Requirement.new("!= 1.9.2".freeze)
   s.rubyforge_project = "wink".freeze
-  s.rubygems_version = "2.7.4".freeze
+  s.rubygems_version = "2.7.5".freeze
   s.summary = "Fast Implementation of Gruber's Markdown in C".freeze
 
-  s.installed_by_version = "2.7.4" if s.respond_to? :installed_by_version
+  s.installed_by_version = "2.7.5" if s.respond_to? :installed_by_version
 end

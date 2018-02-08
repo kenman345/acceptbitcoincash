@@ -1,5 +1,5 @@
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/rdiscount-2.1.7/ext
-/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180201-10004-1ybifgf.rb extconf.rb
+/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180206-9798-14ui27l.rb extconf.rb
 checking for random()... yes
 checking for srandom()... yes
 checking for rand()... yes
@@ -1774,4 +1774,4 @@ linking shared-object rdiscount.so
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/rdiscount-2.1.7/ext
 make "DESTDIR=" install
-/usr/bin/install -m 0755 rdiscount.so ./.gem.20180201-10004-1d7frxx
+/usr/bin/install -m 0755 rdiscount.so ./.gem.20180206-9798-jblmev
