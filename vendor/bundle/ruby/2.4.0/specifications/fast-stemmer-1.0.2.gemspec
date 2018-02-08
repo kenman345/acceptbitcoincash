@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["LICENSE".freeze, "README".freeze]
   s.files = ["LICENSE".freeze, "README".freeze, "ext/extconf.rb".freeze]
   s.homepage = "http://github.com/romanbsd/fast-stemmer".freeze
-  s.rubygems_version = "2.7.5".freeze
+  s.rubygems_version = "2.7.4".freeze
   s.summary = "Fast Porter stemmer based on a C version of algorithm".freeze
 
-  s.installed_by_version = "2.7.5" if s.respond_to? :installed_by_version
+  s.installed_by_version = "2.7.4" if s.respond_to? :installed_by_version
 end

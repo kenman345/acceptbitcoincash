@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["History.md".freeze, "README.md".freeze]
   s.files = ["History.md".freeze, "README.md".freeze]
   s.homepage = "http://www.liquidmarkup.org".freeze
-  s.rubygems_version = "2.7.5".freeze
+  s.rubygems_version = "2.7.4".freeze
   s.summary = "A secure, non-evaling end user template engine with aesthetic markup.".freeze
 
-  s.installed_by_version = "2.7.5" if s.respond_to? :installed_by_version
+  s.installed_by_version = "2.7.4" if s.respond_to? :installed_by_version
 end

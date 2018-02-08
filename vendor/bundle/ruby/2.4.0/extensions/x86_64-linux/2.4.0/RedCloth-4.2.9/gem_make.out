@@ -1,5 +1,5 @@
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/RedCloth-4.2.9/ext/redcloth_scan
-/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180206-9798-8scj5i.rb extconf.rb
+/home/travis/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20180120-7187-1a5f66v.rb extconf.rb
 checking for main() in -lc... yes
 creating Makefile
 
@@ -142,4 +142,4 @@ linking shared-object redcloth_scan.so
 
 current directory: /home/travis/build/kenman345/acceptbitcoincash/vendor/bundle/ruby/2.4.0/gems/RedCloth-4.2.9/ext/redcloth_scan
 make "DESTDIR=" install
-/usr/bin/install -m 0755 redcloth_scan.so ./.gem.20180206-9798-yzgvoi
+/usr/bin/install -m 0755 redcloth_scan.so ./.gem.20180120-7187-7stu6m
