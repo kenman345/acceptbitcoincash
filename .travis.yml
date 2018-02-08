@@ -50,6 +50,9 @@ matrix:
       - bundle exec rake proof_external
     - script: 
       - bundle exec rake proof
+#before_deploy:
+#  - script: 
+#    - docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"
 deploy:
   - provider: pages
     skip-cleanup: true
@@ -62,7 +65,7 @@ deploy:
   - provider: script
     skip-cleanup: true
     script:
-    - docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:$NEXT_BUILD_TAG
+    - docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"
     #- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push kenman345/acceptbitcoincashdocker
     on: 
