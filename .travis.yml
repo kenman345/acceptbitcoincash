@@ -34,6 +34,7 @@ matrix:
       - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
       - echo ".git" > .dockerignore
       - bundle exec rake docker:build
+      - if [ "$NEXT_BUILD_TAG" != "latest" ]; then docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"; fi
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
       # - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
         # git commit -m 'Updates site count' ./_includes/count_support.html;
@@ -65,7 +66,7 @@ deploy:
   - provider: script
     skip-cleanup: true
     script:
-    - docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"
+    #- docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"
     #- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push kenman345/acceptbitcoincashdocker
     on: 
