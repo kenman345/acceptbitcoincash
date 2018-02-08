@@ -43,7 +43,7 @@ task proof_external: 'build' do
 	http_status_ignore: [0, 301, 302, 403, 503], \
     cache: { timeframe: '1w' }, \
 	typhoeus: { \
-		followlocation: true, \
+		followlocation: false, \
 	}, \
     hydra: { max_concurrency: 12 }
   ).run
