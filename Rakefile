@@ -64,7 +64,7 @@ namespace :docker do
 end
 
 task :verify do
-  ruby './verify.rb'
+  ruby './verify_images.rb'
 end
 
 task :verify_images do
