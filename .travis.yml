@@ -37,13 +37,14 @@ matrix:
       - if [ "$NEXT_BUILD_TAG" != "latest" ]; then docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"; fi
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
       #- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
-      #- if [ "$NEXT_BUILD_TAG" != "false" ]; then git config credential.helper "store --file=.git/credentials"; 
-      #echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials; 
-      #git commit -m 'Updates site count [skip ci]' ./_includes/count_support.html;
-     # git remote -v;
-     # git remote set-url origin https://github.com/$TRAVIS_REPO_SLUG.git;
-     # git push;
-     # fi    
+      - if [ "$NEXT_BUILD_TAG" != "false" ]; then 
+        git config credential.helper "store --file=.git/credentials"; 
+        echo "https://$GITHUB_TOKEN:@github.com" > .git/credentials; 
+        git commit -m 'Updates site count [skip ci]' ./_includes/count_support.html;
+        git remote -v;
+        git remote set-url origin https://github.com/$TRAVIS_REPO_SLUG.git;
+        git push;
+        fi    
         #git push origin HEAD:master;
     - script:
       - bundle exec rake verify_images
