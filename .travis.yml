@@ -43,7 +43,7 @@ matrix:
         git commit -m 'Updates site count [skip ci]' ./_includes/count_support.html;
         git remote -v;
         git remote set-url origin https://github.com/$TRAVIS_REPO_SLUG.git;
-        git push;
+        git push origin HEAD:$TRAVIS_BRANCH;
         fi    
         #git push origin HEAD:master;
     - script:
