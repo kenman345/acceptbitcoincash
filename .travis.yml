@@ -55,16 +55,16 @@ matrix:
     - stage: verify
       script:
       - bundle exec rake verify_images
-      - bundle exec rake proof_external
-    - script: 
       - bundle exec rake proof
+    - script: 
+      - bundle exec rake proof_external
     - stage: test
       script: 
       - bundle exec rake proof_external
   allow_failures:
-    #- script: 
-    #  - bundle exec rake verify_images
-    #  - bundle exec rake proof_external
+    - script: 
+      - bundle exec rake verify_images
+      - bundle exec rake proof
     - stage: test
       script: 
       - bundle exec rake proof_external
