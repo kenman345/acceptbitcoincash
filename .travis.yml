@@ -25,10 +25,16 @@ before_install:
     - gem update --system --no-doc
     - bundle install --gemfile=Gemfile
     - pip install --user pathlib
+stages: 
+    - test
+    - verify
+    - name: deploy
+      if: branch = master
 matrix:
   fast_finish: true
   include:
-    - script:
+    - stage: deploy
+      script:
       - BUILD_DOCKER="true"
       - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG=`date +"%m-%d-%Y"`; BUILD_DOCKER="true"; fi
       - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
@@ -37,26 +43,30 @@ matrix:
       - if [ "$NEXT_BUILD_TAG" != "latest" ]; then docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"; fi
       #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
       #- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
-      - if [ "$NEXT_BUILD_TAG" != "false" ]; then 
-        git config credential.helper "store --file=.git/credentials"; 
-        echo "https://$GITHUB_TOKEN:@github.com" > .git/credentials; 
-        git commit -m 'Updates site count [skip ci]' ./_includes/count_support.html;
-        git remote -v;
-        git remote set-url origin https://github.com/$TRAVIS_REPO_SLUG.git;
-        git push origin HEAD:$TRAVIS_BRANCH;
-        fi    
+      # - if [ "$NEXT_BUILD_TAG" != "false" ]; then 
+        # git config credential.helper "store --file=.git/credentials"; 
+        # echo "https://$GITHUB_TOKEN:@github.com" > .git/credentials; 
+        # git commit -m 'Updates site count [skip ci]' ./_includes/count_support.html;
+        # git remote -v;
+        # git remote set-url origin https://github.com/$TRAVIS_REPO_SLUG.git;
+        # git push origin HEAD:$TRAVIS_BRANCH;
+        # fi    
         #git push origin HEAD:master;
-    - script:
+    - stage: verify
+      script:
       - bundle exec rake verify_images
-      - bundle exec rake proof_external
-    - script: 
       - bundle exec rake proof
+    - script: 
+      - bundle exec rake proof_external
+    - stage: test
+      script: 
+      - bundle exec rake proof_external
   allow_failures:
     - script: 
       - bundle exec rake verify_images
-      - bundle exec rake proof_external
-    - script: 
       - bundle exec rake proof
+    - script: 
+      - bundle exec rake proof_external
 #before_deploy:
 #  - script: 
 #    - docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"
