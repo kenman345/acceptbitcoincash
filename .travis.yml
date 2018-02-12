@@ -25,10 +25,16 @@ before_install:
     - gem update --system --no-doc
     - bundle install --gemfile=Gemfile
     - pip install --user pathlib
+stages: 
+    - test
+    - verify
+    - name: deploy
+      if: branch = master
 matrix:
   fast_finish: true
   include:
-    - script:
+    - stage: deploy
+      script:
       - BUILD_DOCKER="true"
       - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG=`date +"%m-%d-%Y"`; BUILD_DOCKER="true"; fi
       - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
@@ -46,10 +52,12 @@ matrix:
         git push origin HEAD:$TRAVIS_BRANCH;
         fi    
         #git push origin HEAD:master;
-    - script:
+    - stage: verify
+      script:
       - bundle exec rake verify_images
       - bundle exec rake proof_external
-    - script: 
+    - stage: test
+      script: 
       - bundle exec rake proof
   allow_failures:
     - script: 
