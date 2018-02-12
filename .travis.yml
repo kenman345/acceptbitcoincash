@@ -65,8 +65,7 @@ matrix:
     - script: 
       - bundle exec rake verify_images
       - bundle exec rake proof
-    - stage: test
-      script: 
+    - script: 
       - bundle exec rake proof_external
 #before_deploy:
 #  - script: 
