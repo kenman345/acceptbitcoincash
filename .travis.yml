@@ -60,10 +60,12 @@ matrix:
       script: 
       - bundle exec rake proof
   allow_failures:
-    - script: 
+    - stage: verify
+      script: 
       - bundle exec rake verify_images
       - bundle exec rake proof_external
-    - script: 
+    - stage: test
+      script: 
       - bundle exec rake proof
 #before_deploy:
 #  - script: 
