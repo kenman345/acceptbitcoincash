@@ -16,4 +16,3 @@ vendor/
 .jekyll-metadata
 vendor/bundle/
 vendor/*
-/.tr.yml
