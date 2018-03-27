@@ -1,0 +1,58 @@
+websites:
+    - name: Antiwar.com
+      url: https://antiwar.com/
+      img: antiwar.png
+      twitter: Antiwarcom
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://www.antiwar.com/cryptocurrencies/
+      
+    - name: Coins 4 Clothes
+      url: https://www.coins4clothes.com
+      img: coins4clothes.png
+      twitter: coins4clothes
+      facebook: coins4clothes
+      region: na
+      country: CA
+      city: Toronto
+      bch: Yes
+      btc: No
+      othercrypto: No
+
+    - name: Growing Veterans
+      url: https://growingveterans.org/
+      img: growingveterans.png
+      twitter: growingveterans
+      facebook: growingveterans
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://growingveterans.org/how-to-help/invest-with-cryptocurrency.html
+
+    - name: NutritionFacts.org
+      url: https://nutritionfacts.org/
+      img: nutritionfacts.png
+      twitter: nutrition_facts
+      facebook: NutritionFacts.org
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+      doc: https://nutritionfacts.org/donate/
+
+    - name: The Bitcoin Cash Fund
+      url: https://www.thebitcoincash.fund/
+      img: bitcoincashfund.png
+      twitter: BitcoinCashFund
+      facebook: bitcoincashfund
+      bch: Yes
+      btc: No
+      othercrypto: No
+      doc: https://www.thebitcoincash.fund/donate/
+      
+    - name: Wikipedia
+      url: https://www.wikipedia.org/
+      img: wikipedia.png
+      bch: No
+      btc: Yes
+      twitter: Wikipedia

@@ -6,6 +6,15 @@ websites:
       btc: No
       othercrypto: No
 
+    - name: 8Bet Crypto Lottery
+      url: https://8bet.io
+      img: 8bet.png
+      email_address: hello@8bet.io
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://www.reddit.com/r/8Bet/
+
     - name: Americas Cardroom
       url: https://americascardroom.eu
       twitter: acr_poker
@@ -23,6 +32,15 @@ websites:
       btc: Yes
       othercrypto: Yes
 
+    - name: Betonline
+      url: https://www.betonline.ag/
+      img: betonline.png
+      twitter: DaveMasonBOL
+      facebook: betonlineag
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: Bitcoin Games
       url: https://games.bitcoin.com/videopoker
       img: bitcoingames.png
@@ -30,6 +48,24 @@ websites:
       email_address: games@bitcoin.com
       bch: Yes
       btc: Yes
+
+    - name: Bitstarz
+      url: https://www.bitstarz.com/
+      img: bitstarz.png
+      twitter: bitstarzcasino
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://calvinayre.com/2018/02/02/bitcoin/bitstarz-starts-accepting-bitcoin-cash/
+
+    - name: Bodog
+      url: https://www.bodog.eu/
+      img: bodog.png
+      facebook: BodogCanada
+      twitter: BodogCa
+      bch: Yes
+      btc: Yes
+      othercrypto: No
 
     - name: Bookmaker
       url: https://www.bookmaker.eu/
@@ -82,6 +118,14 @@ websites:
       btc: Yes
       othercrypto: Yes
 
+    - name: Mt. BetMore
+      url: https://mtbetmore.com
+      img: mtbetmore.png
+      email_address: contact@mtbetmore.com
+      bch: Yes
+      btc: No
+      othercrypto: No
+
     - name: MyBookie
       url: https://mybookie.ag
       twitter: betmybookie
@@ -101,6 +145,34 @@ websites:
       bch: no
       btc: yes
       othercrypto: no
+
+    - name: OddEvenBets
+      url: http://oddevenbets.com
+      img: oddevenbets.png
+      twitter: OddEvenBets
+      email_address: oddevenbets@mail333.com
+      bch: Yes
+      btc: No
+      othercrypto: No
+
+    - name: ORAN MERKEZI
+      url: https://www.oranmerkezi.com
+      img: oran-merkezi-logo.png
+      facebook: oranmerkezi
+      email_address: info@oranmerkezi.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://www.oranmerkezi.com/index.php/Giris/uyelik.html
+
+    - name: phun.io
+      url: https://www.phun.io
+      img: playphun.png
+      twitter: phun_io
+      facebook: playphun.io
+      bch: Yes
+      btc: No
+      othercrypto: No
 
     - name: SafeDice
       url: https://safedice.com/
@@ -125,12 +197,20 @@ websites:
       btc: No
       othercrypto: No
 
+    - name: Sportsbetting
+      url: https://www.sportsbetting.ag
+      img: SportsBettingAG.png
+      twitter: SportsBettingAG
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: SwCPoker
       url: https://swcpoker.eu/
       img: swcpoker.png
       twitter: SwCPoker
       region: eu
-      bch: no
+      bch: yes
       btc: yes
       othercrypto: no
       doc: https://swcpoker.eu/swcpoker-faq/#WhatIsBitcoin

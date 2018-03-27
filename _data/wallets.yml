@@ -42,28 +42,34 @@ websites:
     - name: Blockchain
       url: https://blockchain.info/
       img: blockchain.png
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: Yes
       facebook: blockchain
       twitter: blockchain
-      status: https://blog.blockchain.com/2017/10/11/bitcoin-cash-bch/
 
     - name: Bread
       url: https://breadapp.com/
       img: bread.png
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: Yes
-      doc: https://breadapp.com/blog/breadwallet-plan-bitcoin-cash-bch/
-      exceptions:
-          text: "Currently only allows withdrawals."
 
     - name: BTC.com
       url: https://wallet.btc.com/
       img: btccom.png
       bch: Yes
       btc: Yes
+      
+    - name: Carbon Wallet 
+      url: https://carbonwallet.com/
+      img: carbonwallet.png
+      twitter: Carbon_wallet
+      email_address: john@carbonwallet.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://www.reddit.com/r/Bitcoincash/comments/7vg4is/carbon_wallet_now_live_with_support_for_bch/
 
     - name: CashAddress.org
       url: https://cashaddress.org/
@@ -87,6 +93,17 @@ websites:
       btc: Yes
       othercrypto: No
 
+    - name: Edge
+      url: https://edgesecure.co
+      img: edge.png
+      twitter: EdgeSecure
+      facebook: EdgeSec
+      email_address: support@edgesecure.co
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://blog.edgesecure.co/edge-wallet-is-live-d844cc483210
+
     - name: Electron Cash
       url: https://electroncash.org/
       img: electroncash.png
@@ -106,6 +123,14 @@ websites:
       bch: Yes
       btc: Yes
       othercrypto: Yes
+      
+    - name: HandCash
+      url: http://www.handcash.io/
+      img: handcash.png
+      twitter: handcashapp
+      bch: Yes
+      btc: No
+      othercrypto: No
 
     - name: Jaxx
       url: https://jaxx.io/

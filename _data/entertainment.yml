@@ -1,4 +1,14 @@
 websites:
+    - name: Anarchaforko
+      url: https://anarchaforko.com/
+      facebook: Anarchaforko
+      img: anarchaforko.png
+      country: MX
+      city: Acapulco
+      bch: yes
+      btc: no
+      othercrypto: yes
+
     - name: Anarchapulco
       url: https://anarchapulco.com/
       twitter: Anarchapulco
@@ -34,6 +44,15 @@ websites:
       twitter: cdbaby
       facebook: cdbaby
 
+    - name: computerbase.de
+      url: https://www.computerbase.de/
+      img: computerbase.png
+      twitter: computerbase
+      facebook: computerbase
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+
     - name: Counter Markets
       url: http://countermarkets.com/
       twitter: countermarkets
@@ -62,6 +81,16 @@ websites:
       btc: no
       othercrypto: yes
       doc: https://www.elventower.com/commission-custom-maps
+
+    - name: Emancipated Human
+      url: https://emancipatedhuman.com/
+      img: emancipatedhuman.png
+      twitter: EmancipatedH
+      facebook: emancipatedh
+      email_address: contact@emancipatedhuman.com
+      bch: yes
+      btc: yes
+      othercrypto: yes
 
     - name: Eruce - Buy your music
       url: https://www.eruce.com/
@@ -113,6 +142,14 @@ websites:
       twitter: WatchMixer
       facebook: WatchMixer
 
+    - name: MusicPlug.com.au
+      url: https://musicplug.com.au
+      img: musicplug.png
+      country: AU
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: Netflix
       url: https://www.netflix.com/us/
       img: netflix.png
@@ -149,6 +186,15 @@ websites:
       twitter: qobuz
       facebook: qobuz
 
+    - name: Rock Stuff
+      url: https://www.rockstuff.com.au/
+      img: rockstuff.png
+      facebook: RockStuffCheck12
+      email_address: info@rockstuff.rocks
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+
     - name: Roku
       url: https://www.roku.com
       img: roku.png
@@ -163,6 +209,24 @@ websites:
       bch: yes
       btc: yes
       othercrypto: no
+
+    - name: Self Ownership
+      url: http://selfownership.me/
+      twitter: vinarmani
+      facebook: vinarmani
+      img: selfownership.png
+      bch: yes
+      btc: yes
+      othercrypto: yes
+
+    - name: Sheet Music 2 Celebrate
+      url: https://www.sheetmusic2celebrate.com
+      img: sheetmusic2celebrate.png
+      facebook: Sheet-Music-to-Celebrate-2040933102814363
+      email_address: contact@sheetmusic2celebrate.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Sling TV
       url: https://www.sling.com/
@@ -222,13 +286,6 @@ websites:
       btc: No
       twitter: Twitch
       facebook: Twitch
-
-    - name: Vidme
-      url: https://vid.me/
-      img: vidme.png
-      bch: No
-      twitter: vidme
-      facebook: vidme
 
     - name: Vimeo
       url: https://vimeo.com/

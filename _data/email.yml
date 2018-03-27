@@ -17,11 +17,24 @@ websites:
       btc: No
       othercrypto: No
 
+    - name: kolab now
+      url: https://kolabnow.com
+      img: mykolab.png
+      twitter: kolabsys
+      facebook: Kolab-Now-503394299799839
+      region: eu
+      country: ch
+      city: KUESNACHT
+      bch: yes
+      btc: yes
+      othercrypto: no
+      doc: https://kolabnow.com/support/payments
+
     - name: mailbox.org
       url: https://mailbox.org/
       img: mailbox.png
       twitter: mailbox_org
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: No
 
@@ -32,7 +45,7 @@ websites:
       facebook: mailfence
       bch: No
       btc: Yes
-      othercrypto: No
+      othercrypto: Yes
 
     - name: Migadu
       url: https://www.migadu.com/
@@ -48,16 +61,16 @@ websites:
       img: mxroute.png
       twitter: mxroute
       facebook: mxroute
-      bch: No
+      bch: Yes
       btc: Yes
-      othercrypto: No
+      othercrypto: Yes
 
     - name: Outlook.com
       url: https://outlook.com
       img: outlook.png
       twitter: outlook
       facebook: Outlook
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: No
 
@@ -87,20 +100,12 @@ websites:
       btc: Yes
       othercrypto: No
 
-    - name: Riseup Mail
-      url: https://mail.riseup.net
-      img: riseup.png
-      twitter: riseupnet
-      bch: No
-      btc: Yes
-      othercrypto: No
-
     - name: Runbox
       url: https://runbox.com
       img: runbox.png
       twitter: runbox
       facebook: Runbox-85087490877
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: No
 
@@ -109,6 +114,15 @@ websites:
       img: thexyz.png
       twitter: thexyz
       facebook: thexyz
+      bch: No
+      btc: No
+      othercrypto: No
+
+    - name: Tutanota
+      url: http://www.tutanota.com
+      img: Tutanota.png
+      twitter: tutanotateam
+      facebook: tutanota
       bch: No
       btc: No
       othercrypto: No

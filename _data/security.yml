@@ -1,4 +1,13 @@
 websites:
+    - name: 143VPN
+      url: https://143vpn.com
+      img: 143VPN.png
+      twitter: 143VPN
+      facebook: 143VPN
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: Air VPN
       url: https://airvpn.org/
       img: airvpn.png
@@ -11,8 +20,9 @@ websites:
     - name: Anonine
       url: https://anonine.com
       img: anonine.png
-      bch: No
+      bch: Yes
       btc: Yes
+      othercrypto: Yes
       twitter: anoninevpn
       facebook: Anonine
 
@@ -26,7 +36,9 @@ websites:
     - name: BolehVPN
       url: https://www.bolehvpn.net/
       img: bolehvpn.png
-      bch: No
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
       twitter: bolehvpn
 
     - name: CAcert
@@ -80,6 +92,15 @@ websites:
       twitter: dome9
       facebook: Dome9Security
 
+    - name: Earth VPN
+      url: http://www.earthvpn.com/
+      img: earthvpn.png
+      twitter: Earthvpn
+      facebook: Earthvpn
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+
     - name: Entrust
       img: entrust.png
       url: https://www.entrust.net
@@ -87,7 +108,7 @@ websites:
       twitter: EntrustDatacard
       facebook: EntrustDatacard
 
-    - name: ExpresssVPN
+    - name: ExpressVPN
       img: expressvpn.png
       url: https://www.expressvpn.com
       bch: No
@@ -112,8 +133,9 @@ websites:
     - name: hide.me VPN
       url: https://hide.me/
       img: hidemevpn.png
-      bch: No
+      bch: Yes
       btc: Yes
+      othercrypto: Yes
       twitter: thevpncompany
       facebook: www.hide.me
 
@@ -121,7 +143,7 @@ websites:
       url: https://www.ipvanish.com
       img: ipvanish.png
       bch: No
-      btc: Yes
+      btc: No
       twitter: ipvanish
       facebook: ipvanish
 
@@ -130,17 +152,27 @@ websites:
       twitter: mullvadnet
       email_address: support@mullvad.net
       img: mullvad.png
-      bch: no
+      bch: yes
       btc: yes
       othercrypto: no
+      doc: https://mullvad.net/en/blog/2018/2/13/bitcoin-cash-now-accepted/
 
     - name: NordVPN
       url: https://www.nordvpn.com
       img: nordvpn.png
       bch: No
       btc: Yes
+      othercrypto: Yes
       twitter: nordvpn
       facebook: NordVPN
+
+    - name: nVpn
+      url: https://nvpn.net/
+      img: nvpn.png
+      twitter: nVpnNet
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: OpenDNS
       url: https://www.opendns.com/
@@ -152,10 +184,21 @@ websites:
     - name: Perfect Privacy VPN
       url: https://www.perfect-privacy.com/
       img: perfectprivacyvpn.png
-      bch: No
+      bch: Yes
       btc: Yes
+      othercrypto: No
       twitter: perfectprivacy
       facebook: perfect.privacy
+
+    - name: Premiumize.me
+      url: https://www.premiumize.me
+      img: premiumizeme.png
+      twitter: premiumizeme
+      facebook: PremiumizeMe
+      email_address: acceptbitcoin@guyrimmer.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Prey
       url: https://www.preyproject.com
@@ -282,13 +325,15 @@ websites:
       img: torguard.png
       bch: No
       btc: Yes
+      othercrypto: Yes
       twitter: TorGuard
       facebook: TorGuard
 
     - name: TunnelBear
       url: https://tunnelbear.com/
       img: tunnelbear.png
-      bch: No
+      bch: Yes
+      btc: Yes
       twitter: theTunnelBear
       facebook: tunnelbear
 
@@ -297,19 +342,22 @@ websites:
       img: vpnunlimited.png
       twitter: vpnunlimited
       facebook: vpnunlimitedapp
-      bch: No
+      bch: Yes
+      btc: Yes
+      othercrypto: No
 
     - name: vpn.ac
       url: https://vpn.ac/
       img: vpnac.png
       bch: Yes
-      btc: No
+      btc: Yes
       othercrypto: Yes
-      doc: https://vpn.ac/announcements/51/Bitcoin-payments-through-BitPay-suspended.html
 
     - name: Windscribe
       url: https://windscribe.com
       img: windscribe.png
-      bch: No
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
       twitter: windscribecom
       facebook: windscribe

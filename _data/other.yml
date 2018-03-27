@@ -20,13 +20,6 @@ websites:
       twitter: aerohive
       facebook: aerohivenetworks
 
-    - name: Airbnb
-      url: https://www.airbnb.com/
-      img: airbnb.png
-      bch: No
-      twitter: airbnb
-      facebook: AirBNB
-
     - name: Airtable
       url: https://airtable.com
       img: airtable.png
@@ -106,12 +99,6 @@ websites:
       bch: No
       twitter: CommuterBenefit
 
-    - name: Cosmolex
-      url: https://www.cosmolex.com/
-      img: cosmolex.png
-      bch: No
-      twitter: cosmolexlegal
-
     - name: Crowd Supply
       url: https://www.crowdsupply.com
       img: crowdsupply.png
@@ -119,12 +106,6 @@ websites:
       twitter: crowd_supply
       facebook: CrowdSupply
       email_address: support@crowdsupply.com
-
-    - name: Delicious
-      url: http://del.icio.us/
-      img: delicious.png
-      bch: No
-      twitter: Delicious
 
     - name: Delighted
       url: https://delightedapp.com/
@@ -138,12 +119,6 @@ websites:
       img: directadmin.png
       bch: No
       facebook: DirectAdmin
-
-    - name: Dreamstime
-      url: https://www.dreamstime.com/
-      img: dreamstime.png
-      bch: No
-      twitter: Dreamstime
 
     - name: Envato
       url: http://envato.com
@@ -178,15 +153,6 @@ websites:
       bch: No
       twitter: formstack
       facebook: formstack
-
-    - name: Frostwire
-      url: http://www.frostwire.com/
-      img: frostwire.png
-      bch: Yes
-      btc: Yes
-      twitter: FrostWire
-      exceptions:
-        text: "Frostwire is free but accepts donations"
 
     - name: IEEE
       url: https://www.ieee.org
@@ -262,8 +228,9 @@ websites:
     - name: Office 365
       url: https://www.office.com
       img: office365.png
-      bch: No
+      bch: Yes
       btc: Yes
+      othercrypto: No
       twitter: Office365
       facebook: Office365
 
@@ -278,6 +245,7 @@ websites:
       url: https://pastebin.com
       img: pastebin.png
       bch: No
+      btc: Yes
       twitter: pastebin
       facebook: pastebin
       email_address: admin@pastebin.com
@@ -288,7 +256,7 @@ websites:
       bch: No
       twitter: patreon
       facebook: patreon
-
+      
     - name: PhraseApp
       url: https://phraseapp.com
       img: phraseapp.png
@@ -425,13 +393,6 @@ websites:
       img: wikia.png
       bch: No
       twitter: wikia
-
-    - name: Wikipedia
-      url: https://www.wikipedia.org/
-      img: wikipedia.png
-      bch: No
-      btc: Yes
-      twitter: Wikipedia
 
     - name: Yclas
       url: https://yclas.com/

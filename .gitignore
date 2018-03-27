@@ -11,3 +11,9 @@ Gemfile.lock
 *.suo
 *.pyproj
 scripts/python/output/
+.bundle
+vendor/
+.jekyll-metadata
+vendor/bundle/
+vendor/*
+/.tr.yml

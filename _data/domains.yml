@@ -59,7 +59,8 @@ websites:
     - name: ClouDNS
       url: https://www.cloudns.net/
       img: cloudns.png
-      bch: No
+      bch: Yes
+      btc: Yes
       twitter: ClouDNS
       facebook: ClouDNS
 
@@ -121,13 +122,6 @@ websites:
       email_address: support@domains4bitcoins.com
       twitter: Domains4Bitcoin
 
-    - name: DomainsAtCost
-      url: https://www.domainsatcost.ca/
-      img: domainsatcost.png
-      bch: No
-      twitter: domainsatcost
-      facebook: domainsatcost
-
     - name: Domeny.tv
       url: http://www.domeny.tv/en
       img: domenytv.png
@@ -160,6 +154,8 @@ websites:
       btc: yes
       othercrypto: yes
       doc: https://www.easydns.com/blog/2018/01/08/0-confirmations-now-accepting-bitcoin-cash-as-a-payment-method/
+      exceptions:
+        text: "Crypto-Payments only for existing customers/non-new accounts"
 
     - name: eNom
       url: https://www.enom.com/
@@ -200,7 +196,7 @@ websites:
     - name: Gandi
       url: https://gandi.net
       img: gandi.png
-      bch: No
+      bch: Yes
       btc: Yes
       twitter: gandibar
       facebook: GandiBar
@@ -249,8 +245,9 @@ websites:
     - name: Idotz.net
       url: https://idotz.net
       img: idotz.png
-      bch: No
+      bch: Yes
       btc: Yes
+      othercrypto: No
       twitter: idotz
       facebook: idotz.net
 
@@ -319,7 +316,7 @@ websites:
     - name: MonoVM
       url: https://monovm.com/domain/
       img: monovm.png
-      bch: No
+      bch: Yes
       btc: Yes
       twitter: monovm
       facebook: monovm
@@ -341,7 +338,7 @@ websites:
     - name: Namecheap
       url: https://www.namecheap.com/
       img: namecheap.png
-      bch: No
+      bch: Yes
       btc: Yes
       twitter: Namecheap
       facebook: Namecheap
@@ -359,6 +356,7 @@ websites:
       url: https://www.namesilo.com/
       img: namesilo.png
       bch: No
+      btc: Yes
       twitter: namesilo
       facebook: namesilo
 
@@ -372,7 +370,8 @@ websites:
     - name: NearlyFreeSpeech.net
       url: https://www.nearlyfreespeech.net/
       img: nfsn.png
-      bch: No
+      bch: Yes
+      btc: Yes
       email_address: support@NearlyFreeSpeech.NET
       twitter: nfsn
 
@@ -467,13 +466,22 @@ websites:
       url: https://porkbun.com
       img: porkbunBuns.png
       bch: No
+      btc: Yes
       twitter: PorkbunLLC
       facebook: Porkbun-1626180577611026
+
+    - name: Rebel.ca
+      url: https://www.rebel.ca
+      img: rebeldotcom.png
+      bch: No
+      twitter: rebeldotcom
+      facebook: rebeldomains
 
     - name: Register4Less
       url: https://register4less.com/
       img: register4less.png
       bch: No
+      btc: Yes
       twitter: Register4Less
       facebook: Register4Less
 
@@ -501,6 +509,15 @@ websites:
       twitter: STRATO_AG
       facebook: strato
       lang: de
+
+    - name: TekkFolio
+      url: https://tekkfolio.com/
+      img: tekkfolio.png
+      twitter: Blockchain_Name
+      email_address: admin@tekkfolio.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: UK2
       url: https://www.uk2.net/

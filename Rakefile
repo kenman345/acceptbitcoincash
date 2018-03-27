@@ -2,7 +2,8 @@ require 'html-proofer'
 require 'rubocop/rake_task'
 require 'jekyll'
 
-task default: %w[proof verify rubocop]
+task default: %w[verify rubocop proof]
+task external: %w[verify rubocop proof_external]
 
 task :build do
   config = Jekyll.configuration(
@@ -19,9 +20,8 @@ task proof: 'build' do
     assume_extension: true, \
     check_html: true, \
     disable_external: true, \
-	log_level: 'debug', \
-	url_ignore: ['/add'], \
-	verbose: true
+    url_ignore: ['/add'], \
+    hydra: { max_concurrency: 50 }
   ).run
 end
 
@@ -30,45 +30,30 @@ task proof_external: 'build' do
     './_site', \
     assume_extension: true, \
     check_html: true, \
-	validation: { \
-		report_invalid_tags: false, \
-		report_missing_names: true, \
-		report_script_embeds: true, \
-	}, \
-	check_sri: true, \
-	external_only: false, \
-	verbose: true, \
-	log_level: 'debug', \
-	url_ignore: ['/add'], \
-	http_status_ignore: [0, 301, 302, 403, 503], \
+    external_only: false, \
+    url_ignore: ['/add'], \
+    http_status_ignore: [0, 301, 302, 403, 503], \
     cache: { timeframe: '1w' }, \
-	typhoeus: { \
-		followlocation: true, \
-	}, \
-    hydra: { max_concurrency: 12 }
+    hydra: { max_concurrency: 20 }
   ).run
 end
 
-namespace :docker do
-  desc "build docker images"
-  task :build do
-    puts "Generating stats (HTML partial) of websites supporting Bitcoin Cash"
-    Dir.chdir(File.join('.', 'scripts', 'python')) do
-      puts `python ./bchAccepted.py`
-    end
-    puts "Generating static files for nginx"
-    puts `bundle exec jekyll build`
-    puts "Building acceptbitcoincash docker image"
-    puts `docker build -t kenman345/acceptbitcoincashdocker .`
-  end
-end
-
 task :verify do
-  ruby './verify_images.rb'
-end
-
-task :verify_images do
-  ruby './verify_images.rb'
+  ruby './verify.rb'
 end
 
 RuboCop::RakeTask.new
+
+namespace :docker do
+  desc 'build docker images'
+  task :build do
+    puts 'Generating stats (HTML partial) of websites supporting Bitcoin Cash'
+    Dir.chdir(File.join('.', 'scripts', 'python')) do
+      puts `python ./bchAccepted.py`
+    end
+    puts 'Generating static files for nginx'
+    puts `bundle exec jekyll build`
+    puts 'Building acceptbitcoincash docker image'
+    puts `docker build -t acceptbitcoincash/acceptbitcoincash .`
+  end
+end
