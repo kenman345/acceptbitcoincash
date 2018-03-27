@@ -1,10 +1,32 @@
 websites:
-    - name: BCHTips.org
-      url: https://bchtips.org
-      img: bchtips.png
+    - name: Alfatop.me
+      url: https://www.alfatop.me
+      img: ALFAtopme.png
+      twitter: ALFAtopme
+      facebook: alfatop.me
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://twitter.com/ALFAtopme/status/965512505471721472
+
+    - name: Bit2Me
+      url: https://bit2me.com
+      img: bit2me.png
+      twitter: bit2me
+      facebook: bit2me
+      email_address: info@bit2me.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
+    - name: Bitcoin Superstore
+      url: https://bitcoinsuperstore.us
+      img: bitcoinSuperstore.png
+      twitter: BitcoinSuperst1
+      email_address: customerservice@bitcoinsuperstore.us
       bch: yes
-      btc: no
-      othercrypto: no
+      btc: yes
+      othercrypto: yes
 
     - name: BitcoinPlug
       url: https://bitcoinplug.com
@@ -23,6 +45,15 @@ websites:
       othercrypto: Yes
       doc: https://blog.bitgo.com/bitcoin-cash-bch-update-6dced6c8c53d
 
+    - name: Bitit
+      url: https://bitit.io/
+      img: Bitit.png
+      twitter: Bitit_Gift
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://support.bitit.io/hc/en-us/articles/360000566429-How-to-buy-Bitcoin-Cash-BCH-on-Bitit-by-credit-card-cash-and-wire-transfer-
+
     - name: Blockchain
       url: https://blockchain.info/
       img: blockchain.png
@@ -40,12 +71,31 @@ websites:
       btc: Yes
       othercrypto: No
 
+    - name: BlockCypher
+      url: https://www.blockcypher.com/
+      img: blockcypher.png
+      twitter: BlockCypher
+      facebook: BlockCypher
+      email_address: contact@blockcypher.com
+      bch: No
+      btc: Yes
+      othercrypto: Yes
+
     - name: Blockdozer
       url: http://blockdozer.com/
       img: blockdozer.png
       bch: Yes
       btc: Yes
       othercrypto: No
+
+    - name: Btcinshop
+      url: http://www.btcinshop.com
+      img: Btcinshop.png
+      twitter: btcinshop
+      email_address: info@btcinshop.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Changelly
       url: https://changelly.com
@@ -87,6 +137,16 @@ websites:
       facebook: Coinapult
       twitter: Coinapult
       email_address: support@coinapult.com
+
+    - name: coinbought.com
+      url: https://coinbought.com/
+      img: coinbought.png
+      twitter: coinbought
+      email_address: support@coinbought.com
+      region: na
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: CoinDance
       url: https://cash.coin.dance/
@@ -143,10 +203,33 @@ websites:
       btc: Yes
       othercrypto: Yes
 
+    - name: CoinText
+      url: https://cointext.io/
+      twitter: CoinText
+      img: cointext.png
+      bch: yes
+      btc: no
+      othercrypto: no
+
+    - name: Crypto Traders Pro
+      url: https://cryptotraderspro.com/
+      img: CryptoTradersPro.png
+      twitter: CryptoNewsUpd8s
+      facebook: CryptoTradersNews
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: CryptoGraffiti
       url: https://cryptograffiti.info
       img: cryptograffiti.png
       bch: Yes
+
+    - name: cryptohearsay
+      url: https://www.cryptohearsay.com/
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Cryptonize.it
       url: https://www.cryptonize.it
@@ -157,12 +240,20 @@ websites:
       othercrypto: no
       doc: https://www.reddit.com/r/btc/comments/7jmcyz/pay_for_anything_online_with_bch_cryptonizeit/
 
+    - name: Digital Keys
+      url: http://digitalkeys.biz/
+      img: DigitalKeys.png
+      email_address: digitalkeysshop@gmail.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: eGifter
       url: https://www.egifter.com/Default.aspx
       img: egifter.png
       twitter: egifter
       facebook: egifter
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: No
 
@@ -171,6 +262,7 @@ websites:
       img: giftoff.png
       twitter: giftoffuk
       facebook: pockiouk
+      region: eu
       bch: Yes
       btc: Yes
       othercrypto: Yes
@@ -180,14 +272,13 @@ websites:
       img: gyft.png
       twitter: Gyft
       facebook: gyft
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: No
 
     - name: Incognito Deals
       url: https://www.incognitodeals.com/index.html
       img: incognitoDeals.png
-      twitter: IncognitoDeals
       bch: Yes
       btc: No
       othercrypto: Yes
@@ -198,6 +289,14 @@ websites:
       twitter: bitpay
       bch: Yes
       btc: Yes
+      othercrypto: No
+
+    - name: JoyStream
+      url: http://joystream.co/
+      img: JoyStream.png
+      twitter: JoyStreamApp
+      bch: Yes
+      btc: No
       othercrypto: No
 
     - name: KaMoney Brasil
@@ -217,14 +316,14 @@ websites:
       btc: Yes
       othercrypto: Yes
       doc: https://www.keys4coins.com/bitcoin-cash-accepted-here/
-      
+
     - name: Living Room of Satoshi
       url: https://www.livingroomofsatoshi.com/
       img: livingroom.png
       bch: Yes
       btc: Yes
       othercrypto: Yes
-      
+
     - name: LocalBitcoinCash
       url: https://localbitcoincash.org
       bch: Yes
@@ -254,7 +353,6 @@ websites:
       bch: Yes
       btc: Yes
       othercrypto: No
-      doc: https://twitter.com/PasteCoin/status/943562876513673216
 
     - name: piixPay
       url: https://piixpay.com
@@ -348,4 +446,3 @@ websites:
       doc: https://blog.xapo.com/xapo-bitcoincash-bch-update/
       exceptions:
         text: "Xapo has enabled Bitcoin Cash withdrawal but does not yet offer full support."
-

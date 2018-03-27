@@ -1,90 +1,78 @@
-sudo: required
-language: ruby
+sudo: true
+dist: trusty
 rvm: 2.4.0
-os: linux
-env:
-  global: 
-    - DOCKER_USERNAME=kenman345
-    - BUILD_DOCKER=false
-    - NEXT_BUILD_TAG=latest
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - secure: C7mCh9Pl4mxH/YtnjhMueSTyulbQdADfw2LCsPCwxwT30Ic/DTj3if12y0QItDnW7fwwR83Y+vZsLUYDyrwMRAFbi8pR2nZN74Ri2CWAviynxQ2Z/dEh73Gss6eCw617eMAI5OGAZ2809vXE6zwag9j6sIksvAA7bd/n2DRSNXwOrBTs7Y+Q5J3MP4bUs2hQ65PkEbIIbHWC7wCSY4t3KAp8q7v0DMxDuKdxExRE61RlsYe2A+fBsAHepXeCXIvzCmxTxaiYRKRV1VZi6jJtFI9QB6HmKBNC/QuQZcJRptmDEY22/u+AtN8kpViDZzq26fy6uD5GYDuYWipwsrVhUSi5IakL01jzG1nDIq/Q+U0OzES9oow+2FEzyjMS/faP/I0shPDmyHwecZHimlg7ue0cVJIpwCocqXfkcY3ShmcWA3qih64uFTetSjtP3UJrpAUo+rfGktAH51dzxqmEY+I6TmfA6t7p0ztURFoR/dRENbIw7ouTcmRyWl6y/OxHnki6g3X3kxZPZZmQbMi0y6OmkKDtefGaJdvM1clGhqwlxOPs3yIGSG7jBCKe4cLzWT7TOwkO3GDaW9rTrgHaYTjq+HUkIrkU2ZEJLMN4ufuwSFJ4l+VvwFmi7buiiV1vSR+29kasGFdUNcAeuuZhsliD9AzK23+HNB1wTm12JtM=
-python:
-  - "3.4"
-services:
-  - docker
 cache:
   bundler: true
-  directories: $TRAVIS_BUILD_DIR/tmp/.htmlproofer
+  directories:
+  - vendor/bundle
+  - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 addons:
   apt:
     packages:
     - libcurl4-openssl-dev
     - ca-certificates
-before_install: 
-    - gem update --system --no-doc
-    - bundle install --gemfile=Gemfile
-    - pip install --user pathlib
-stages: 
-    - test
-    - verify
-    - name: deploy
-      if: branch = master
-matrix:
-  fast_finish: true
+stages:
+  - name: Test
+    if: sender != svenfuchs
+  - name: imgbot
+    if: sender = svenfuchs
+  - name: Run build
+    if: type = push AND (branch = master OR tag IS present)
+jobs:
   include:
-    - stage: deploy
+    - &test-baseline
+      stage: Test
       script:
-      - BUILD_DOCKER="true"
-      - if [ "$TRAVIS_TAG" != "" ]; then NEXT_BUILD_TAG=`date +"%m-%d-%Y"`; BUILD_DOCKER="true"; fi
-      - NEXT_BUILD_TAG=`date +"%m-%d-%Y"`
+        bundle exec rake
+      
+    - <<: *test-baseline
+      script:
+        bundle exec rake external
+      if: type IN (pull_request, cron)
+    
+    - stage: imgbot
+      script:
+        bundle exec rake verify
+    
+    - stage: Run build
+      env: 
+        NEXT_BUILD_TAG=latest
+      before_install:
+        pip install --user pathlib
+      script:
+      - if [ "$TRAVIS_TAG" != "" ]; then 
+          NEXT_BUILD_TAG=`date +"%m-%d-%Y"`;
+        fi
       - echo ".git" > .dockerignore
       - bundle exec rake docker:build
-      - if [ "$NEXT_BUILD_TAG" != "latest" ]; then docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"; fi
-      #- if [ "$NEXT_BUILD_TAG" != "" ]; then sh ./scripts/bash/build.sh; fi
-      #- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
-      # - if [ "$NEXT_BUILD_TAG" != "false" ]; then 
-        # git config credential.helper "store --file=.git/credentials"; 
-        # echo "https://$GITHUB_TOKEN:@github.com" > .git/credentials; 
-        # git commit -m 'Updates site count [skip ci]' ./_includes/count_support.html;
-        # git remote -v;
-        # git remote set-url origin https://github.com/$TRAVIS_REPO_SLUG.git;
-        # git push origin HEAD:$TRAVIS_BRANCH;
-        # fi    
-        #git push origin HEAD:master;
-    - stage: verify
-      script:
-      - bundle exec rake verify_images
-      - bundle exec rake proof
-    - script: 
-      - bundle exec rake proof_external
-    - stage: test
-      script: 
-      - bundle exec rake proof_external
+      - if [ "$NEXT_BUILD_TAG" != "latest" ]; then
+          docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"; 
+        fi
+      deploy:
+      - provider: script
+        skip-cleanup: true
+        script:
+        # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push kenman345/acceptbitcoincashdocker
+          docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
+        on: 
+          tags: true
+      - provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+        fqdn: kenman345.github.io/acceptbitcoincash
+        keep-history: true
+        repo: kenman345/acceptbitcoincash
+        target_branch: gh-pages
   allow_failures:
-    - script: 
-      - bundle exec rake verify_images
-      - bundle exec rake proof
-    - script: 
-      - bundle exec rake proof_external
-#before_deploy:
-#  - script: 
-#    - docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"
-deploy:
-  - provider: pages
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-    keep-history: true
-    on: 
-      branch: master
-      #tags: true
-      condition: $BUILD_DOCKER == "true"
-  - provider: script
-    skip-cleanup: true
-    script:
-    #- docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"
-    #- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push kenman345/acceptbitcoincashdocker
-    on: 
-      branch: master
-      condition: $BUILD_DOCKER == "true"
+    - stage: Test
+      script:
+        bundle exec rake external
+      if: type IN (pull_request, cron)
+notifications:
+  webhooks: https://www.travisbuddy.com/
+  slack:
+    rooms:
+      - secure: "vIMiDIutWLX4xPWK4+HRh39MdAaNLl+UcK7UjNlehHIuopZPbnH+TmqFg5726ZDhkQ6QN/lHYVuHTvW9Kp+f7uiuRX2QLJH4vZZrcvsXeRccWbVx7MlMW9hbOnvB73nUmezaHploSpMINKWRD51PhLlONbztLCzYmOoBfLRDvrmEY7kzoiMFCCZwPIzIiyB1LrEhSQD3YELgZ+ZDipFUeVA2yrBKZSZZoM7ubcpqNZHhx+3uAJrpQ66k36eprrXM7IC8Qy8u2AcV1hNnczNM+jUts/PKyCjH4vIjh4JEVNN/gBLY30oDOR6d95szme/4BWEPCcP2Sz3MQTtkN5tXaAmRRKqwYUv+lB0lTB5EB28SD9Sa3Q6HJhIQ5BVuO0Lmdwe8CVBTy7lmwcyuUqW5y0MHQF6HAZj2lSN8pktInFD40o+FQgC03YEiXWJbCYzny7LmE0T6ZgycvFzr/S28cDXiPemPMg4333aDjHj02631gRZtMG9dh7u35UnjuWU1Qs2ke2Irx2GJadp5LHp7++ssHWdmZKVJlKSvh679QCNvlG5CvWD/VinBvibTR61Py+b0Zk+k3++fz3YcJZ89ZCAyQ4yWCsGB7nNjpaMYcBHgHwgNBF6Gk3x71A2N3NfQrm2pcoB3+KM3QMVFmZrUD74Ni8TLXOdK2GHmYaqMI9A="
+    on_success: change
+    on_failure: always
+    on_pull_requests: always 

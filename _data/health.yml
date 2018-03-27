@@ -36,6 +36,18 @@ websites:
       othercrypto: no
       doc: http://www.christersharvard.se/priser/
 
+    - name: CrossFit Spaarne
+      url: https://www.crossfitspaarne.nl/
+      img: crossfitspaarne.png
+      twitter: crossfitspaarne
+      email_address: info@crossfitspaarne.nl
+      region: eu
+      country: NL
+      city: Haarlem
+      bch: Yes
+      btc: No
+      othercrypto: Yes
+      
     - name: CVS Caremark
       url: https://www.caremark.com
       twitter: CVSHealth
@@ -90,6 +102,18 @@ websites:
       bch: No
       btc: No
       othercrypto: No
+      
+    - name: Focused Taiwan 佛克斯台灣
+      url: https://focused.com.tw
+      img: focusedTaiwan.png
+      twitter: FocusedTaiwan
+      facebook: focusedTaiwan
+      email_address: kevin@majorbros.com
+      region: as
+      country: TW
+      bch: Yes
+      btc: No
+      othercrypto: No
 
     - name: FollowMyHealth
       url: https://www.followmyhealth.com/
@@ -108,7 +132,7 @@ websites:
     - name: HealthVault (w/Microsoft Account)
       url: https://www.healthvault.com
       img: healthvault.png
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: No
 
@@ -137,6 +161,16 @@ websites:
       bch: No
       btc: No
       othercrypto: No
+      
+    - name: Mermaid Perfume
+      url: https://mermaidperfume.com/
+      img: mermaidPerfume.png
+      twitter: mermaidperfume
+      facebook: shopmermaidperfume
+      email_address: info@mermaidperfume.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Misfit
       url: https://misfit.com/
@@ -183,6 +217,31 @@ websites:
       othercrypto: no
       doc: https://www.shinyleaf.com/promotions/bitcoin-cash-payment/
 
+    - name: Smile Acapulco
+      url: http://www.smileacapulco.com/
+      img: smileacapulco.png
+      twitter: smileacapulco
+      facebook: SmileAca
+      email_address: contacto@smileacapulco.com
+      country: MX
+      city: Acapulco
+      bch: yes
+      btc: yes
+      othercrypto: yes
+      lang: es
+      
+    - name: Storm & Leif
+      url: https://www.stormandleif.com/
+      img: stormleif.png
+      twitter: stormandleif
+      facebook: stormandleif
+      email_address: info@stormandleif.com
+      region: na
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://www.stormandleif.com/blogs/journal/the-all-natural-deodorant-thats-now-cryptocurrency-friendly
+
     - name: Thriva
       url: https://thriva.co
       twitter: thrivahealth
@@ -190,4 +249,12 @@ websites:
       img: thriva.png
       bch: No
       btc: No
+      othercrypto: No
+      
+    - name: Transparent Labs
+      url: https://www.transparentlabs.com/
+      img: transparentlabs.png
+      facebook: transparentlabs
+      bch: Yes
+      btc: Yes
       othercrypto: No

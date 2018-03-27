@@ -7,13 +7,15 @@ First off, **thanks for your interest in contributing!** Your help will foster g
 
 ### _A quick note..._
 
-The site maintainers do not endorse nor confirm the legitimacy of any of the merchants linked to on this site. While we try our best to verify the merchant information submitted, it's possible that we may miss something, or a service may change/information becomes outdated. If you notice anything, please [raise a new issue](https://github.com/acceptbitcoincash/acceptbitcoincash/issues/new).
+The site maintainers do not endorse nor confirm the legitimacy of any of the listings linked to on this site. While we try our best to verify the information submitted, it's possible that we may miss something, or a service may change/information becomes outdated. If you notice anything, please [raise a new issue](https://github.com/acceptbitcoincash/acceptbitcoincash/issues/new).
 
 Adding a site is easy. Read below for the basics, and if you're more technically-inclined, detailed instructions are further down this document. Regardless, the only thing **you need** is **a Github account**.
 
 ## Submitting a site _the easy way_
 
-[Open a new issue](https://github.com/acceptbitcoincash/acceptbitcoincash/issues/new) and fill out the template that's provided as a placeholder. Try to fill out all of the fields as accurately as possible. We are looking for the following:
+We offer two easy ways to submit a new site to be listed.
+1. Use the [Merchant/Website Addition Request](https://AcceptBitcoin.Cash/add) form to the best of your ability.
+2. [Open a new issue](https://github.com/acceptbitcoincash/acceptbitcoincash/issues/new) and fill out the template that's provided as a placeholder. Try to fill out all of the fields as accurately as possible. We are looking for the following:
 
 - `name` -- Name of merchant/site
 - `url` -- URL of merchant/site (http*s* preferred)
@@ -121,7 +123,7 @@ id, using the `.yml` extension.
 
 ## New Sites
 
-If you are adding multiple sites to the AcceptBitcoinCash list, please create a new
+If you are adding multiple sites to the [AcceptBitcoin.Cash](https://AcceptBitcoin.Cash) list, please create a new
 git branch for each website, and submit a separate pull request for each branch.
 More information regarding how to create new git branches can be found on
 [GitHub's Help Page](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/)
@@ -142,7 +144,7 @@ websites:
     othercrypto: no
 ```
 
-The fields `name:`, `url:`, `img:`, `bch:` are required for all entries.
+The fields `name:`, `url:`, `bch:` are required for all entries.
 If the site supports Bitcoin (Legacy) or other cryptocurrencies, `btc` and `othercrypto` should be
 entered as well.
 

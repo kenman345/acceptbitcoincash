@@ -26,6 +26,37 @@ websites:
       twitter: Blizzard_Ent
       facebook: Blizzard
 
+    - name: Buy Pi
+      url: https://buypi.net/
+      img: buypi.png
+      twitter: buypinet
+      email_address: mark@buypi.net
+      region: na
+      country: US
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+
+    - name: CJS CD Keys
+      url: https://www.cjs-cdkeys.com
+      img: CJSCDKEYS.png
+      twitter: CJS_CD_Keys
+      facebook: CJSCDKEYS
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
+    - name: Crypto Kid Games
+      url: https://www.cryptokidgames.com
+      img: cryptokidgames.png
+      twitter: billdlabs
+      email_address: bill@billdlabs.com
+      region: na
+      country: US
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+
     - name: Curse
       url: https://www.curse.com/
       img: curse.png
@@ -67,6 +98,15 @@ websites:
       bch: No
       twitter: FaceIt
       facebook: FaceItCommunity
+
+    - name: Fishmonger
+      url: https://wowfishmonger.weebly.com/
+      img: Fishmonger.png
+      twitter: WoW_Fishmonger
+      email_address: wowfishmonger@yahoo.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: G2A
       url: https://www.g2a.com/
@@ -116,6 +156,7 @@ websites:
       url: https://www.humblebundle.com/
       img: humble.png
       bch: No
+      btc: Yes
       twitter: humble
       facebook: HumbleBundle
 
@@ -153,6 +194,17 @@ websites:
       btc: Yes
       othercrypto: Yes
 
+    - name: MMOGA
+      url: https://www.mmoga.com/
+      img: mmoga.png
+      twitter: mmoga_ltd
+      facebook: MMOGA
+      region: EU
+      bch: yes
+      btc: yes
+      othercrypto: yes
+      doc: https://www.mmoga.com/payment_methods/Bitcoin-and-Altcoins.html
+
     - name: Mojang
       url: https://mojang.com/
       img: mojang.png
@@ -173,12 +225,42 @@ websites:
       twitter: NVIDIA
       facebook: NVIDIA
 
+    - name: OMGSERV
+      url: https://www.omgserv.com
+      img: OMGSERV.png
+      twitter: OMGSERV_COM
+      facebook: OMGSERV
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+
     - name: Origin
       url: https://www.origin.com/
       img: origin.png
       bch: No
       twitter: OriginInsider
       facebook: OriginInsider
+
+    - name: Pinoy Game Store
+      url: http://www.pinoygamestore.com
+      img: pinoygamestore.png
+      twitter: pinoygamestore
+      facebook: pinoygamestore
+      email_address: pinoygamestore@gmail.com
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: http://www.pinoygamestore.com/2018/02/pinoy-game-store-accepts-bitcoin-cash.html
+
+    - name: Play-Asia.com
+      url: https://www.play-asia.com/
+      img: playasia.png
+      twitter: playasia
+      facebook: playasia
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+      doc: https://twitter.com/playasia/status/972079670815612930
 
     - name: Playstation Network
       url: https://www.playstation.com/
@@ -280,10 +362,12 @@ websites:
       twitter: wildstar
       facebook: WildstarOnline
 
-    - name: Xbox Live
+    - name: Xbox Live (with Microsoft Account)
       url: https://www.xbox.com/live
       img: xbox.png
-      bch: No
+      bch: Yes
+      btc: Yes
+      othercrypto: No
       twitter: XboxSupport
       facebook: Xbox
 

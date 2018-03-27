@@ -83,15 +83,15 @@ websites:
       img: cloud9hosting.png
       twitter: cloud9hosting
       facebook: cloud9hosting
-      bch: No
+      bch: Yes
       btc: Yes
-      othercrypto: No
+      othercrypto: Yes
 
     - name: CloudAtCost
       url: http://cloudatcost.com
       img: cloudatcost.png
       twitter: cloudatcost
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: Yes
 
@@ -104,19 +104,21 @@ websites:
       facebook: cloudways
       twitter: cloudways
 
+    - name: CoinHost
+      url: https://www.coinhost.io/
+      img: coinhost.png
+      twitter: hostcoin
+      facebook: coinhost
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: cyon
       url: https://www.cyon.ch
       img: cyon.png
       bch: No
       twitter: cyon
       facebook: cyonhosting
-
-    - name: DasVPS
-      url: https://dasvps.com
-      img: dasvps.png
-      bch: Yes
-      btc: Yes
-      othercrypto: Yes
 
     - name: Dreamhost
       url: https://dreamhost.com
@@ -188,18 +190,78 @@ websites:
       bch: No
       twitter: globat
 
+    - name: Hawk Host
+      url: https://www.hawkhost.com
+      img: hawkhost.png
+      twitter: hawkhost
+      facebook: hawkhost
+      email_address: cody@hawkhost.com
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+      doc: https://twitter.com/HawkHost/status/971888229820616704
+      exceptions:
+        text: "Select 'Bitcoin' as a payment method and you can pay with Bitcoin Cash or Bitcoin Legacy"
+
     - name: Hetzner Online
       url: https://www.hetzner.de/
       facebook: hetzner.de
       img: hetzner.png
       bch: No
 
-    - name: HostHatch
+    - name: Host Hatch
       url: https://hosthatch.com/
       img: hosthatch.png
-      bch: No
+      bch: yes
+      btc: yes
+      othercrypto: no
       twitter: HostHatch
       facebook: HostHatch
+      exceptions:
+        text: "Select 'Bitcoin' as a payment method and you can pay with Bitcoin Cash or Bitcoin Legacy"
+
+    - name: Host Havoc
+      url: https://hosthavoc.com/
+      img: hosthavoc.png
+      twitter: hosthavoc
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
+    - name: Hoster Box
+      url: https://hosterbox.com/
+      img: Hosterbox.png
+      twitter: Hosterbox_com
+      facebook: Hosterboxcom
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
+    - name: Hostinger
+      url: https://www.hostinger.com/
+      img: Hostinger.png
+      twitter: HostingerCOM
+      facebook: Hostinger
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
+    - name: Hostlic
+      url: https://www.hostlic.com
+      img: hostlic.png
+      facebook: hostlic
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
+    - name: HostWinds
+      url: https://www.hostwinds.com
+      img: HostWinds.png
+      twitter: HostWinds
+      facebook: HostWinds
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: ICUK
       url: https://www.icuk.net/
@@ -238,6 +300,14 @@ websites:
       facebook: inmotionhosting
       img: inmotion.png
       bch: No
+
+    - name: Instant cPanel Hosting
+      url: http://instantcpanelhosting.com/
+      img: ICPH.png
+      twitter: ICPHTweet
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Internoc24 LLC
       url: https://www.internoc24.host/
@@ -283,6 +353,14 @@ websites:
       img: lcn.png
       bch: No
 
+    - name: Liberty VPS
+      url: https://libertyvps.net/
+      img: libertyvps.png
+      twitter: libertyvps
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+
     - name: Liquid Web
       url: https://www.liquidweb.com
       img: liquidweb.png
@@ -327,10 +405,19 @@ websites:
       bch: No
       lang: de
 
+    - name: Monster Megs
+      url: https://www.monstermegs.com/
+      img: MonsterMegs.png
+      twitter: MonsterMegsHost
+      facebook: MonsterMegs
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: NearlyFreeSpeech.NET
       url: https://www.nearlyfreespeech.net/
       img: nfsn.png
-      bch: No
+      bch: Yes
       btc: Yes
       doc: https://www.nearlyfreespeech.net/about/faq#Payment
 
@@ -353,6 +440,15 @@ websites:
       othercrypto: yes
       doc: https://twitter.com/Nexwave/status/948650799281917957
 
+    - name: NForce
+      url: https://nforce.com
+      img: NForce.png
+      facebook: NFOrceInternetServices
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+      doc: https://nforce.com/news/item/67/Bitcoin-Cash-payments
+
     - name: NiceVPS.net
       url: https://nicevps.net
       img: nicevps.png
@@ -360,7 +456,7 @@ websites:
       btc: yes
       othercrypto: yes
       doc: https://nicevps.net/index/payments
-      
+
     - name: Nitrado
       url: https://server.nitrado.net/
       img: nitrado.png
@@ -403,6 +499,14 @@ websites:
       img: ovh.png
       bch: No
       doc: https://www.ovh.com/support/termsofservice/payment.xml
+
+    - name: PiVPS Services
+      url: https://pivps.com/
+      img: pivps.png
+      facebook: pivpscom
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: PlanetHoster
       url: https://planethoster.net
@@ -468,6 +572,25 @@ websites:
       bch: Yes
       doc: https://sporestack.com/news#2017-12-12
 
+    - name: Super Byte Hosting
+      url: https://www.superbytehosting.com/
+      img: superbytehosting.png
+      twitter: superbytehostin
+      facebook: superbytehosting
+      region: as
+      country: IN
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      
+    - name: TAB.DIGITAL
+      url: http://tab.digital
+      img: tabdigital.png
+      twitter: tab_digital
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: THC Servers
       url: https://www.thcservers.com/
       twitter: THCServers
@@ -483,7 +606,7 @@ websites:
       twitter: time4vps
       facebook: time4vps
       img: time4vps.png
-      bch: No
+      bch: Yes
       btc: Yes
 
     - name: TransIP
@@ -516,6 +639,24 @@ websites:
       img: upcloud.png
       bch: No
 
+    - name: Usenet Bucket
+      url: https://www.usenetbucket.com/en/
+      img: UsenetBucket.png
+      twitter: UsenetBucket
+      region: eu
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+
+    - name: UTop
+      url: http://utop.us/
+      img: utop.png
+      twitter: utopus2
+      facebook: www.uTop.us
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: Versio
       url: https://www.versio.nl
       twitter: versio
@@ -537,17 +678,20 @@ websites:
       url: https://www.vpsserver.com/
       twitter: vpsservercom
       img: vpsserver.png
-      bch: No
+      bch: Yes
       btc: Yes
+      othercrypto: No
 
     - name: Vultr
       url: https://www.vultr.com/
       twitter: vultr
       facebook: vultr
       img: vultr.png
-      bch: No
+      bch: Yes
       btc: Yes
       othercrypto: No
+      exceptions:
+        text: "Crypto-Payments only for existing customers/non-new accounts"
 
     - name: WebFaction
       url: https://www.webfaction.com
@@ -576,9 +720,6 @@ websites:
       bch: Yes
       btc: Yes
       othercrypto: Yes
-      doc:
-      exceptions:
-        text: ""
 
     - name: WP Engine
       url: https://wpengine.com/
@@ -596,3 +737,20 @@ websites:
       bch: Yes
       btc: Yes
       othercrypto: Yes
+
+    - name: Zion VPS
+      url: https://zionvps.com/
+      img: zionvpsllp.png
+      facebook: zionvpsllp
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
+    - name: Zomex
+      url: https://www.zomex.com
+      img: zomex.png
+      twitter: z0mex
+      facebook: zomex
+      bch: Yes
+      btc: Yes
+      othercrypto: No

@@ -21,6 +21,12 @@ $(document).ready(function () {
     $('#show-bch-only').prop('checked', false);
   }
 
+  // Check if URL parameter exists to skip to content (due to window.location.hash being used for categories)
+  if (getUrlParameter('skipToListings')) {
+    var body = $("html, body");
+    body.stop().animate({scrollTop: $('#maingrid').offset().top - 128}, 500, 'swing');
+  }
+
   // Clear the BCH-only view
   $('.clear-bch-only').click(function () {
     $('#show-bch-only').prop('checked', false);
@@ -58,14 +64,7 @@ $(document).ready(function () {
   // Scroll to the main content grid
   $('#skip-to-content').on('click', function () {
     var body = $("html, body");
-    body.stop().animate({scrollTop: $('#maingrid').offset().top - 64}, 500, 'swing');
-  });
-
-  // Scroll to the search field and focus it via floating action button and filter bar link
-  $('.fab button:nth-child(2), #top-btn-search').on('click', function () {
-    var body = $("html, body");
-    body.stop().animate({scrollTop: $('#search-wrapper').offset().top}, 500, 'swing');
-    $('#search-wrapper input').focus();
+    body.stop().animate({scrollTop: $('#maingrid').offset().top - 128}, 500, 'swing');
   });
 
   // Clear and collapse all open categories
@@ -74,8 +73,8 @@ $(document).ready(function () {
     if (isSearching == false) {
       $('.website-table').slideUp();
       var body = $("html, body");
-      body.stop().animate({scrollTop: $('.category h5 i.active-icon').offset().top - 120}, 1000, 'swing');
-      $('.category h5 i').removeClass('active-icon');
+      body.stop().animate({scrollTop: $('.category h5.active-icon').offset().top - 120}, 1000, 'swing');
+      $('.category h5').removeClass('active-icon');
       $(this).css('display', 'none');
       document.location.hash = '';
     } else {
@@ -176,6 +175,35 @@ function getLatestRelease() {
   });
 }
 
+
+// Set a cookie to store prefs
+function createCookie(name,value,days) {
+  var expires = "";
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+// Get a cookie to read prefs
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+// Clean up the cookie crumbs
+function eraseCookie(name) {
+  createCookie(name,"",-1);
+}
+
 /**
  * Create an event that is called 500ms after the browser
  * window is re-sized and has finished being re-sized.
@@ -197,7 +225,7 @@ var jets = new Jets({
     document.location.hash = '';
     $('#no-results').css('display', 'none');
     $('#maingrid').css('visibility', 'visible');
-    $('.category h5 i').removeClass('active-icon');
+    $('.category h5').removeClass('active-icon');
     // Two separate table layouts are used for desktop/mobile
     var platform = ($(window).width() > 768) ? 'desktop' : 'mobile';
     var content = $('.' + platform + '-table .bch-merchant-content');
@@ -237,7 +265,7 @@ var jets = new Jets({
       isSearching = true;
 
       //$('html, body').stop().animate({scrollTop: $('#maingrid').offset().top - 120}, 500, 'swing');
-      $('html, body').scrollTop($('#maingrid').offset().top - 64);
+      $('html, body').scrollTop($('#maingrid').offset().top - 128);
     }
   },
   addImportant: true,
@@ -295,7 +323,7 @@ function BCHfilter() {
  * @returns {*|jQuery} A true or false value, whether the category is open
  */
 function isOpen(category) {
-  return $('#' + category + ' h5 i').hasClass('active-icon');
+  return $('#' + category + ' h5').hasClass('active-icon');
 }
 
 /**
@@ -305,7 +333,7 @@ function isOpen(category) {
  */
 function openCategory(category) {
   // Close all active categories
-  $('.category h5 i').removeClass('active-icon');
+  $('.category h5').removeClass('active-icon');
   $('.website-table').css('display', 'none');
   $('.fab button:nth-child(3)').css('display', 'inline-block');
   BCHfilter();
@@ -313,8 +341,9 @@ function openCategory(category) {
   // Place the category being viewed in the URL bar
   window.location.hash = category;
 
+  var cat = $('#' + category + ' h5');
   var icon = $('#' + category + ' h5 i');
-  icon.addClass('active-icon');
+  cat.addClass('active-icon');
   if ($(window).width() > 768) {
     $('#' + category + '-desktoptable').slideDown('slow');
 
@@ -339,7 +368,7 @@ function openCategory(category) {
  */
 function closeCategory(category) {
   $('.' + category + '-table').slideUp();
-  $('#' + category + ' h5 i').removeClass('active-icon');
+  $('#' + category + ' h5').removeClass('active-icon');
   history.pushState('', document.title, window.location.pathname);
   $('.fab button:nth-child(3)').css('display', 'none');
 }

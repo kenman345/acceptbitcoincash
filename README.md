@@ -5,6 +5,7 @@ A community-curated list of sites/merchants that accept [**Bitcoin Cash**](https
 
 Add a site that's not listed, or provide any updates/corrections by submitting a pull request, or [creating an issue](https://github.com/acceptbitcoincash/acceptbitcoincash/issues). Learn how to do either by reading [our contribution guidelines](CONTRIBUTING.md).
 
+[![Build Status](https://travis-ci.org/acceptbitcoincash/acceptbitcoincash.svg?branch=master)](https://travis-ci.org/acceptbitcoincash/acceptbitcoincash)
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/acceptbitcoincash/acceptbitcoincash.svg)](https://github.com/acceptbitcoincash/acceptbitcoincash/pulls/)
 [![GitHub issues-closed](https://img.shields.io/github/issues-closed/acceptbitcoincash/acceptbitcoincash.svg)](https://github.com/acceptbitcoincash/acceptbitcoincash/issues?q=is%3Aissue+is%3Aclosed)
 [![Twitter](https://img.shields.io/badge/Twitter-@useBitcoinCash-blue.svg)](https://twitter.com/useBitcoinCash)
@@ -16,7 +17,7 @@ The goal is to build a website ([https://acceptBitcoin.cash](https://acceptBitco
 
 Our hope is to connect consumers and merchants, while spreading awareness and promoting global adoption of [Bitcoin Cash](https://www.bitcoincash.org).
 
-The site maintainers do not endorse nor confirm the legitimacy of any of the merchants linked to on this site. This is an open source project which accepts submissions from the general community. While we try our best to verify the merchant information submitted, it's possible that we may miss something.
+The site maintainers do not endorse nor confirm the legitimacy of any of the listings linked to on this site. This is an open source project which accepts submissions from the general community. While we try our best to verify the information submitted, it's possible that we may miss something.
 
 ## Contributing
 
@@ -56,7 +57,7 @@ If you are doing development, and want to launch a jekyll server which can track
 
 ```
 cd ~/acceptbitcoincash
-docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll \
+docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll:z \
   -it -p 127.0.0.1:4000:4000 jekyll/jekyll:latest jekyll s
 ```
 
