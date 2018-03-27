@@ -31,6 +31,10 @@ jobs:
         
     - <<: *test-baseline
       script:
+        ls vendor/ruby
+        
+    - <<: *test-baseline
+      script:
         bundle exec rake external
       if: type IN (pull_request, cron) OR (type = push AND branch = master)
     
