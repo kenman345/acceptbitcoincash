@@ -1,4 +1,4 @@
-sudo: true
+sudo: false
 dist: trusty
 rvm: 2.4.0
 cache:
@@ -35,10 +35,9 @@ jobs:
         bundle exec rake verify
     
     - stage: Run build
+      sudo: true
       env: 
         NEXT_BUILD_TAG=latest
-      before_install:
-        pip install --user pathlib
       script:
       - if [ "$TRAVIS_TAG" != "" ]; then 
           NEXT_BUILD_TAG=`date +"%m-%d-%Y"`;
