@@ -28,7 +28,7 @@ jobs:
     - <<: *test-baseline
       script:
         bundle exec rake external
-      if: type IN (pull_request, cron)
+      if: type IN (pull_request, cron) OR (type = push AND branch = master)
     
     - stage: imgbot
       script:
@@ -66,7 +66,7 @@ jobs:
     - stage: Test
       script:
         bundle exec rake external
-      if: type IN (pull_request, cron)
+      if: type IN (pull_request, cron) OR (type = push AND branch = master)
 notifications:
   webhooks: https://www.travisbuddy.com/
   slack:
