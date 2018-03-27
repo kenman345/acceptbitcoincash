@@ -46,7 +46,7 @@ jobs:
       - echo ".git" > .dockerignore
       - bundle exec rake docker:build
       - if [ "$NEXT_BUILD_TAG" != "latest" ]; then
-          docker tag acceptbitcoincash/acceptbitcoincash acceptbitcoincash/acceptbitcoincash:"$NEXT_BUILD_TAG"; 
+          docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"; 
         fi
       deploy:
       - provider: script
