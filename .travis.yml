@@ -4,7 +4,6 @@ cache:
   bundler: true
   directories:
   - vendor/bundle
-  - vendor/ruby
   - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
 addons:
   apt:
@@ -12,7 +11,6 @@ addons:
     - libcurl4-openssl-dev
     - ca-certificates
 stages:
-  - name: Precache
   - name: Test
     if: sender != svenfuchs AND sender != imgbot[bot]
   - name: imgbot
@@ -21,9 +19,6 @@ stages:
     if: type = push AND (branch = master OR tag IS present)
 jobs:
   include:
-    - stage: Precache
-      script: true
-      
     - &test-baseline
       stage: Test
       script:
@@ -31,7 +26,7 @@ jobs:
         
     - <<: *test-baseline
       script:
-        ls vendor/ruby
+        ls tmp
         
     - <<: *test-baseline
       script:
