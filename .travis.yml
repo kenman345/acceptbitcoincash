@@ -13,7 +13,7 @@ addons:
     - ca-certificates
 stages:
   - name: Test
-    if: sender NOT IN (svenfuchs, imgbot[bot])
+    if: sender != svenfuchs AND sender != imgbot[bot]
   - name: imgbot
     if: sender IN (svenfuchs, imgbot[bot])
   - name: Run build
