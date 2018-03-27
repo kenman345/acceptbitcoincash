@@ -1,4 +1,3 @@
-sudo: false
 dist: trusty
 rvm: 2.4.0
 cache:
@@ -22,7 +21,6 @@ jobs:
   include:
     - &test-baseline
       stage: Test
-      dist: precise
       script:
         bundle exec rake
       
