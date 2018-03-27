@@ -22,6 +22,7 @@ jobs:
   include:
     - &test-baseline
       stage: Test
+      dist: precise
       script:
         bundle exec rake
       
