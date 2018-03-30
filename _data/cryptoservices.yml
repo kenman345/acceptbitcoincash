@@ -227,6 +227,7 @@ websites:
 
     - name: cryptohearsay
       url: https://www.cryptohearsay.com/
+      img: cryptohearsay.png
       bch: Yes
       btc: Yes
       othercrypto: Yes
@@ -316,6 +317,15 @@ websites:
       btc: Yes
       othercrypto: Yes
       doc: https://www.keys4coins.com/bitcoin-cash-accepted-here/
+      
+    - name: Lamassu
+      url: https://lamassu.is/
+      img: lamassubtc.png
+      twitter: LamassuBTC
+      facebook: lamassubtc
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Living Room of Satoshi
       url: https://www.livingroomofsatoshi.com/
@@ -326,7 +336,10 @@ websites:
 
     - name: LocalBitcoinCash
       url: https://localbitcoincash.org
+      img: localbitcoincash.png
       bch: Yes
+      btc: No
+      othercrypto: Yes
 
     - name: LocalBitcoins
       url: https://localbitcoins.com/
