@@ -548,7 +548,25 @@ websites:
       img: ramnode.png
       bch: No
       btc: Yes
+      
+    - name: RouterHosting
+      url: https://www.routerhosting.com
+      img: routerhosting.png
+      twitter: routerhosting
+      facebook: RouterHosting
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
+    - name: Seedboxes.cc
+      url: https://www.seedboxes.cc
+      img: Seedboxes.png
+      twitter: seedboxescc
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      doc: https://blog.seedboxes.cc/post/168895178115/extending-cryptocurrency-support
+      
     - name: Site5
       url: https://www.site5.com/
       twitter: site5
