@@ -26,6 +26,15 @@ websites:
       twitter: anoninevpn
       facebook: Anonine
 
+    - name: AstrillVPN
+      url: https://www.astrill.com
+      img: astrill.png
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+      twitter: astrill
+      facebook: astrillvpn
+
     - name: Blur
       url: https://www.abine.com/
       img: blur.png
@@ -180,6 +189,13 @@ websites:
       bch: No
       twitter: opendns
       facebook: OpenDNS
+      
+    - name: oVPN Anonymous Services
+      url: https://vcp.ovpn.to
+      img: oVPNAnon.png
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
 
     - name: Perfect Privacy VPN
       url: https://www.perfect-privacy.com/

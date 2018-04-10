@@ -5,6 +5,24 @@ websites:
       bch: Yes
       btc: No
       othercrypto: No
+
+    - name: Electron Cash
+      url: https://electroncash.org/
+      img: electroncash.png
+      bch: Yes
+      btc: No
+      doc: https://electroncash.org/#donate
+      
+    - name: Emuparadise
+      url: https://www.emuparadise.me
+      img: emuparadise.png
+      twitter: emuparadise
+      facebook: emuparadise
+      email_address: info@emuparadise.org
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+      doc: https://www.emuparadise.me/donatebtc.php
       
     - name: Flowee the Hub
       url: http://www.flowee.org/
@@ -21,7 +39,17 @@ websites:
       bch: Yes
       btc: Yes
       twitter: FrostWire
-      
+
+    - name: GNOME
+      url: https://www.gnome.org/
+      img: gnome.png
+      twitter: gnome
+      facebook: GNOMEDesktop
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+      doc: https://www.gnome.org/support-gnome/donate/
+
     - name: KDE
       url: https://www.kde.org/
       img: kde.png
@@ -50,6 +78,13 @@ websites:
       btc: Yes
       othercrypto: Yes
       doc: https://pi-hole.net/donate/
+
+    - name: Python Software Foundation
+      url: https://www.python.org/
+      img: pythonfoundation.png
+      bch: No
+      twitter: pypi
+      doc: https://www.python.org/psf/donations/
 
     - name: Riseup Mail
       url: https://riseup.net
