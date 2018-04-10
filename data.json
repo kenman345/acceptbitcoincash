@@ -1,6 +1,7 @@
 ---
----
-{ 
+layout: 'json'
+show_generated_date: true
+--- 
 {%- assign pages = site.data.sections | group_by:"page" | sort:"name" -%}
 {%- assign sortedPages = pages | reverse -%}
 {% for tracked_page in sortedPages %} 
@@ -10,4 +11,3 @@
 		]{% unless forloop.last %},{% endunless %}{% endfor %}
 	}{% unless forloop.last %},{% endunless %}
 {%- endfor -%}
-}
