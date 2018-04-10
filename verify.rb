@@ -23,9 +23,9 @@ def error(msg)
 end
 
 # rubocop:disable AbcSize
-def test_img(img, name, imgs)
+def test_img(img, name, imgs, section)
   # Exception if image file not found
-  raise "#{name} image not found." unless File.exist?(img)
+  raise "#{section}: #{name} image not found." unless File.exist?(img)
   # Remove img from array unless it doesn't exist (double reference case)
   imgs.delete_at(imgs.index(img)) unless imgs.index(img).nil?
 
@@ -59,8 +59,17 @@ def process_section(section, validator)
   errors = validator.validate(data)
 
   errors.each do |e|
+    msg = ''
+    if e.message.include? " is already used at '/websites/"
+      err_split = e.message.split('already used at')[1].split('/')
+      msg = "\nThese listings share the same "\
+            "'#{err_split[3].split('\'')[0]}':"\
+            "\n#{websites.at(err_split[2].to_i).to_yaml}"\
+            "#{websites.at(e.path.split('/')[2].to_i).to_yaml}\n"
+    end
+
     error("#{section_file}:#{websites.at(e.path.split('/')[2].to_i)['name']}"\
-          ": #{e.message}")
+          ": #{e.message}#{msg}")
   end
 
   # Check section alphabetization
@@ -79,7 +88,7 @@ def process_section(section, validator)
 
     next if website['img'].nil?
     test_img("img/#{section['id']}/#{website['img']}", \
-             website['name'], imgs)
+             website['name'], imgs, section_file)
   end
 
   # After removing images associated with entries in test_img, alert
@@ -99,6 +108,20 @@ begin
   # Check sections.yml alphabetization
   error("#{path} is not alphabetized by name") \
     if sections != (sections.sort_by { |section| section['id'].downcase })
+
+  # meta validator
+  metavalidator = Kwalify::MetaValidator.instance
+
+  # validate schema definition
+  parser = Kwalify::Yaml::Parser.new(metavalidator)
+  parser.parse_file(File.join(__dir__, 'websites_schema.yml'))
+  errors = parser.errors()
+  if errors && !errors.empty?
+    errors.each do |e|
+      error(e.message.to_s)
+    end
+  end
+
   schema = YAML.load_file(File.join(__dir__, 'websites_schema.yml'))
   validator = Kwalify::Validator.new(schema)
 

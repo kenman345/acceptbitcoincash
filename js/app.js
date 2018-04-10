@@ -249,14 +249,16 @@ if(document.getElementById('bch-merchant-search') instanceof Object){
 		  $('.category').hide();
 		  table.css('display', 'block');
 		  content.parent().show();
-		  content.each(function () {
+		  var l = content.length;
+		  for(var i = 0; i < l; i++) {
+			var section = content[i];
 			// Hide table when all rows within are hidden by Jets
-			if ($(this).children(':hidden').length === $(this).children().length) {
-			  if (platform == 'mobile') $(this).parent().hide();
-			  else $(this).parent().parent().hide();
+			if ($(section).children(':hidden').length === $(section).children().length) {
+			  if (platform == 'mobile') $(section).parent().hide();
+			  else $(section).parent().parent().hide();
 			}
-		  });
-
+		  }
+		 
 		  if (table.children().length == table.children(':hidden').length) {
 			  $('#no-results').css('display', 'block');
 			  $('#maingrid').css('visibility', 'hidden');
@@ -273,7 +275,8 @@ if(document.getElementById('bch-merchant-search') instanceof Object){
 	  addImportant: true,
 	  // Process searchable elements manually
 	  manualContentHandling: function(tag) {
-		return $(tag).find('.title > a.name').text();
+		var searchItems = $(tag).find('.title > div.keywords').text();
+		return searchItems;
 	  }
 	});
 }

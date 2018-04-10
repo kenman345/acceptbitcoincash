@@ -68,8 +68,9 @@ websites:
       email_address: support@bountysource.com
       img: bountysource.png
       bch: no
-      btc: yes
+      btc: no
       othercrypto: no
+      doc: "disabled for now as per https://github.com/bountysource/core/issues/1162"
 
     - name: Bugsnag
       url: https://bugsnag.com
@@ -304,12 +305,6 @@ websites:
       bch: No
       twitter: plivo
       facebook: Plivo
-
-    - name: PyPI
-      url: https://pypi.python.org/
-      img: pypi.png
-      bch: No
-      twitter: pypi
 
     - name: PythonAnywhere
       url: https://www.pythonanywhere.com
