@@ -57,9 +57,9 @@ jobs:
       - provider: pages
         skip-cleanup: true
         github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-        fqdn: kenman345.github.io/acceptbitcoincash
+        fqdn: kenman345.github.io
         keep-history: true
-        repo: kenman345/acceptbitcoincash
+        repo: kenman345/kenman345.github.io
         target_branch: gh-pages
   allow_failures:
     - stage: Test
