@@ -38,11 +38,6 @@ $(document).ready(function () {
     openCategory(window.location.hash.substring(1));
   }
 
-  // Some frilly animations on click of the main Bitcoin Cash logo
-  $('#coin-toggle').click(function (){
-    coinEffect();
-  });
-
   // Stick the BCH-only filter to the top on scroll
   $('.bch-only').fixTo('html', {
     useNativeSticky: false
@@ -143,9 +138,6 @@ $(document).ready(function () {
     label: 'percent',
     showActivity: false
   });
-
-  // Retrieve latest production version
-  //getLatestRelease();
 });
 
 /**
@@ -168,12 +160,6 @@ function coinEffect() {
   setTimeout(
     function(){ rightSideCoin.addClass('top-side-right-side-force') }
   , 1);
-}
-
-function getLatestRelease() {
-  var githubfeed = $.getJSON("https://api.github.com/repos/acceptbitcoincash/acceptbitcoincash/releases/latest", function(data){
-    $("span.version").html('Current Release: <a href="https://github.com/acceptbitcoincash/acceptbitcoincash/releases/latest" target="_blank" data-tooltip="Read the ' + data.tag_name + ' release notes" data-position="top center" data-inverted=""><i class="tag icon"></i><b>' + data.tag_name + '</b></a> &nbsp;&bull;&nbsp; <a href="https://github.com/acceptbitcoincash/acceptbitcoincash/compare/' + data.tag_name + '...master" target="_blank" data-tooltip="View a list of approved commits that have not yet been deployed to this site" data-position="top center" data-inverted="">Upcoming changes <i class="sign in icon"></i></a>');
-  });
 }
 
 
