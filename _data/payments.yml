@@ -4,6 +4,16 @@ websites:
       twitter: AmazonPayments
       img: amazon.png
       bch: No
+      
+    - name: Atlantis
+      url: http://atlantislabs.co/
+      img: AtlantisLabs.png
+      twitter: AtlantisLabs
+      email_address: sumanth@atlantislabs.co
+      bch: Yes
+      btc: No
+      othercrypto: No
+      doc: https://medium.com/atlantislabs/money-is-now-an-api-7164514d4383
 
     - name: Bitcoin payment processing api
       url: https://btcapi.org/
@@ -43,14 +53,19 @@ websites:
       twitter: Braintree
       url: https://www.braintreepayments.com/
       bch: No
-      btc: Yes
+      btc: No
+      doc: https://www.braintreepayments.com/blog/coinbase-private-beta/
+      exceptions:
+        text: "Update (6/2017): We chose to deprecate Braintree's Coinbase integration due to resources required for the maintenance of the integration outstripping our ability to support it."
 
     - name: Buycraft
       url: http://buycraft.net
       img: buycraft.png
       twitter: Buycraft
       bch: No
-      btc: Yes
+      btc: No
+      exceptions:
+        text: "Buycraft used to accept BTC, but as of 2018-04-26 stopped accepting it"
 
     - name: Cleverbridge
       url: https://www.cleverbridge.com
@@ -126,9 +141,17 @@ websites:
       facebook: KlarnaUSA
       bch: No
 
+    - name: MiniPOS
+      url: https://www.minipos.cash/
+      img: minipos.png
+      twitter: miniposcash
+      bch: Yes
+      btc: Yes
+      othercrypto: Yes
+
     - name: NETELLER
       img: neteller.png
-      url: https://www.neteller.com/en/
+      url: https://www.neteller.com/en_us
       twitter: neteller
       facebook: neteller
       bch: No
@@ -249,3 +272,12 @@ websites:
       img: yandexmoney.png
       twitter: yandex
       bch: No
+
+    - name: ZuPago API
+      url: https://zupago.pe/api-docs
+      twitter: zupago
+      facebook: zupago
+      img: zupago.png
+      bch: yes
+      btc: yes
+      othercrypto: no

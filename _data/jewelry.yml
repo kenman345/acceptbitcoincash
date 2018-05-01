@@ -99,9 +99,11 @@ websites:
     img: jmbullion.png
     twitter: JMBullion
     facebook: JMBullion
-    bch: No
+    bch: Yes
     btc: Yes
     othercrypto: No
+    exceptions:
+      text: "Bitcoin / Bitcoin Cash is approved for orders between $100.00 and $250,000.00. All BTC / BCH Orders Receive a 3% Discount Relative to Credit Card/PayPal Pricing"
 
   - name: Kobelli Jewelry
     url: https://www.kobelli.com/
@@ -120,7 +122,16 @@ websites:
     bch: Yes
     btc: Yes
     othercrypto: Yes
-    
+
+  - name: Money Metals Exchange
+    url: https://www.moneymetals.com/
+    img: moneymetals.png
+    twitter: MoneyMetals
+    facebook: MoneyMetals
+    bch: Yes
+    btc: Yes
+    othercrypto: Yes
+
   - name: PenceBit
     url: http://pencebit.com/
     img: pencebit.png
@@ -137,6 +148,15 @@ websites:
     bch: Yes
     btc: Yes
     othercrypto: No
+    
+  - name: ShinyBars
+    url: https://www.shinybars.com
+    img: shinybars.png
+    twitter: shinybarsdotcom
+    facebook: shinybars
+    bch: No
+    btc: Yes
+    othercrypto: Yes
 
   - name: SilverGoldBull.com
     url: https://silvergoldbull.com/
