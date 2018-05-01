@@ -12,26 +12,26 @@
 <script src="/js/main.js"></script>
 
 {% if page.id == "adult-listings" %}
-<!-- Adult section warning modal -->
-  <script>
-    $(document).ready(function () {
+	<!-- Adult section warning modal -->
+	<script>
+		$(document).ready(function () {
+		  $('#adult-warning-checkbox').click(function(){
+			if($(this).prop('checked')) {
+			  createCookie('hideAdultWarning')
+			} else {
+			  eraseCookie('hideAdultWarning')
+			}
+		  });
 
-      $('#adult-warning-checkbox').click(function(){
-        if($(this).prop('checked')) {
-          createCookie('hideAdultWarning')
-        } else {
-          eraseCookie('hideAdultWarning')
-        }
-      });
+		  if (!readCookie('hideAdultWarning')) {
+			$('.ui.modal.adult-warning')
+			  .modal('setting','closable', false)
+			  .modal('show');
+		  }
 
-      if (!readCookie('hideAdultWarning')) {
-        $('.ui.modal.adult-warning')
-          .modal('setting','closable', false)
-          .modal('show');
-      }
-
-    });
-  </script>
+		});
+		{% include js/cookie.js %}
+	</script>
 {% endif %}
 
 {% if site.google_analytics and site.GH_ENV != 'gh_pages' %}
