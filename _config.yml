@@ -55,7 +55,7 @@ exclude:
     - vendor
     - kube
     - nginx.conf
-    - scripts
+    - scripts/
     - Dockerfile
     - sections_schema.yml
     - websites_schema.yml
