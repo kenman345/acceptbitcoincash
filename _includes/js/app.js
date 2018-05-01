@@ -15,11 +15,25 @@ $(document).ready(function () {
       }
     }
   };
+  {% if include.search == "true" %}
+  // Clear the BCH-only view
+  $('.clear-bch-only').click(function () {
+    $('#show-bch-only').prop('checked', false);
+    BCHfilter();
+  });
 
+  // Stick the BCH-only filter to the top on scroll
+  $('.bch-only').fixTo('html', {
+    useNativeSticky: false
+  });
+  
   // Check if URL parameter exists to filter by BCH-only
   if (getUrlParameter('filter') == 'all') {
     $('#show-bch-only').prop('checked', false);
   }
+
+  {% endif %}
+
 
   // Check if URL parameter exists to skip to content (due to window.location.hash being used for categories)
   if (getUrlParameter('skipToListings')) {
@@ -27,21 +41,10 @@ $(document).ready(function () {
     body.stop().animate({scrollTop: $('#maingrid').offset().top - 128}, 500, 'swing');
   }
 
-  // Clear the BCH-only view
-  $('.clear-bch-only').click(function () {
-    $('#show-bch-only').prop('checked', false);
-    BCHfilter();
-  });
-
   // Check if URL references specific category
   if (window.location.hash && window.location.hash.indexOf('#') > -1) {
     openCategory(window.location.hash.substring(1));
   }
-
-  // Stick the BCH-only filter to the top on scroll
-  $('.bch-only').fixTo('html', {
-    useNativeSticky: false
-  });
 
   // Scroll to the top via floating action button and filter bar link, then pop some flair
   $('.fab button:nth-child(1), #top-btn-top').on('click', function () {
@@ -56,6 +59,7 @@ $(document).ready(function () {
     });
   });
 
+  {% if include.search == "true" %}
   // Scroll to the main content grid
   $('#skip-to-content').on('click', function () {
     var body = $("html, body");
@@ -93,11 +97,11 @@ $(document).ready(function () {
     $('#search-wrapper input#bch-merchant-search').focus();
     $('head style').html("");
   });
-
   $('.submit-new').on('click', function () {
     $('.ui.long.modal.google-form').modal('show');
     return false;
   });
+  {% endif %}
 
   $('#ama-merchant').on('click', function () {
     $('.ui.modal.ama-merchant').modal('show');
@@ -124,14 +128,17 @@ $(document).ready(function () {
     $('.ui.modal.disclaimer').modal('show');
   });
 
+  {% if include.listing == "true" %}
   // Unveil images 50px before they appear
   $('img').unveil(50);
-
+  
   // Show exception warnings upon hover
   $('span.popup.exception').popup({
     hoverable: true
   });
   $('a.popup.exception').popup();
+  
+  {% endif %}
 
   // Display progress counter for sites accepting BCH out of total sites listed
   $('.ui.bch-progress').progress({
@@ -175,6 +182,7 @@ $(window).resize(function () {
   }, 500);
 });
 
+{% if include.search == "true" %}
 var isSearching = false;
 if(document.getElementById('bch-merchant-search') instanceof Object){
 	var jets = new Jets({
@@ -335,3 +343,4 @@ function closeCategory(category) {
   history.pushState('', document.title, window.location.pathname);
   $('.fab button:nth-child(3)').css('display', 'none');
 }
+{% endif %}

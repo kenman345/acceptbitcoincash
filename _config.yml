@@ -41,7 +41,7 @@ defaults:
       has_search: yes
       list_of: "merchants"
       encoded_img_placeholder: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-      img_placeholder: "/img/placeholder.png"
+      img_placeholder: "/img/placeholder.png?v=1"
       
 exclude:
     - CNAME
