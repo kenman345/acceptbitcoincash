@@ -1,6 +1,7 @@
-require 'html-proofer'
+Rake.add_rakelib 'scripts/tasks'
 require 'rubocop/rake_task'
 require 'jekyll'
+require 'safe_yaml/load'
 
 task default: %w[verify rubocop proof]
 task external: %w[verify rubocop proof_external]
@@ -15,41 +16,57 @@ task :build do
 end
 
 task proof: 'build' do
-  HTMLProofer.check_directory(
-    './_site', \
-    assume_extension: true, \
-    check_html: true, \
-    disable_external: true, \
-    url_ignore: ['/add'], \
+  check_site(
+    check_html: true,
+    disable_external: true,
     hydra: { max_concurrency: 50 }
-  ).run
+  )
 end
 
 task proof_external: 'build' do
-  HTMLProofer.check_directory(
-    './_site', \
-    assume_extension: true, \
-    check_html: true, \
-    external_only: false, \
-    url_ignore: ['/add'], \
-    http_status_ignore: [0, 301, 302, 403, 503], \
-    cache: { timeframe: '1w' }, \
+  check_site(
+    external_only: true,
+    http_status_ignore: [0, 301, 302, 403, 503],
     hydra: { max_concurrency: 20 }
-  ).run
+  )
 end
 
 task :verify do
   ruby './verify.rb'
 end
 
+task :clean do
+  rm_rf './_site'
+end
+
 RuboCop::RakeTask.new
 
-namespace :docker do
-  desc 'build docker images'
-  task :build do
-    puts 'Generating static files for nginx'
-    puts `bundle exec jekyll build`
-    puts 'Building acceptbitcoincash docker image'
-    puts `docker build -t kenman345/acceptbitcoincashdocker .`
+# rubocop:disable MethodLength
+def check_site(options = {})
+  require 'html-proofer'
+
+  dir = jekyll_site_dir
+  defaults = {
+    assume_extension: true,
+    check_favicon: true,
+    check_opengraph: true,
+    file_ignore: ["#{dir}/google75bd212ec246ba4f.html"],
+    url_ignore: ['/add', 'https://fonts.gstatic.com/'],
+    cache: { timeframe: '1w' }
+  }
+  HTMLProofer.check_directory(dir, defaults.merge(options)).run
+end
+# rubocop:enable MethodLength
+
+def jekyll_site_dir
+  dir = './_site'
+  if File.exist?('_config.yml')
+    config = SafeYAML.load_file('_config.yml')
+    dir = config['destination'] || dir
   end
+  dir
+end
+
+def base_dir
+  __dir__
 end

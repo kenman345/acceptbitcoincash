@@ -1,11 +1,4 @@
 websites:
-    - name: 888 Bitcoin Cash
-      url: https://888bitcoin.cash/
-      img: 888bcc.png
-      bch: Yes
-      btc: No
-      othercrypto: No
-
     - name: 8Bet Crypto Lottery
       url: https://8bet.io
       img: 8bet.png
@@ -57,6 +50,14 @@ websites:
       btc: Yes
       othercrypto: Yes
       doc: https://calvinayre.com/2018/02/02/bitcoin/bitstarz-starts-accepting-bitcoin-cash/
+      
+    - name: Blockchain Poker
+      url: https://blockchain.poker/#/cash
+      img: BlockchainPoker.png
+      twitter: BlockchainPoker
+      bch: yes
+      btc: yes
+      othercrypto: no
 
     - name: Bodog
       url: https://www.bodog.eu/
@@ -91,6 +92,16 @@ websites:
       bch: No
       btc: Yes
       othercrypto: No
+      
+    - name: Cloudbet.com
+      url: https://www.cloudbet.com/en/
+      img: cloudbet.png
+      twitter: cloudbet
+      facebook: cloudbet
+      bch: Yes
+      btc: Yes
+      othercrypto: No
+      doc: https://www.cloudbet.com/en/bitcoin-cash-promotion
 
     - name: Fairlay
       url: https://fairlay.com
@@ -137,7 +148,7 @@ websites:
       doc: https://mybookie.ag/info/banking/
 
     - name: Nitrogen Sports
-      url: https://nitrogensports.eu/
+      url: https://nitrogensports.eu
       img: nitrogenSports.png
       twitter: NitrogenSports
       facebook: nitrogensports
