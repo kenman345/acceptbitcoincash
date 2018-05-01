@@ -140,12 +140,31 @@ $(document).ready(function () {
   
   {% endif %}
 
+	updateTweetLink($('.tweet-negative-fill'));
+	
+  
   // Display progress counter for sites accepting BCH out of total sites listed
   $('.ui.bch-progress').progress({
     label: 'percent',
     showActivity: false
   });
 });
+
+function replaceLink(elem, replaceText, replaceTemplate) {
+	var social_handle = $(elem).attr('data-handle');
+	var newLink = 'https://twitter.com/share?url=' + replaceTemplate.replace(replaceText, social_handle);
+	$(elem).attr('href', newLink);
+	$(elem).attr('data-tooltip', 'Tweet to @' + social_handle);
+	$(elem).attr('data-position', 'left center');
+	$(elem).attr('data-inverted', '');
+	
+}
+
+function updateTweetLink(elems) {
+	for (i = 0; i < elems.length; i++) {
+		replaceLink(elems[i], 'TWITTERHANDLE', 'Please consider accepting #BitcoinCash for payments @TWITTERHANDLE - it’s \"Peer-to-Peer Electronic Cash\" that is fast, reliable, and secure, with low fees. More @');
+	}
+}
 
 /**
  * Draw a neat animation on the main Bitcoin Cash logo at the top of the page
