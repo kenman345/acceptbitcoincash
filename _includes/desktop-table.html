@@ -63,7 +63,8 @@
 			  <td class="{% if website.btc %}positive{% else %}negative{% endif %} icon">
 				{%- if website.btc -%}
 				<span class="coin-wrap orange-coin-wrap" data-tooltip="Bitcoin (Legacy) accepted at {{ website.name }}" data-position="top center" data-inverted="">
-				  <i class="bitcoin big icon"></i>
+				  <span class="btc-b"></span>
+					<i class="bitcoin big icon"></i>
 				</span>
 				
 				{%- endif -%}
