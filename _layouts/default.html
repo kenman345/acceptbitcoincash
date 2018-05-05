@@ -21,9 +21,26 @@
 		integrity="sha384-vQPhfJdJkfTCHP7ouiqoAojjcDFuU346yP8z/pRpSn0xsWOfkMd+DkNmxns9jy4l" crossorigin="anonymous">
  
   {%- if page.has_search -%}
-	<link rel="stylesheet" href="/assets/css/search-style.css">
+  {% capture scss_code %}
+	
+@import 'base';
+@import 'corner';
+@import 'z-switch';
+
+{% endcapture %}
+<style>
+{{ scss_code | scssify }}
+</style>
   {%- else -%}
-	<link rel="stylesheet" href="/assets/css/style.css">
+    {% capture scss_code %}
+	
+@import 'base';
+@import 'corner';
+
+{% endcapture %}
+<style>
+{{ scss_code | scssify }}
+</style>
   {%- endif -%}
 </head>
 
