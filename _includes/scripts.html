@@ -10,9 +10,23 @@
         crossorigin="anonymous"></script>
 <!-- AB.C JS -->
 {%- if page.has_search -%}
-	<script src="/assets/js/main.js"></script>
+{% capture page_js %}
+{% include js/jquery.unveil.min.js %}
+{% include js/ticker.js %}
+{% include js/fixto.min.js %}
+{% include js/app.js listing="true" search="true" %}
+{% endcapture %}
+
+{{ page_js }}
 {%- else -%}
-	<script src="/assets/js/base.js"></script>
+{% capture page_js %}
+{% include js/jquery.unveil.min.js %}
+{% include js/ticker.js %}
+{% include js/fixto.min.js %}
+{% include js/app.js listing="false" search="false" %}
+{% endcapture %}
+
+{{ page_js }}
 {%- endif -%}
 
 {% if page.page_name == "adult" %}
