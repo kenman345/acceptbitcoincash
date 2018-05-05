@@ -16,8 +16,9 @@
 {% include js/fixto.min.js %}
 {% include js/app.js listing="true" search="true" %}
 {% endcapture %}
-
+<script>
 {{ page_js }}
+</script>
 {%- else -%}
 {% capture page_js %}
 {% include js/jquery.unveil.min.js %}
@@ -26,7 +27,9 @@
 {% include js/app.js listing="false" search="false" %}
 {% endcapture %}
 
+<script>
 {{ page_js }}
+</script>
 {%- endif -%}
 
 {% if page.page_name == "adult" %}
