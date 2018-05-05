@@ -97,10 +97,7 @@ $(document).ready(function () {
     $('#search-wrapper input#bch-merchant-search').focus();
     $('head style').html("");
   });
-  $('.submit-new').on('click', function () {
-    $('.ui.long.modal.google-form').modal('show');
-    return false;
-  });
+  
   {% endif %}
 
   $('#ama-merchant').on('click', function () {
