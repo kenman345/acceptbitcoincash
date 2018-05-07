@@ -23,8 +23,12 @@ $(document).ready(function () {
   });
 
   // Stick the BCH-only filter to the top on scroll
-  $('.bch-only').fixTo('html', {
-    useNativeSticky: false
+  $('.ui.sticky.bch-only').sticky({
+		onStick: function(){
+			$(this).css({
+				height: 'auto'
+			});
+		}
   });
   
   // Check if URL parameter exists to filter by BCH-only
