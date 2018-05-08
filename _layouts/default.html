@@ -31,23 +31,11 @@ layout: compress
 	<link rel="preconnect" href="https://pbs.twimg.com" crossorigin>
 	<link rel="preconnect" href="https://abs.twimg.com" crossorigin>
 	
-	<!-- Google Fonts should not use SRI hashes as the CSS served dynamically changes depending on browser 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700"  crossorigin="anonymous">-->
+	<!-- Google Fonts should not use SRI hashes as the CSS served dynamically changes depending on browser -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700"  crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"
 		integrity="sha384-vQPhfJdJkfTCHP7ouiqoAojjcDFuU346yP8z/pRpSn0xsWOfkMd+DkNmxns9jy4l" crossorigin="anonymous">
- <script type="text/javascript">
-    WebFontConfig = {
-        google: { families: [ 'Ubuntu:300,300i,400,400i,500,500i,700' ] }
-    };
-    (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-    })();
-</script>
+ 
   {%- if page.has_search -%}
 	<link rel="stylesheet" href="/assets/css/search-style.css">
   {%- else -%}
