@@ -15,11 +15,32 @@ $(document).ready(function () {
       }
     }
   };
-  {% if include.search == "true" %}
+
+  // Check if URL parameter exists to filter by BCH-only
+  if (getUrlParameter('filter') == 'all') {
+    $('#show-bch-only').prop('checked', false);
+  }
+
+  // Check if URL parameter exists to skip to content (due to window.location.hash being used for categories)
+  if (getUrlParameter('skipToListings')) {
+    var body = $("html, body");
+    body.stop().animate({scrollTop: $('#maingrid').offset().top - 128}, 500, 'swing');
+  }
+
   // Clear the BCH-only view
   $('.clear-bch-only').click(function () {
     $('#show-bch-only').prop('checked', false);
     BCHfilter();
+  });
+
+  // Check if URL references specific category
+  if (window.location.hash && window.location.hash.indexOf('#') > -1) {
+    openCategory(window.location.hash.substring(1));
+  }
+
+  // Some frilly animations on click of the main Bitcoin Cash logo
+  $('#coin-toggle').click(function (){
+    coinEffect();
   });
 
   // Stick the BCH-only filter to the top on scroll
@@ -30,25 +51,6 @@ $(document).ready(function () {
 			});
 		}
   });
-  
-  // Check if URL parameter exists to filter by BCH-only
-  if (getUrlParameter('filter') == 'all') {
-    $('#show-bch-only').prop('checked', false);
-  }
-
-  {% endif %}
-
-
-  // Check if URL parameter exists to skip to content (due to window.location.hash being used for categories)
-  if (getUrlParameter('skipToListings')) {
-    var body = $("html, body");
-    body.stop().animate({scrollTop: $('#maingrid').offset().top - 128}, 500, 'swing');
-  }
-
-  // Check if URL references specific category
-  if (window.location.hash && window.location.hash.indexOf('#') > -1) {
-    openCategory(window.location.hash.substring(1));
-  }
 
   // Scroll to the top via floating action button and filter bar link, then pop some flair
   $('.fab button:nth-child(1), #top-btn-top').on('click', function () {
@@ -63,7 +65,6 @@ $(document).ready(function () {
     });
   });
 
-  {% if include.search == "true" %}
   // Scroll to the main content grid
   $('#skip-to-content').on('click', function () {
     var body = $("html, body");
@@ -101,8 +102,6 @@ $(document).ready(function () {
     $('#search-wrapper input#bch-merchant-search').focus();
     $('head style').html("");
   });
-  
-  {% endif %}
 
   $('#ama-merchant').on('click', function () {
     $('.ui.modal.ama-merchant').modal('show');
@@ -114,7 +113,7 @@ $(document).ready(function () {
 
   $('#assets').on('click', function () {
     $('.ui.modal.assets').modal('show');
-	  $('img.image').trigger('unveil');
+    $('img.image').trigger('unveil');
   });
 
   $('#art-collections').on('click', function () {
@@ -130,43 +129,24 @@ $(document).ready(function () {
     $('.ui.modal.disclaimer').modal('show');
   });
 
-  {% if include.listing == "true" %}
   // Unveil images 50px before they appear
   $('img').unveil(50);
-  
+
   // Show exception warnings upon hover
   $('span.popup.exception').popup({
     hoverable: true
   });
   $('a.popup.exception').popup();
-  
-  {% endif %}
 
-	updateTweetLink($('.tweet-negative-fill'));
-	
-  
   // Display progress counter for sites accepting BCH out of total sites listed
   $('.ui.bch-progress').progress({
     label: 'percent',
     showActivity: false
   });
+
+  // Retrieve latest production version
+  //getLatestRelease();
 });
-
-function replaceLink(elem, replaceText, replaceTemplate) {
-	var social_handle = $(elem).attr('data-handle');
-	var newLink = 'https://twitter.com/share?url=' + replaceTemplate.replace(replaceText, social_handle);
-	$(elem).attr('href', newLink);
-	$(elem).attr('data-tooltip', 'Tweet to @' + social_handle);
-	$(elem).attr('data-position', 'left center');
-	$(elem).attr('data-inverted', '');
-	
-}
-
-function updateTweetLink(elems) {
-	for (i = 0; i < elems.length; i++) {
-		replaceLink(elems[i], 'TWITTERHANDLE', 'Please consider accepting #BitcoinCash for payments @TWITTERHANDLE - it’s \"Peer-to-Peer Electronic Cash\" that is fast, reliable, and secure, with low fees. More @');
-	}
-}
 
 /**
  * Draw a neat animation on the main Bitcoin Cash logo at the top of the page
@@ -190,6 +170,41 @@ function coinEffect() {
   , 1);
 }
 
+function getLatestRelease() {
+  var githubfeed = $.getJSON("https://api.github.com/repos/acceptbitcoincash/acceptbitcoincash/releases/latest", function(data){
+    $("span.version").html('Current Release: <a href="https://github.com/acceptbitcoincash/acceptbitcoincash/releases/latest" target="_blank" data-tooltip="Read the ' + data.tag_name + ' release notes" data-position="top center" data-inverted=""><i class="tag icon"></i><b>' + data.tag_name + '</b></a> &nbsp;&bull;&nbsp; <a href="https://github.com/acceptbitcoincash/acceptbitcoincash/compare/' + data.tag_name + '...master" target="_blank" data-tooltip="View a list of approved commits that have not yet been deployed to this site" data-position="top center" data-inverted="">Upcoming changes <i class="sign in icon"></i></a>');
+  });
+}
+
+
+// Set a cookie to store prefs
+function createCookie(name,value,days) {
+  var expires = "";
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+// Get a cookie to read prefs
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+// Clean up the cookie crumbs
+function eraseCookie(name) {
+  createCookie(name,"",-1);
+}
+
 /**
  * Create an event that is called 500ms after the browser
  * window is re-sized and has finished being re-sized.
@@ -203,7 +218,6 @@ $(window).resize(function () {
   }, 500);
 });
 
-{% if include.search == "true" %}
 var isSearching = false;
 if(document.getElementById('bch-merchant-search') instanceof Object){
 	var jets = new Jets({
@@ -244,7 +258,7 @@ if(document.getElementById('bch-merchant-search') instanceof Object){
 			  else $(section).parent().parent().hide();
 			}
 		  }
-		 
+
 		  if (table.children().length == table.children(':hidden').length) {
 			  $('#no-results').css('display', 'block');
 			  $('#maingrid').css('visibility', 'hidden');
@@ -364,4 +378,3 @@ function closeCategory(category) {
   history.pushState('', document.title, window.location.pathname);
   $('.fab button:nth-child(3)').css('display', 'none');
 }
-{% endif %}

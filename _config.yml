@@ -8,7 +8,7 @@ description:
     Community-curated list of sites/merchants that accept Bitcoin Cash.
 url: https://AcceptBitcoin.Cash
 twitter_url: https://usebitcoin.cash
-repo: https://github.com/acceptbitcoincash/acceptbitcoincash
+repo: https://github.com/kenman345/kenman345.github.io
 img: img/logo.png
 
 lang: en-US
@@ -39,7 +39,7 @@ defaults:
       progress_tweet: "Thanks for accepting Bitcoin Cash, @TWITTERHANDLE!"
       hash: "acceptBitcoinCash, BCHforEveryone"
       has_search: yes
-      list_of: "merchants"
+      list_of: "merchant"
       encoded_img_placeholder: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
       img_placeholder: "/img/placeholder.png?v=1"
       

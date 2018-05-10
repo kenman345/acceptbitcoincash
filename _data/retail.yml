@@ -7,14 +7,28 @@ websites:
   bch: true
   btc: false
   othercrypto: false
+- name: 4electric.de
+  url: https://4electric.de/
+  img: 4electric.png
+  email_address: info@4electric.de
+  bch: true
+  btc: true
+  othercrypto: false
+  region: eu
+  lang: de
+  keywords:
+  - bitpay
+  - bip70
 - name: 6 Dollar Shirts
   url: http://6dollarshirts.com
   img: 6DollarShirts.png
   twitter: 6DollarShirts
   facebook: sixdollarshirts
   bch: false
-  btc: true
+  btc: false
   othercrypto: false
+  exceptions:
+    text: "Used to accept Bitcoin but was disabled after Coinbase Merchant Tools were discontinued. Last checked May 5th, 2018"
 - name: 99japan
   url: https://99japan.com/
   img: 99japancom.png
@@ -54,6 +68,14 @@ websites:
   btc: true
   othercrypto: true
   doc: https://medium.com/chapin-labs/all-chapin-labs-e-commerce-companies-to-accept-bitcoin-cash-2bb40d95f94d
+- name: Afri Garments
+  url: https://afrigarments.com/
+  img: afrigarments.png
+  bch: true
+  btc: false
+  othercrypto: false
+  keywords:
+  - rocketr
 - name: Ali Lightning
   url: http://alilightning.com/
   img: alilightning.png
@@ -73,6 +95,17 @@ websites:
   othercrypto: true
   twitter: btcswag
   facebook: AllThingsDecentral
+- name: All Things Luxury
+  url: http://www.allthingsluxury.biz/
+  img: allthingsluxury.png
+  twitter: AllThingsLux
+  facebook: AllThingsLuxury
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Alza
   url: https://www.alza.co.uk/
   twitter: Alzacz
@@ -123,6 +156,18 @@ websites:
   keywords:
   - bitpay
   - bip70
+- name: Babygoodies
+  url: https://www.babygoodies.shop/
+  img: babygoodies.png
+  twitter: Babygoodies
+  facebook: Babygoodies
+  bch: true
+  btc: true
+  othercrypto: false
+  region: eu
+  keywords:
+  - bitpay
+  - bip70
 - name: BCHSticker.com
   url: http://BCHSticker.com
   img: bchsticker.png
@@ -140,6 +185,18 @@ websites:
   bch: true
   btc: true
   othercrypto: true
+- name: Beardbrand
+  url: https://www.beardbrand.com/
+  img: beardbrand.png
+  twitter: beardbrand
+  facebook: Beardbrand
+  email_address: support@beardbrand.com
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: BEBI Vodka
   url: https://www.bebivodka.com/
   twitter: vegasbebi
@@ -200,6 +257,14 @@ websites:
   bch: true
   btc: true
   othercrypto: true
+- name: BitLasers
+  url: https://bitlasers.com/
+  img: bitlasers.png
+  bch: true
+  btc: true
+  othercrypto: true
+  keywords:
+  - coinpayments.net
 - name: Bitsoaps
   url: http://www.bitsoaps.com/
   img: bitsoaps.png
@@ -269,6 +334,19 @@ websites:
   bch: false
   facebook: Costco
   twitter: Costco
+- name: Craft & Caro
+  url: https://www.craftandcaro.com/
+  img: craftcaro.png
+  twitter: CraftandCaro
+  facebook: CraftandCaro
+  email_address: hello@craftandcaro.com
+  bch: true
+  btc: true
+  othercrypto: false
+  lang: de
+  keywords:
+  - bitpay
+  - bip70
 - name: Cryptartica
   url: https://cryptartica.com/
   img: cryptartica.png
@@ -305,6 +383,18 @@ websites:
   bch: false
   btc: true
   othercrypto: true
+- name: Datsusara
+  url: https://www.dsgear.com/
+  img: datsusara.png
+  twitter: DSgear
+  facebook: datsusara
+  email_address: dsinfo@dsgear.com
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Dell
   url: http://www.dell.com/en-us
   img: dell.png
@@ -378,6 +468,16 @@ websites:
   bch: true
   btc: true
   facebook: fasttech.net
+- name: First Golf
+  url: https://www.firstgolf.club/
+  img: firstgolf.png
+  bch: true
+  btc: true
+  othercrypto: false
+  lang: de
+  keywords:
+  - bitpay
+  - bip70
 - name: Flipkart
   url: https://www.flipkart.com
   img: flipkart.png
@@ -466,6 +566,17 @@ websites:
   facebook: Groupon.US
   img: groupon.png
   bch: false
+- name: growhaus
+  url: https://www.growhaus.de/
+  img: growhaus.png
+  email_address: info@growhaus.de
+  bch: true
+  btc: true
+  othercrypto: false
+  lang: de
+  keywords:
+  - bitpay
+  - bip70
 - name: GVRNURSLF
   url: https://gvrnurslf.com/
   twitter: gvrnurslf
@@ -519,6 +630,16 @@ websites:
   bch: false
   btc: true
   othercrypto: true
+- name: Hold Monkey
+  url: https://hodlmonkey.com/
+  img: hodlmonkey.png
+  twitter: HodlmonkeyHodl
+  facebook: hodlmonkeyshop
+  bch: true
+  btc: true
+  othercrypto: true
+  keywords:
+  - coinpayments.net
 - name: Home Depot
   url: http://www.homedepot.com
   img: homedepot.png
@@ -551,6 +672,17 @@ websites:
   btc: true
   bch: true
   othercrypto: true
+- name: iT'S ONLY NATURAL
+  url: https://www.hempandcompany.com/
+  img: itsonlynatural.png
+  twitter: HempandCo
+  email_address: info@hempandcompany.com
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: JB Hi-Fi
   url: https://www.jbhifi.com.au/
   twitter: JBHiFi
@@ -591,6 +723,33 @@ websites:
   exceptions:
     text: Currently accepting BCH if you request an address. Working on adding BCH
       to the payment flow.
+- name: kisshoes.ch
+  url: https://www.kisshoes.ch/
+  img: kisshoes.png
+  twitter: kis_shoes
+  facebook: kisshoes.ch
+  email_address: admin@kisshoes.ch
+  bch: true
+  btc: true
+  othercrypto: false
+  lang: de
+  country: ch
+  keywords:
+  - bitpay
+  - bip70
+- name: Klebe Monster
+  url: https://www.klebe-monster.de/
+  img: klebemonster.png
+  facebook: KlebeMonster
+  email_address: info@klebe-monster.de
+  bch: true
+  btc: true
+  othercrypto: false
+  lang: de
+  country: de
+  keywords:
+  - bitpay
+  - bip70
 - name: Know Bitcoin
   url: http://gettoknowbitcoin.com/
   img: knowbitcoin.png
@@ -621,6 +780,17 @@ websites:
   twitter: asklazadasg
   img: lazada.png
   bch: false
+- name: Lehner Versand
+  url: https://www.lehner-versand.ch/
+  img: lehnerversand.png
+  facebook: lehnerversand
+  email_address: info@lehner-versand.ch
+  bch: true
+  btc: true
+  othercrypto: true
+  country: ch
+  keywords:
+  - coinify
 - name: Liberty Store
   url: https://www.libertystore.de
   img: libertystore.png
@@ -688,6 +858,22 @@ websites:
   bch: true
   btc: false
   othercrypto: false
+- name: Mill Geek Comics
+  url: http://www.millgeekcomics.com/
+  img: millgeekcomics.png
+  twitter: millgeekcomics
+  facebook: MillGeekComics
+  email_address: millgeekcomics@gmail.com
+  bch: true
+  btc: true
+  othercrypto: true
+  region: na
+  country: US
+  state: Washington
+  city: Mill Creek
+  doc: https://www.facebook.com/MillGeekComics/posts/1334980266647348
+  keywords:
+  - coinbase
 - name: Mineralz.nl
   url: https://mineralz.nl
   img: mineralz.png
@@ -700,6 +886,29 @@ websites:
   btc: true
   othercrypto: false
   doc: https://mineralz.nl/content/12-bitcoin-cash
+- name: Möbelmarkt Shop
+  url: https://www.moebelmarkt-shop.de/
+  img: moebelmarktshop.png
+  bch: true
+  btc: true
+  othercrypto: false
+  region: eu
+  lang: de
+  keywords:
+  - bitpay
+  - bip70
+- name: Negash
+  url: https://www.negash83.com/
+  img: negash.png
+  twitter: negash83
+  facebook: NegashDetroit
+  email_address: Contactus@NegashDetroit.com
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Newegg
   url: https://www.newegg.com
   img: newegg.png
@@ -730,6 +939,16 @@ websites:
   twitter: NorthernTool
   facebook: northerntool
   email_address: intlenglishsales@northerntool.com
+- name: Nozzles.Online
+  url: http://nozzles.online
+  img: nozzlesonline.png
+  twitter: nozzlesonline
+  email_address: fantastic.nozzles@nozzles.online
+  region: oc
+  country: AU
+  bch: true
+  btc: true
+  othercrypto: true
 - name: Okami Knives
   url: https://www.okamiknives.com/
   img: okamiknives.png
@@ -764,6 +983,18 @@ websites:
   bch: true
   btc: false
   othercrypto: false
+- name: parfuemerie.de
+  url: https://www.parfuemerie.de/
+  img: parfuemeriede.png
+  email_address: service@parfuemerie.de
+  bch: true
+  btc: true
+  othercrypto: true
+  country: de
+  lang: de
+  keywords:
+  - bitpay
+  - bip70
 - name: PC Case Gear
   url: https://www.pccasegear.com/
   twitter: pccasegear
@@ -802,6 +1033,17 @@ websites:
   bch: true
   btc: true
   othercrypto: true
+- name: Pflanzen Pflanzen
+  url: http://pflanzen-pflanzen.de/
+  img: pflanzenpflanzen.png
+  bch: true
+  btc: true
+  othercrypto: false
+  region: eu
+  lang: de
+  keywords:
+  - bitpay
+  - bip70
 - name: Pi Supply
   url: https://pi-supply.com
   img: pi-supply.png
@@ -812,6 +1054,17 @@ websites:
   btc: false
   othercrypto: true
   doc: https://twitter.com/PiSupply/status/972228324721295360
+- name: PK Systems
+  url: https://pk-systems.info/
+  img: pksystems.png
+  email_address: service@pk-systems.info
+  bch: true
+  btc: true
+  othercrypto: false
+  country: de
+  keywords:
+  - bitpay
+  - bip70
 - name: Pokemon Bitcoin
   url: http://pokemonbtc.com/
   img: pokemonbitcoin.png
@@ -827,6 +1080,17 @@ websites:
   bch: true
   btc: true
   othercrypto: false
+- name: Pure Water Freedom
+  url: https://purewaterfreedom.com/
+  img: purewaterfreedom.png
+  twitter: PureWatrFreedom
+  facebook: PureWaterFreedom
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Purism
   url: https://puri.sm/
   img: purism.png
@@ -880,6 +1144,16 @@ websites:
   bch: true
   btc: true
   othercrypto: true
+- name: Servershop24
+  url: https://www.servershop24.de/
+  img: servershop24.png
+  email_address: mail@servershop24.de
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Shire Soaps
   url: http://shiresoaps.com/
   img: shiresoaps.png
@@ -896,6 +1170,17 @@ websites:
   bch: true
   btc: true
   othercrypto: true
+- name: Sickboards
+  url: https://www.sickboards.nl/
+  img: sickboards.png
+  facebook: sickboardshop
+  email_address: info@sickboards.nl
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Sierra Trading Post
   url: http://www.sierratradingpost.com
   img: sierratradingpost.png
@@ -943,12 +1228,39 @@ websites:
   btc: true
   othercrypto: true
   doc: https://streetcuts.co/pages/press
+- name: Svedana Box
+  url: https://www.svedana-box.net/
+  email_address: info@svedana-box.net
+  bch: true
+  btc: false
+  othercrypto: true
+  country: de
+  lang: de
 - name: Target
   url: http://www.target.com/
   twitter: target
   facebook: Target
   img: target.png
   bch: false
+- name: tazzine.de
+  url: https://tazzine.de/
+  img: tazzine.png
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
+- name: Technikware
+  url: https://technikware.at/
+  img: technikware.png
+  email_address: office@technikware.at
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Tortuga
   url: https://www.tortugabackpacks.com/
   img: TortugaBackpack.png
@@ -967,6 +1279,19 @@ websites:
   bch: true
   btc: true
   othercrypto: true
+- name: Uhrzeit.org
+  url: https://www.uhrzeit.org/
+  img: uhrzeitorg.png
+  twitter: uhrzeitorg
+  facebook: uhrzeit
+  email_address: shop@uhrzeit.org
+  bch: true
+  btc: true
+  othercrypto: false
+  region: eu
+  keywords:
+  - bitpay
+  - bip70
 - name: Unix Stickers
   url: https://www.unixstickers.com
   img: unixstickers.png
@@ -1014,6 +1339,15 @@ websites:
   bch: true
   btc: true
   othercrypto: false
+- name: Wikan & Saged
+  url: http://wikansaged.com/
+  img: wikansaged.png
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: WikiLeaks Shop
   url: https://wikileaks.shop/
   twitter: WikiLeaksShop

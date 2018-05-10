@@ -22,9 +22,11 @@ websites:
   img: baconsheir.png
   facebook: PorkClouds
   twitter: BaconsHeir
-  btc: true
+  btc: false
   bch: false
   othercrypto: false
+  exceptions:
+    text: "Used to accept Bitcoin but was disabled after Coinbase Merchant Tools were discontinued. Last checked May 5th, 2018"
 - name: Bar Foxx
   url: http://barfoxx.com
   img: barfoxx.png
@@ -174,6 +176,19 @@ websites:
   btc: true
   othercrypto: false
   doc: https://www.menufy.com/bitcoin-cash
+- name: Osaru Coffee
+  url: https://osarucoffee.thebase.in
+  img: osarucoffee.png
+  twitter: sakuranobonsai
+  facebook: osarucoffee
+  email_address: osarucoffee@gmail.com
+  region: as
+  country: JP
+  city: Osaka
+  bch: true
+  btc: false
+  othercrypto: false
+  doc: https://morizocoin.com/bchpayment_osarucoffee/
 - name: Pex Peppers
   url: https://www.pexpeppers.com/
   img: pexpeppers.png
@@ -228,10 +243,6 @@ websites:
   img: sonoranspice.png
   twitter: sonoranspiceco
   facebook: SonoranSpice
-  region: na
-  country: US
-  state: Arizona
-  city: Scottsdale
   bch: true
   btc: true
   othercrypto: false
@@ -304,6 +315,15 @@ websites:
   bch: true
   btc: false
   othercrypto: false
+- name: Umami Snack Import
+  url: https://www.umamisnack.ch/
+  img: umamisnack.png
+  twitter: umamisnack
+  region: eu
+  bch: Yes
+  btc: Yes
+  othercrypto: No
+  doc: https://twitter.com/umamisnack/status/992325968437104641
 - name: Village Catalog
   url: https://villagecatalog.com
   img: villageCatalog.png
@@ -320,9 +340,11 @@ websites:
   twitter: WeiChocolate
   facebook: weichocolate
   region: na
-  bch: false
+  bch: true
   btc: true
-  othercrypto: false
+  othercrypto: true
+  keywords:
+  - coinbase
 - name: Xpresso
   url: https://www.xpressoutah.com
   img: XpressOutah.png

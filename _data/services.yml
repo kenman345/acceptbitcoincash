@@ -23,6 +23,17 @@ websites:
   bch: true
   btc: true
   othercrypto: false
+- name: Genuine COA
+  url: https://www.genuinecoa.com/
+  img: genuinecoa.png
+  twitter: GenuineCOA
+  facebook: GenuineCOA
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Gutes Leben Ltd
   url: https://guteshome.com/
   img: guteslebenltd.png
@@ -105,6 +116,27 @@ websites:
   bch: true
   btc: false
   othercrypto: false
+- name: SEO Clerks
+  url: https://www.seoclerk.com/
+  img: seoclerks.png
+  twitter: seoclerks
+  facebook: SeoClerks
+  bch: true
+  btc: true
+  othercrypto: true
+  keywords:
+  - coinbase
+- name: Shipito
+  url: https://www.shipito.com/
+  img: shipito.png
+  twitter: shipito
+  facebook: shipito
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Shuriken Social
   url: https://shurikensocial.com
   img: shurikenSocial.png
@@ -148,6 +180,17 @@ websites:
   bch: true
   btc: true
   othercrypto: false
+- name: WIRmachenDRUCK
+  url: https://www.wir-machen-druck.de/
+  img: wirmachendruck.png
+  twitter: _WIRmachenDRUCK
+  facebook: wirmachendruck.de
+  bch: true
+  btc: true
+  othercrypto: false
+  keywords:
+  - bitpay
+  - bip70
 - name: Wise Owl Technologies
   url: https://www.wiseowlcomputers.biz
   img: wiseowl.png

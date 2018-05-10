@@ -48,15 +48,15 @@ jobs:
       - echo $NEXT_BUILD_TAG
       - bundle exec rake docker:build
       - docker tag kenman345/acceptbitcoincashdocker kenman345/acceptbitcoincashdocker:"$NEXT_BUILD_TAG"
-      - cp ./_site/assets/js/main.js ./assets/js/main.js
-      - cp ./_site/assets/js/base.js ./assets/js/base.js
+      - cp ./_site/js/main.js ./js/main.js
       deploy:
       - provider: script
         skip-cleanup: true
         script:
         # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push kenman345/acceptbitcoincashdocker
           docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push kenman345/acceptbitcoincashdocker
-        on: 
+        on:
+          all_branches: true # <== new!
           condition: $NEXT_BUILD_TAG != "latest"
       # - provider: pages
         # skip-cleanup: true
@@ -65,6 +65,8 @@ jobs:
         # keep-history: true
         # repo: kenman345/kenman345.github.io
         # target_branch: gh-pages
+        # on:
+          # all_branches: true # <== new!
   allow_failures:
     - stage: Test
       script:

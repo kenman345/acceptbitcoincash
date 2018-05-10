@@ -9,31 +9,27 @@
         integrity="sha384-3XpZKO/6IouOQmpAvQxLkXEb/pwxGCYqUo139/l6M12U3HmeWnna/qKWIgIJTLPV"
         crossorigin="anonymous"></script>
 <!-- AB.C JS -->
-{%- if page.has_search -%}
-	<script src="/assets/js/main.js"></script>
-{%- else -%}
-	<script src="/assets/js/base.js"></script>
-{%- endif -%}
+<script src="/js/main.js"></script>
 
-{% if page.page_name == "adult" %}
-	<!-- Adult section warning modal -->
-	<script>
-		$(document).ready(function () {
-		  $('#adult-warning-checkbox').click(function(){
-			if($(this).prop('checked')) {
-			  createCookie('hideAdultWarning')
-			} else {
-			  eraseCookie('hideAdultWarning')
-			}
-		  });
+{% if page.id == "adult-listings" %}
+<!-- Adult section warning modal -->
+  <script>
+    $(document).ready(function () {
 
-		  if (!readCookie('hideAdultWarning')) {
-			$('.ui.modal.adult-warning')
-			  .modal('setting','closable', false)
-			  .modal('show');
-		  }
+      $('#adult-warning-checkbox').click(function(){
+        if($(this).prop('checked')) {
+          createCookie('hideAdultWarning')
+        } else {
+          eraseCookie('hideAdultWarning')
+        }
+      });
 
-		});
-		{% include js/cookie.js %}
-	</script>
+      if (!readCookie('hideAdultWarning')) {
+        $('.ui.modal.adult-warning')
+          .modal('setting','closable', false)
+          .modal('show');
+      }
+
+    });
+  </script>
 {% endif %}

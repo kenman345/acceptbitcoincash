@@ -16,29 +16,15 @@ layout: compress
   <link rel="mask-icon" href="/safari-pinned-tab.svg?v=478559" color="#F7941D">
   <link rel="shortcut icon" href="/favicon.ico?v=478559">
   <meta name="theme-color" content="#F7941D">
-
   
-	{% if site.google_analytics and site.GH_ENV == 'gh_pages' %}
-	<!-- Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		galite('create', '{{ site.google_analytics }}', 'auto');
-		galite('send', 'pageview');
-	</script>
-	<!-- End Google Analytics -->
-	{% endif %}
-
+  {% include google-analytics.html %}
+	
 	<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 	<link rel="preconnect" href="https://platform.twitter.com" crossorigin>
 	<link rel="preconnect" href="https://img.shields.io" crossorigin>
 	<link rel="preconnect" href="https://travis-ci.org" crossorigin>
-	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 	<link rel="preconnect" href="https://min-api.cryptocompare.com" crossorigin>
 	<link rel="preconnect" href="https://api.travis-ci.org" crossorigin>
 	<link rel="preconnect" href="https://cdn.syndication.twimg.com" crossorigin>
@@ -47,14 +33,14 @@ layout: compress
 	<link rel="preconnect" href="https://abs.twimg.com" crossorigin>
 	
 	<!-- Google Fonts should not use SRI hashes as the CSS served dynamically changes depending on browser -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700"  crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700" crossorigin>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"
 		integrity="sha384-vQPhfJdJkfTCHP7ouiqoAojjcDFuU346yP8z/pRpSn0xsWOfkMd+DkNmxns9jy4l" crossorigin="anonymous">
  
   {%- if page.has_search -%}
-	<link rel="stylesheet" href="/assets/css/search-style.css">
+	<link rel="stylesheet" href="/css/search-style.css">
   {%- else -%}
-	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
   {%- endif -%}
 </head>
 

@@ -39,8 +39,8 @@
 	      {%- assign show_social = true -%}
         {%- else -%}
 		  {%- assign main_class = 'negative' -%}
-        {%- endif -%}		
-		
+        {%- endif -%}
+
 		  <tr class="desktop-tr{% if website.bch == false %} no-bch{% endif %}">
 			<td class="main {{main_class}}">
               {% include segment/table-row-title.html section=section_id website=website type='desktop' show_social=show_social %}
@@ -57,15 +57,16 @@
 				</div>
 				{%- else -%}
 				{%- if website.twitter -%} <a data-tooltip="{{page.link_tweet|replace:'TWITTERHANDLE',website.twitter}}" data-position="left center" data-inverted="" class="ui twitter mini button" href="https://twitter.com/share?url={{site.twitter_url|cgi_escape}}&amp;text={{workonit_tweet|replace:'TWITTERHANDLE',website.twitter|cgi_escape}}&amp;hashtags={{page.hash|cgi_escape}}" target="_blank"><i class="twitter big icon"></i></a>{%- endif -%}
-				{%- if website.facebook -%} <a data-tooltip="{{page.link_facebook|replace:'@FACEBOOKHANDLE',website.name}}" data-position="right center" data-inverted="" class="ui facebook mini button" href="https://fb.com/{{website.facebook}}/" target="_blank"><i class="facebook big icon"></i></a>{%- endif -%}
+				{%- if website.facebook -%} <a data-tooltip="{{page.link_facebook|replace:'@FACEBOOKHANDLE',website.name}}" data-position="right center" data-inverted="" class="ui facebook mini button" href="https://facebook.com/{{website.facebook}}/" target="_blank"><i class="facebook big icon"></i></a>{%- endif -%}
 				{%- endif -%}
 			  </td>
 			  <td class="{% if website.btc %}positive{% else %}negative{% endif %} icon">
 				{%- if website.btc -%}
 				<span class="coin-wrap orange-coin-wrap" data-tooltip="Bitcoin (Legacy) accepted at {{ website.name }}" data-position="top center" data-inverted="">
-				  <span class="btc-b"></span>
+					<span class="btc-b"></span>
 					<i class="bitcoin big icon"></i>
 				</span>
+
 				{%- endif -%}
 			  </td>
 			  <td class="{% if website.othercrypto %}positive{% else %}negative{% endif %} icon">
@@ -82,15 +83,9 @@
 			  </td>
 			{%- else -%}
 			  <td class="twitter negative" colspan="4">
-			  {%- if website.twitter -%}
-<a class="ui twitter mini button tweet-negative-fill" href="" data-handle="{{website.twitter}}">Ask on <i class="twitter big icon"></i></a>
-			 <!-- <a data-tooltip="{{page.link_tweet|replace:'TWITTERHANDLE',website.twitter}}" data-position="left center" data-inverted="" class="ui twitter mini button" href="https://twitter.com/share?url={{site.twitter_url|cgi_escape}}&amp;text={{workonit_tweet|replace:'TWITTERHANDLE',website.twitter|cgi_escape}}&amp;hashtags={{page.hash|cgi_escape}}" target="_blank">Ask on <i class="twitter big icon"></i></a>
-			 -->
-			 {%- endif -%}
-			  {%- if website.facebook -%} 
-			  <a data-tooltip="{{page.link_facebook|replace:'@FACEBOOKHANDLE',website.name}}" data-position="right center" data-inverted=""  class="ui facebook mini button" href="https://fb.com/{{website.facebook}}/" target="_blank">Ask on <i class="facebook big icon"></i></a>{%- endif -%}
-			  {%- if website.email_address -%} <a data-tooltip="Send an e-mail to {{website.name}}" data-position="right center" data-inverted=""  class="ui green mini button" href="mailto:{{website.email_address}}?subject={{page.email_subject}}"><i class="mail big icon"></i></a>
-			  {%- endif -%}
+			  {%- if website.twitter -%} <a data-tooltip="{{page.link_tweet|replace:'TWITTERHANDLE',website.twitter}}" data-position="left center" data-inverted="" class="ui twitter mini button" href="https://twitter.com/share?url={{site.twitter_url|cgi_escape}}&amp;text={{workonit_tweet|replace:'TWITTERHANDLE',website.twitter|cgi_escape}}&amp;hashtags={{page.hash|cgi_escape}}" target="_blank">Ask on <i class="twitter big icon"></i></a>{%- endif -%}
+			  {%- if website.facebook -%} <a data-tooltip="{{page.link_facebook|replace:'@FACEBOOKHANDLE',website.name}}" data-position="right center" data-inverted=""  class="ui facebook mini button" href="https://facebook.com/{{website.facebook}}/" target="_blank">Ask on <i class="facebook big icon"></i></a>{%- endif -%}
+			  {%- if website.email_address -%} <a data-tooltip="Send an e-mail to {{website.name}}" data-position="right center" data-inverted=""  class="ui green mini button" href="mailto:{{website.email_address}}?subject={{page.email_subject}}"><i class="mail big icon"></i></a>{%- endif -%}
 			  </td>
 			{%- endif -%}
 		  </tr>

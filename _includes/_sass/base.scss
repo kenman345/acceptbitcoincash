@@ -126,7 +126,7 @@ p {
 }
 
 .orange-coin-wrap {
-	color: $orange;
+  color: $orange;
 
   .btc-b {
     position: absolute;
@@ -141,6 +141,11 @@ p {
   i.bitcoin.icon {
     position: relative;
   }
+}
+
+.btc-mobile-icon {
+  position: relative;
+  top: -15px;
 }
 
 .fab {
@@ -515,7 +520,7 @@ p {
       }
     }
 
-    &.fixed.top  {
+    &.fixed.top {
       z-index: 10000;
       background: $gray;
       color: $orange;
@@ -1301,11 +1306,22 @@ span.progress {
   }
 }
 
-/*
-#ama-merchant {
-  background-color: #BF5700;
+.ama-merchant {
+  h3 {
+    margin-bottom: 1rem;
+    font-weight: normal;
+    text-align: center;
+
+    big {
+      font-weight: bold;
+    }
+  }
+  h4 {
+    margin-bottom: 2rem;
+  }
 }
 
+/*
 #ama-customer {
   background-color: #007373;
 }
