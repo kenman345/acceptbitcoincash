@@ -38,11 +38,6 @@ $(document).ready(function () {
     openCategory(window.location.hash.substring(1));
   }
 
-  // Some frilly animations on click of the main Bitcoin Cash logo
-  // $('#coin-toggle').click(function (){
-    // coinEffect();
-  // });
-
   // Stick the BCH-only filter to the top on scroll
   $('.ui.sticky.bch-only').sticky({
 		onStick: function(){
@@ -143,9 +138,6 @@ $(document).ready(function () {
     label: 'percent',
     showActivity: false
   });
-
-  // Retrieve latest production version
-  //getLatestRelease();
 });
 
 /**
@@ -169,13 +161,6 @@ function coinEffect() {
     function(){ rightSideCoin.addClass('top-side-right-side-force') }
   , 1);
 }
-
-// currently unused
-// function getLatestRelease() {
-  // var githubfeed = $.getJSON("https://api.github.com/repos/acceptbitcoincash/acceptbitcoincash/releases/latest", function(data){
-    // $("span.version").html('Current Release: <a href="https://github.com/acceptbitcoincash/acceptbitcoincash/releases/latest" target="_blank" data-tooltip="Read the ' + data.tag_name + ' release notes" data-position="top center" data-inverted=""><i class="tag icon"></i><b>' + data.tag_name + '</b></a> &nbsp;&bull;&nbsp; <a href="https://github.com/acceptbitcoincash/acceptbitcoincash/compare/' + data.tag_name + '...master" target="_blank" data-tooltip="View a list of approved commits that have not yet been deployed to this site" data-position="top center" data-inverted="">Upcoming changes <i class="sign in icon"></i></a>');
-  // });
-// }
 
 /**
  * Create an event that is called 500ms after the browser
@@ -221,13 +206,12 @@ if(document.getElementById('bch-merchant-search') instanceof Object){
 		  $('.category').hide();
 		  table.css('display', 'block');
 		  content.parent().show();
-		  var l = content.length;
-		  for(var i = 0; i < l; i++) {
-			var section = content[i];
+		  for(var i = 0; i < content.length; i++) {
+			var section = $(content[i]);
 			// Hide table when all rows within are hidden by Jets
-			if ($(section).children(':hidden').length === $(section).children().length) {
-			  if (platform == 'mobile') $(section).parent().hide();
-			  else $(section).parent().parent().hide();
+			if (section.children(':hidden').length === section.children().length) {
+			  if (platform == 'mobile') section.parent().hide();
+			  else section.parent().parent().hide();
 			}
 		  }
 
