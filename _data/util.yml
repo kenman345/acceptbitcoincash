@@ -1,56 +1,24 @@
 websites:
     - name: createmultisig
-      url: https://www.bitcoinabc.org
-      img: bitcoinabc.png
       bch: Yes
-      btc: No
 
     - name: estimatefee
-      url: https://bitcoinclassic.com/
-      img: bitcoinclassic.png
       bch: Yes
-      btc: Yes
-      doc: https://bitcoinclassic.com/downloads/bcc/
-      exceptions:
-        text: "Bitcoin Classic Closing its doors: https://bitcoinclassic.com/news/closing.html"
 
     - name: estimatepriority
-      url: https://www.bitcoinunlimited.info
-      img: bitcoinunlimited.png
       bch: Yes
-      btc: Yes
 
     - name: estimatesmartfee
-      url: https://bitcoinxt.software/
-      img: bitcoinxt.png
       bch: Yes
-      btc: Yes
 
     - name: estimatesmartpriority
-      url: https://wallet.bitcoin.com/
-      img: bitcoincom.png
       bch: Yes
-      btc: Yes
-      doc: https://news.bitcoin.com/introducing-the-simple-to-use-and-robust-bitcoin-com-wallet/
 
     - name: signmessagewithprivkey
-      url: http://www.sollico.com/bitwallet/
-      img: bitwallet.png
       bch: Yes
-      btc: Yes
 
     - name: validateaddress
-      url: https://blockchain.info/
-      img: blockchain.png
       bch: Yes
-      btc: Yes
-      othercrypto: Yes
-      facebook: blockchain
-      twitter: blockchain
 
     - name: verifymessage
-      url: https://breadapp.com/
-      img: bread.png
       bch: Yes
-      btc: Yes
-      othercrypto: Yes

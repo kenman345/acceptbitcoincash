@@ -1,102 +1,60 @@
 websites:
     - name: getbestblockhash
       bch: Yes
-      btc: Yes
-      othercrypto: No
-      keywords:
-      - bitpay
-      - bip70
 
     - name: getblock
       bch: Yes
 
     - name: getblockchaininfo
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: getblockcount
       bch: yes
-      btc: yes
-      othercrypto: no
 
     - name: getblockhash
       bch: Yes
-      btc: No
-      othercrypto: Yes
 
     - name: getblockheader
-      region: na
       bch: Yes
-      btc: Yes
-      othercrypto: No
 
     - name: getchaintips
       bch: Yes
-      btc: Yes
-      othercrypto: Yes
 
     - name: getchaintxstats
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: getdifficulty
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: getmempoolancestors
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: getmempooldescendants
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: getmempoolentry txid
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: getmempoolinfo
       bch: yes
-      btc: yes
-      othercrypto: yes
 
-    - name: getrawmempool ( verbose )
+    - name: getrawmempool
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: gettxout
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: gettxoutproof
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: gettxoutsetinfo
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: preciousblock
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: pruneblockchain
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: verifychain
       bch: yes
-      btc: yes
-      othercrypto: yes

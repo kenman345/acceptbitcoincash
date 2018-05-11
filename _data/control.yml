@@ -1,50 +1,15 @@
 websites:
     - name: getinfo
-      url: https://www.adormo.com/
-      img: adormo.png
       bch: Yes
-      btc: Yes
-      othercrypto: No
-      twitter: adormonews
-      facebook: Adormo
-      keywords:
-      - bitpay
-      - bip70
 
     - name: getmemoryinfo
-      url: https://www.airbnb.com/
-      img: airbnb.png
       bch: Yes
-      twitter: airbnb
-      facebook: AirBNB
-      
+
     - name: help
-      url: https://www.cryptocribs.com/
-      img: cryptocribs.png
-      twitter: CryptoCribs
-      facebook: cryptocribs
-      email_address: info@cryptocribs.com
       bch: yes
-      btc: yes
-      othercrypto: yes
 
     - name: stop
-      url: https://www.liberstad.com/
-      img: liberstad.png
-      twitter: liberstad
-      facebook: liberstad.english
-      email_address: liberstad@gmail.com
       bch: yes
-      btc: yes
-      othercrypto: no
-      
+
     - name: uptime
-      url: https://www.riddelltravel.com
-      img: riddelltravel.png
-      email_address: bookings@riddelltravel.com
       bch: Yes
-      btc: No
-      othercrypto: Yes
-      doc: https://www.reddit.com/r/btc/comments/88yb6o/crypto_giving_you_sleepless_nights_rather_go_on_a/
-      exceptions: 
-        text: "Bitcoin Cash address will be provided once you've decided on your preferred package."

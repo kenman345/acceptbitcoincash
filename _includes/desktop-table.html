@@ -17,7 +17,7 @@
       <th class="two wide">ABC</th>
       <th class="two wide">Unlimited</th>
       <th class="two wide">XT</th>
-      <th class="two wide">Docs</th>
+      <!-- <th class="two wide">Docs</th> -->
     </tr>
     </thead>
     <tbody class="bch-merchant-content">
@@ -76,11 +76,11 @@
 				</span>
 			    {%- endif -%}
 			  </td>
-			  <td class="docs {% if website.doc %}positive{% else %}negative{% endif %} icon">
+			  <!-- <td class="docs {% if website.doc %}positive{% else %}negative{% endif %} icon">
 				{%- if website.doc -%}
 				<a href="{{ website.doc }}" target="_blank" data-tooltip="{{page.rtfm}} {{ website.name }}" data-position="top center" data-inverted=""><i class="file text large icon"></i></a>
 				{%- endif -%}
-			  </td>
+			  </td> -->
 			{%- else -%}
 			  <td class="twitter negative" colspan="4">
 			  {%- if website.twitter -%} <a data-tooltip="{{page.link_tweet|replace:'TWITTERHANDLE',website.twitter}}" data-position="left center" data-inverted="" class="ui twitter mini button" href="https://twitter.com/share?url={{site.twitter_url|cgi_escape}}&amp;text={{workonit_tweet|replace:'TWITTERHANDLE',website.twitter|cgi_escape}}&amp;hashtags={{page.hash|cgi_escape}}" target="_blank">Ask on <i class="twitter big icon"></i></a>{%- endif -%}

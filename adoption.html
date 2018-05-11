@@ -22,7 +22,7 @@ show_bch_only: no
 			{%- endif -%}
 		{%- endfor -%}
 	{%- endfor -%}
-	{% include segment/progress-bar.html value=count_bch total=count_total page=tracked_page.name %}
+	<!-- {% include segment/progress-bar.html value=count_bch total=count_total page=tracked_page.name %} -->
 {% endfor %}
 
 {%- if page.show_bch_only -%}
@@ -41,7 +41,7 @@ show_bch_only: no
 		{%- endfor -%}
 	{%- endfor -%}
 {% endfor %}
-{% include segment/progress-bar.html value=count_bch total=count_total page="only-bch" %}
+<!-- {% include segment/progress-bar.html value=count_bch total=count_total page="only-bch" %} -->
 {%- endif -%}
 
 {%- assign count_total = 0 -%}
@@ -59,6 +59,6 @@ show_bch_only: no
 		{%- endfor -%}
 	{%- endfor -%}
 {% endfor %}
-{% include segment/progress-bar.html value=count_bch total=count_total page="cobra" %}
+<!-- {% include segment/progress-bar.html value=count_bch total=count_total page="cobra" %} -->
 </div>
 <br/><br/><br/>

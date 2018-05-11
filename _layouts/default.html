@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
-  
+
 {% seo %}
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=478559">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=478559">
@@ -13,9 +13,9 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg?v=478559" color="#F7941D">
   <link rel="shortcut icon" href="/favicon.ico?v=478559">
   <meta name="theme-color" content="#F7941D">
-  
+
   {% include google-analytics.html %}
-	
+
 	<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -35,12 +35,12 @@
    <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin" as="stylesheet">
    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" as="stylesheet"
 		integrity="sha384-vQPhfJdJkfTCHP7ouiqoAojjcDFuU346yP8z/pRpSn0xsWOfkMd+DkNmxns9jy4l" crossorigin="anonymous">
-	
+
 	<!-- Google Fonts should not use SRI hashes as the CSS served dynamically changes depending on browser -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700" crossorigin>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"
 		integrity="sha384-vQPhfJdJkfTCHP7ouiqoAojjcDFuU346yP8z/pRpSn0xsWOfkMd+DkNmxns9jy4l" crossorigin="anonymous">
-		
+
   {%- if page.has_search -%}
 	<link rel="stylesheet" href="/css/search-style.css">
   {%- else -%}
@@ -58,17 +58,17 @@
 <!-- 'content' loads pages from the root (index.html/*.html) -->
 {{ content }}
 
-{%- if page.page_name == "home" -%}
+<!-- {%- if page.page_name == "home" -%}
   {% include segment/twitter.html %}
   {% include segment/moreinfo.html %}
   {% include segment/assets.html %}
 {%- elsif page.page_name == "adult" -%}
   {% include modals/adult-warning.html %}
-{%- endif -%}
+{%- endif -%} -->
 
 <!-- Global includes -->
 {% include modals/disclaimer.html %}
-{% include segment/ticker.html %}
+<!-- {% include segment/ticker.html %} -->
 {% include fab.html %}
 {% include footer.html %}
 {% include scripts.html %}
