@@ -5,7 +5,6 @@ tmp/
 .idea/
 Thumbs.db
 ehthumbs.db
-Gemfile.lock
 .sass-cache
 *.geany
 *.suo
