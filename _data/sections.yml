@@ -1,34 +1,34 @@
 - id: blockchain
   title: Blockchain
-  icon: suitcase
+  icon: cubes
   page: home
-  
+
 - id: control
   title: Control
-  icon: sitemap
+  icon: gamepad
   page: home
 
 - id: generating
   title: Generating
-  icon: chat
+  icon: buromobelexperte
   page: home
-  
+
 - id: mining
   title: Mining
-  icon: cart
+  icon: hdd
   page: home
 
 - id: network
   title: Network
-  icon: treatment
+  icon: cloud
   page: home
 
 - id: rawtransactions
   title: Rawtransactions
-  icon: bug
+  icon: exchange
   page: home
 
 - id: util
   title: Util
-  icon: hdd outline
+  icon: cogs
   page: home
