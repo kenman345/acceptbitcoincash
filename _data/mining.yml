@@ -1,89 +1,50 @@
 websites:
-    - name: Antpool
-      url: https://antpool.com/
-      img: antpool.png
-      bch: Yes
-      btc: Yes
-      othercrypto: Yes
-
-    - name: BitClub Network
-      url: https://bitclubpool.com/
-      img: bitclub.png
-      bch: Yes
-      btc: Yes
-      othercrypto: Yes
-
-    - name: Bitcoin.com
-      url: https://pool.bitcoin.com/
-      img: bitcoincom.png
+    - name: getblocktemplate
+      url: https://www.adormo.com/
+      img: adormo.png
       bch: Yes
       btc: Yes
       othercrypto: No
+      twitter: adormonews
+      facebook: Adormo
+      keywords:
+      - bitpay
+      - bip70
 
-    - name: BitMain
-      url: https://www.bitmain.com/
-      img: bitmain.png
-      twitter: bitmaintech
+    - name: getmininginfo
+      url: https://www.airbnb.com/
+      img: airbnb.png
       bch: Yes
-      btc: Yes
-      othercrypto: Yes
-
-    - name: BTC.com
-      url: https://pool.btc.com
-      img: btccom.png
-      bch: Yes
-      btc: Yes
-      othercrypto: No
-
-    - name: Gigampz
-      url: http://www.gigampz.com
-      twitter: gigampz
-      img: gigampz.png
-      bch: yes
-      btc: no
-      othercrypto: no
+      twitter: airbnb
+      facebook: AirBNB
       
-    - name: GPU Mining Bios
-      url: https://mining-bios.eu/
-      img: miningbios.png
-      facebook: indeedminers
-      region: eu
+    - name: getnetworkhashps
+      url: https://www.cryptocribs.com/
+      img: cryptocribs.png
+      twitter: CryptoCribs
+      facebook: cryptocribs
+      email_address: info@cryptocribs.com
       bch: yes
       btc: yes
       othercrypto: yes
-      doc: https://mining-bios.eu/2018/01/21/more-native-crypto/
 
-    - name: gpuShack
-      url: https://www.gpushack.com
-      twitter: gpuShack
-      facebook: shack.gpu
-      img: gpushack.png
+    - name: prioritisetransaction
+      url: https://www.liberstad.com/
+      img: liberstad.png
+      twitter: liberstad
+      facebook: liberstad.english
+      email_address: liberstad@gmail.com
+      bch: yes
+      btc: yes
+      othercrypto: no
+      
+    - name: submitblock
+      url: https://www.riddelltravel.com
+      img: riddelltravel.png
+      email_address: bookings@riddelltravel.com
       bch: Yes
       btc: No
       othercrypto: Yes
-      doc: https://gpushack.com/pages/bitcoin-payments
-
-    - name: Suprnova
-      url: https://www.suprnova.cc/
-      img: suprnova.png
-      bch: Yes
-      btc: Yes
-      othercrypto: Yes
-      
-    - name: Taimine
-      url: https://taimine.com
-      img: taimine.png
-      twitter: taimineminer
-      facebook: taimineindustries
-      email_address: service@taimine.com
-      region: as
-      bch: Yes
-      btc: Yes
-      othercrypto: Yes
-
-    - name: ViaBTC
-      url: https://pool.viabtc.com/
-      img: viabtc.png
-      bch: Yes
-      btc: Yes
-      othercrypto: Yes
+      doc: https://www.reddit.com/r/btc/comments/88yb6o/crypto_giving_you_sleepless_nights_rather_go_on_a/
+      exceptions: 
+        text: "Bitcoin Cash address will be provided once you've decided on your preferred package."

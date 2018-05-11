@@ -1,5 +1,5 @@
 websites:
-    - name: Adormo
+    - name: getinfo
       url: https://www.adormo.com/
       img: adormo.png
       bch: Yes
@@ -11,14 +11,14 @@ websites:
       - bitpay
       - bip70
 
-    - name: Airbnb
+    - name: getmemoryinfo
       url: https://www.airbnb.com/
       img: airbnb.png
-      bch: No
+      bch: Yes
       twitter: airbnb
       facebook: AirBNB
       
-    - name: CryptoCribs
+    - name: help
       url: https://www.cryptocribs.com/
       img: cryptocribs.png
       twitter: CryptoCribs
@@ -28,7 +28,7 @@ websites:
       btc: yes
       othercrypto: yes
 
-    - name: Liberstad
+    - name: stop
       url: https://www.liberstad.com/
       img: liberstad.png
       twitter: liberstad
@@ -38,7 +38,7 @@ websites:
       btc: yes
       othercrypto: no
       
-    - name: Riddell Travel
+    - name: uptime
       url: https://www.riddelltravel.com
       img: riddelltravel.png
       email_address: bookings@riddelltravel.com
@@ -48,31 +48,3 @@ websites:
       doc: https://www.reddit.com/r/btc/comments/88yb6o/crypto_giving_you_sleepless_nights_rather_go_on_a/
       exceptions: 
         text: "Bitcoin Cash address will be provided once you've decided on your preferred package."
-
-    - name: SV Breta
-      url: https://breta.weebly.com/
-      img: svbreta.png
-      twitter: RoyWessbecher
-      email_address: BretaNet00@hotmail.com
-      region: na
-      bch: Yes
-      btc: Yes
-      othercrypto: No
-
-    - name: Villa Vvedene
-      url: http://maxkite.wixsite.com/vvedene
-      email_address: max_kite@mail.ru
-      region: eu
-      country: RU
-      city: Yaroslavl
-      bch: Yes
-      btc: Yes
-      othercrypto: Yes
-
-    - name: Washington Intern Housing Network
-      url: https://www.thewihn.com
-      facebook: dcinternhousing
-      img: wihn.png
-      bch: yes
-      btc: yes
-      othercrypto: yes

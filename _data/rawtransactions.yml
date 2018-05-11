@@ -1,0 +1,52 @@
+websites:
+    - name: createrawtransaction
+      url: https://www.aep.com/
+      twitter: AEPnews
+      facebook: americanelectricpower
+      img: aep.png
+      bch: Yes
+      btc: No
+      othercrypto: No
+
+    - name: decoderawtransaction
+      url: https://aa.net.uk
+      img: aaisp.png
+      twitter: aaisp
+      bch: Yes
+      btc: No
+      othercrypto: No
+
+    - name: decodescript
+      url: https://www.att.com/
+      twitter: ATTCares
+      facebook: ATT
+      img: att.png
+      bch: Yes
+      btc: No
+      othercrypto: No
+
+    - name: getrawtransaction
+      url: https://www.callcentric.com/
+      img: callcentric.png
+      twitter: callcentric
+      bch: Yes
+      btc: No
+      othercrypto: No
+
+    - name: sendrawtransaction
+      url: https://www.centurylink.com/
+      twitter: CenturyLink
+      facebook: CenturyLink
+      img: centurylink.png
+      bch: Yes
+      btc: No
+      othercrypto: No
+
+    - name: signrawtransaction
+      url: https://www.spectrum.com/
+      twitter: GetSpectrum
+      facebook: Spectrum
+      img: charter.png
+      bch: Yes
+      btc: No
+      othercrypto: No
