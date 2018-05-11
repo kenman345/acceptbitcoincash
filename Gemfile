@@ -14,7 +14,6 @@ group :test do
   gem 'highline'
   gem 'html-proofer'
   gem 'kwalify'
-  gem 'rake'
   gem 'rubocop'
 end
 
@@ -25,3 +24,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
+
+gem "rake"

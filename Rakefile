@@ -39,6 +39,10 @@ task :clean do
   rm_rf './_site'
 end
 
+task "assets:precompile" do
+  exec("jekyll build")
+end
+
 RuboCop::RakeTask.new
 
 # rubocop:disable MethodLength
