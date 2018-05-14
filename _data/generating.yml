@@ -1,3 +1,16 @@
 websites:
+    - generate:
+      bch: no
+      btc: yes
+
     - name: generatetoaddress
-      bch: Yes
+      bch: yes
+      btc: yes
+
+    - getgenerate:
+      bch: no
+      btc: yes
+      
+    - setgenerate:
+      bch: no
+      btc: yes

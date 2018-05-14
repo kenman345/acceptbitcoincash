@@ -1,15 +1,20 @@
 websites:
     - name: getinfo
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: getmemoryinfo
-      bch: Yes
+      bch: yes
+      btc: no
 
     - name: help
       bch: yes
+      btc: yes
 
     - name: stop
       bch: yes
+      btc: yes
 
     - name: uptime
-      bch: Yes
+      bch: yes
+      btc: no

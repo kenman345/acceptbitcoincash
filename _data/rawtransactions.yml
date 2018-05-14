@@ -1,18 +1,24 @@
 websites:
     - name: createrawtransaction
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: decoderawtransaction
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: decodescript
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: getrawtransaction
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: sendrawtransaction
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: signrawtransaction
-      bch: Yes
+      bch: yes
+      btc: yes

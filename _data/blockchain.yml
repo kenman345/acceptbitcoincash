@@ -1,60 +1,84 @@
 websites:
     - name: getbestblockhash
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: getblock
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: getblockchaininfo
       bch: yes
+      btc: yes
 
     - name: getblockcount
       bch: yes
+      btc: yes
 
     - name: getblockhash
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: getblockheader
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: getchaintips
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: getchaintxstats
       bch: yes
+      btc: yes
 
     - name: getdifficulty
       bch: yes
+      btc: yes
 
     - name: getmempoolancestors
       bch: yes
+      btc: no
 
     - name: getmempooldescendants
       bch: yes
+      btc: no
 
-    - name: getmempoolentry txid
+    - name: getmempoolentry
       bch: yes
+      btc: no
 
     - name: getmempoolinfo
       bch: yes
+      btc: yes
 
     - name: getrawmempool
       bch: yes
+      btc: yes
 
     - name: gettxout
       bch: yes
+      btc: yes
 
     - name: gettxoutproof
       bch: yes
+      btc: yes
 
     - name: gettxoutsetinfo
       bch: yes
+      btc: yes
 
     - name: preciousblock
       bch: yes
+      btc: no
 
     - name: pruneblockchain
       bch: yes
+      btc: no
 
     - name: verifychain
       bch: yes
+      btc: yes
+
+    - name: verifytxoutproof
+      bch: no
+      btc: yes

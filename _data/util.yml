@@ -1,24 +1,60 @@
 websites:
     - name: createmultisig
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: estimatefee
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: estimatepriority
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: estimatesmartfee
-      bch: Yes
+      bch: yes
+      btc: yes
 
     - name: estimatesmartpriority
-      bch: Yes
+      bch: yes
+      btc: yes
+
+    - name: get
+      bch: no
+      btc: yes
+
+    - name: getaddressforms
+      bch: no
+      btc: yes
+
+    - name: getstat
+      bch: no
+      btc: yes
+
+    - name: getstatlist
+      bch: no
+      btc: yes
+
+    - name: log
+      bch: no
+      btc: yes
+
+    - name: set
+      bch: no
+      btc: yes
 
     - name: signmessagewithprivkey
-      bch: Yes
+      bch: yes
+      btc: no
 
     - name: validateaddress
-      bch: Yes
+      bch: yes
+      btc: yes
+
+    - name: validatechainhistory
+      bch: no
+      btc: yes
 
     - name: verifymessage
-      bch: Yes
+      bch: yes
+      btc: yes
