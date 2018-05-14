@@ -1,5 +1,5 @@
 websites:
-    - generate:
+    - name: generate
       bch: no
       btc: yes
 
@@ -7,10 +7,10 @@ websites:
       bch: yes
       btc: yes
 
-    - getgenerate:
+    - name: getgenerate
       bch: no
       btc: yes
-      
-    - setgenerate:
+
+    - name: setgenerate
       bch: no
       btc: yes

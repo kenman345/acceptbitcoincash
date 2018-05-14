@@ -3,11 +3,11 @@ websites:
       bch: yes
       btc: yes
 
-    - getblockversion:
+    - name: getblockversion
       bch: no
       btc: yes
 
-    - getminercomment:
+    - name: getminercomment
       bch: no
       btc: yes
 
@@ -15,7 +15,7 @@ websites:
       bch: yes
       btc: yes
 
-    - getminingmaxblock:
+    - name: getminingmaxblock
       bch: no
       btc: yes
 
@@ -27,15 +27,15 @@ websites:
       bch: yes
       btc: yes
 
-    - setblockversion:
+    - name: setblockversion
       bch: no
       btc: yes
 
-    - setminercomment:
+    - name: setminercomment
       bch: no
       btc: yes
 
-    - setminingmaxblock:
+    - name: setminingmaxblock
       bch: no
       btc: yes
 
