@@ -19,14 +19,6 @@ div,
       margin-top: 10px;
     }
   }
-
-  &.progress {
-    background-color: rgba(255, 203, 27, 0.25) !important;
-
-    p {
-      color: rgba(195, 99, 27, 0.51);
-    }
-  }
 }
 
 @media(max-width: 768px) {
@@ -46,14 +38,6 @@ div,
       p {
         color: rgba(195, 45, 42, 0.7);
         margin-top: 10px;
-      }
-    }
-
-    &.progress {
-      background-color: rgba(254, 228, 141, 0.6) !important;
-
-      p {
-        color: rgb(195, 144, 27);
       }
     }
   }
@@ -253,15 +237,7 @@ p {
   background: rgba(0,0,0,0.8);
   margin: 0 0 40px;
   padding: 30px 20px 40px;
-
-  &.adult-listings {
-    background: rgba(57, 0, 59, 0.8);
-  }
-
-  &.donation-listings {
-    background: rgba(30, 0, 74, 0.8);
-  }
-
+  
   a {
     color: $link-on-dark;
 
@@ -534,7 +510,7 @@ p {
         line-height: 1;
 
         .search-input-wrapper {
-          float: left;
+          //float: left;
         }
 
         label {
@@ -543,7 +519,7 @@ p {
           input[type=search] {
             display: block;
             float: left;
-            width: 410px;
+            //width: 410px;
             margin-right: 20px;
             border-color: transparent;
             color: $blue;
@@ -582,10 +558,6 @@ p {
 
 .bch-only-hidden {
   opacity: 0.4;
-}
-
-.google-form {
-  height: 80vh;
 }
 
 #no-results {
@@ -661,16 +633,6 @@ p {
 
   &.home {
     background: $blue-light-alpha !important;
-  }
-
-  &.donation-listings {
-    border-color: $violet-light;
-    background: rgba(134, 85, 181, 0.45) !important;
-  }
-
-  &.adult-listings {
-    border-color: $pink-light;
-    background: rgba(181, 85, 165, 0.45) !important;
   }
 
   &.adoption {
@@ -785,18 +747,6 @@ p {
   color: $green !important;
 }
 
-.ui.table tr td.docs a {
-  color: $blue !important;
-
-  &:hover {
-    color: $orange !important;
-  }
-}
-
-.ui.table td.twitter {
-  text-align: center;
-}
-
 
 .donation-listings {
   .category h5.ui.icon.header {
@@ -857,65 +807,6 @@ p {
   }
 }
 
-.adult-listings {
-  .category h5.ui.icon.header {
-    i.circular.icon {
-      box-shadow: 0 0 0 3px $pink-light inset;
-      border-color: $pink-light;
-
-      & + small {
-        border: 3px solid $pink-light;
-        //box-shadow: 0 0 0 3px $orange-dark inset;
-      }
-    }
-
-    &:hover i.circular.icon, &:hover i.circular.icon + small {
-      background-color: $pink-light;
-      border-color: $pink;
-      color: $pink-dark;
-    }
-
-    &:hover i.circular.icon {
-      box-shadow: 0 0 0 3px $pink inset;
-    }
-
-    &.active-icon {
-      i.circular.icon {
-        box-shadow: 0 0 0 3px $pink-light inset;
-        background-color: $pink;
-        border-color: $pink-light;
-        color: white;
-
-        & + small {
-          border: 3px solid $pink-light;
-          background-color: $pink;
-          color: white;
-        }
-      }
-    }
-  }
-
-  .ui.table.content-wrapper {
-    border-color: $pink-light;
-  }
-
-  .ui.table thead th {
-    color: $pink-dark;
-
-    &:first-child {
-      color: white;
-      background: $pink-dark;
-      background: -moz-linear-gradient(left, $pink-dark 0%, $pink-dark 58%, #f9fafb 100%);
-      background: -webkit-gradient(left top, right top, color-stop(0%, $pink-dark), color-stop(58%, $pink-dark), color-stop(100%, #f9fafb));
-      background: -webkit-linear-gradient(left, $pink-dark 0%, $pink-dark 58%, #f9fafb 100%);
-      background: -o-linear-gradient(left, $pink-dark 0%, $pink-dark 58%, #f9fafb 100%);
-      background: -ms-linear-gradient(left, $pink-dark 0%, $pink-dark 58%, #f9fafb 100%);
-      background: linear-gradient(to right, $pink-dark 0%, $pink-dark 58%, #f9fafb 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$pink-dark', endColorstr='#f9fafb', GradientType=1 );
-    }
-  }
-}
-
 .bch-only-none-found {
   display: none;
 }
@@ -948,10 +839,6 @@ p {
 
       &.negative {
         box-shadow: 0 0 0 3px rgb(228, 196, 196) inset;
-      }
-
-      &.progress {
-        box-shadow: 0 0 0 3px rgb(228, 216, 131) inset;
       }
     }
 
@@ -1123,7 +1010,6 @@ td img.icon,
   border-radius: 50%;
   float: left;
   padding: 4px 4px;
-  width: 2em;
   height: 2em;
   width: 2em;
   line-height: 1;
@@ -1145,10 +1031,6 @@ td img.icon,
 
 .ui.mini.button {
   margin: 0.2em;
-}
-
-span.progress {
-  padding-left: 10%;
 }
 
 .ui.progress.bch-progress {

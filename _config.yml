@@ -53,8 +53,9 @@ exclude:
     - nginx.conf
     - scripts
     - Dockerfile
+    - static.json
     - sections_schema.yml
-    - websites_schema.yml
+    - rpc_schema.yml
 
 jekyll-minifier:
   compress_javascript: true         # Default: true

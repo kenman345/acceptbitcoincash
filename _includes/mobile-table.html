@@ -3,9 +3,9 @@
 {%- assign section_file = site.data[section_id] -%}
 {%- assign count_bch = 0 -%}
 {%- assign count_listings = 0 -%}
-{%- for website in section_file.websites -%}
+{%- for call in section_file.rpc -%}
   {%- assign count_listings = count_listings | plus: '1' -%}
-  {%- if website.bch -%}
+  {%- if call.abc or call.bu or call.xt or call.bitprim -%}
     {%- assign count_bch = count_bch | plus: '1' -%}
   {%- endif -%}
 {%- endfor -%}
@@ -14,7 +14,7 @@
     <h3>{{ section_title }}</h3>
   </div>
   {%- if count_bch <= 0 -%}
-  <div class="main negative{% if website.bch == false %} no-bch{% endif %} bch-only-none-found-mobile">
+  <div class="main negative{% if call.abc == false %} no-bch{% endif %} bch-only-none-found-mobile">
     <div class="title">
       <h3><i class="big remove circle icon"></i></h3>
       <p>No listings accepting Bitcoin Cash found in {{section_title}}.</p>
@@ -23,24 +23,18 @@
   </div>
   {%- endif -%}
   <div class="bch-merchant-content">
-    {% for website in section_file.websites %}
-        {%- assign social_count = 0 -%}
-	    {%- assign show_social = false -%}
-	    {%- if website.status -%}
-		  {%- assign main_class = 'progress' -%}
-		{%- elsif website.bch -%}
+    {% for call in section_file.rpc %}
+	    {%- if call.abc -%}
           {%- assign main_class = 'positive' -%}
-	      {%- assign show_social = true -%}
         {%- else -%}
 		  {%- assign main_class = 'negative no-bch' -%}
         {%- endif -%}
 
       <div class="main {{main_class}}">
-        {% include segment/table-row-title.html section=section_id website=website type='mobile' show_social=show_social %}
-        {%- if website.status -%}
-        {%- elsif website.bch or website.btc or website.othercrypto -%}
+        {% include segment/table-row-title.html section=section_id rpc=call type='mobile' %}
+        {%- if call.abc or call.bu or call.xt or call.bitprim -%}
           <p>Supported:</p>
-          {%- if website.bch -%}
+          {%- if call.abc -%}
           <div class="mobile-logo coin-wrap green-coin-wrap">
             <noscript>
               <img src="/img/coin-bch.png" alt="Bitcoin Cash" height="40">
@@ -48,47 +42,26 @@
             <img src="{{ page.img_placeholder }}" data-src="/img/coin-bch.png" alt="Bitcoin Cash" height="40">
           </div>
           {%- endif -%}
-          {%- if website.btc -%}
-          <div class="mobile-logo coin-wrap orange-coin-wrap">
-            <span class="coin-wrap orange-coin-wrap btc-mobile-icon">
-              <span class="btc-b"></span>
-              <i class="bitcoin big icon"></i>
-            </span>
+          {%- if call.bu -%}
+          <div class="mobile-logo coin-wrap green-coin-wrap">
+            <noscript>
+              <img src="/img/coin-bch.png" alt="Bitcoin Cash" height="40">
+            </noscript>
+            <img src="{{ page.img_placeholder }}" data-src="/img/coin-bch.png" alt="Bitcoin Cash" height="40">
           </div>
           {%- endif -%}
-          {%- if website.othercrypto -%}
+          {%- if call.xt -%}
           <div class="mobile-logo tbl-other-crypto">Other<br>Crypto</div>
           {%- endif -%}
-          {%- if website.doc or website.twitter or website.facebook or website.email_address -%}
-          <div class="button-group">
-            {%- if website.doc -%}
-            <a href="{{ website.doc }}" class="ui button mini blue docs" target="_blank" title="{{page.rtfm}} {{website.name}}'s website"><i class="book big icon"></i></a>
-            {%- endif -%}
-            {%- if website.bch -%}
-            {%- elsif website.btc or website.othercrypto -%}
-            {%- if website.twitter -%}
-			{%- assign social_count = social_count | plus: '1' -%}
-    		<a title="{{page.link_tweet|replace:'TWITTERHANDLE',website.twitter}}" class="ui twitter mini button" href="https://twitter.com/share?url={{site.twitter_url|cgi_escape}}&amp;text={{workonit_tweet|replace:'TWITTERHANDLE',website.twitter|cgi_escape}}&amp;hashtags={{page.hash|cgi_escape}}" target="_blank">Ask on <i class="twitter big icon"></i></a>
-    		{%- endif -%}
-            {%- if website.facebook -%}
-			{%- assign social_count = social_count | plus: '1' -%}
-			<a title="{{page.link_facebook|replace:'FACEBOOKHANDLE',website.facebook}}" class="ui facebook mini button" href="https://facebook.com/{{website.facebook}}/" target="_blank">Ask on <i class="facebook big icon"></i></a>{%- endif -%}
-            {%- if website.email_address and social_count < 2 -%}
-			{%- assign social_count = social_count | plus: '1' -%}
-			<a title="Send an e-mail to {{website.name}}" class="ui green mini button" href="mailto:{{website.email_address}}?subject={{page.email_subject}}" target="_blank">Ask via <i class="mail big icon"></i></a>{%- endif -%}
-            {%- endif -%}
-          </div>
+		  
+          {%- if call.bitprim -%}
+          <div class="mobile-logo tbl-other-crypto">Other<br>Crypto</div>
           {%- endif -%}
+          
         {%- else -%}
-          <p>No cryptocurrencies supported</p>
+          <p>No implementations support this call</p>
           <div class="button-group">
-            {%- if website.twitter -%}
-			{%- assign social_count = social_count | plus: '1' -%} <a title="{{page.link_tweet|replace:'TWITTERHANDLE',website.twitter}}" class="ui twitter mini button" href="https://twitter.com/share?url={{site.twitter_url|cgi_escape}}&amp;text={{workonit_tweet|replace:'TWITTERHANDLE',website.twitter|cgi_escape}}&amp;hashtags={{page.hash|cgi_escape}}" target="_blank">Ask on <i class="twitter big icon"></i></a>{%- endif -%}
-            {%- if website.facebook -%}
-			{%- assign social_count = social_count | plus: '1' -%} <a title="{{page.link_facebook|replace:'FACEBOOKHANDLE',website.facebook}}" class="ui facebook mini button" href="https://facebook.com/{{website.facebook}}/" target="_blank">Ask on <i class="facebook big icon"></i></a>{%- endif -%}
-            {%- if website.email_address and social_count < 2 -%}
-			{%- assign social_count = social_count | plus: '1' -%}
-			<a title="Send an e-mail to {{website.name}}" class="ui green mini button" href="mailto:{{website.email_address}}?subject={{page.email_subject}}" target="_blank"><i class="mail big icon"></i></a>{%- endif -%}
+           
           </div>
         {%- endif -%}
 	  </div>

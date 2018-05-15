@@ -1,75 +1,75 @@
-websites:
+rpc:
     - name: createmultisig
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: estimatefee
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: estimatepriority
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: estimatesmartfee
-      bch: yes
-      btc: yes
-      othercrypto: no
+      abc: yes
+      bu: yes
+      xt: no
 
     - name: estimatesmartpriority
-      bch: yes
-      btc: yes
-      othercrypto: no
+      abc: yes
+      bu: yes
+      xt: no
 
     - name: get
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: getaddressforms
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: getstat
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: getstatlist
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: log
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: set
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: signmessagewithprivkey
-      bch: yes
-      btc: no
-      othercrypto: no
+      abc: yes
+      bu: no
+      xt: no
 
     - name: validateaddress
-      bch: yes
-      btc: yes
-      othercrypto: no
+      abc: yes
+      bu: yes
+      xt: no
 
     - name: validatechainhistory
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: verifymessage
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes

@@ -18,7 +18,7 @@ $(document).ready(function () {
 
   // Check if URL parameter exists to filter by BCH-only
   if (getUrlParameter('filter') == 'all') {
-    $('#show-bch-only').prop('checked', false);
+    //$('#show-bch-only').prop('checked', false);
   }
 
   // Check if URL parameter exists to skip to content (due to window.location.hash being used for categories)

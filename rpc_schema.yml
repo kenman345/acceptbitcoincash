@@ -1,0 +1,45 @@
+type: map
+class: rpc
+mapping:
+  "rpc":
+    type: seq
+    sequence:
+      - type: map
+        class: rpc
+        name: RPC
+        mapping:
+          "name":
+            type: str
+            desc: Name of Call
+            required: yes
+            ident: yes
+            unique: yes
+          "abc":
+            type: bool
+            required: yes
+            desc: Does ABC support this call?
+            pattern: /(true|false)/
+          "bu":
+            type: bool
+            desc: Does BU support this call?
+            pattern: /(true|false)/
+          "xt":
+            type: bool
+            desc: Does XT support this call?
+            pattern: /(true|false)/
+          "bitprim":
+            type: bool
+            desc: Does bitprim support this call?
+            pattern: /(true|false)/
+          "exceptions":
+            type: map
+            mapping:
+              "text":
+                type: str
+                required: yes
+          "keywords":
+            type: seq
+            desc: Use this tag to add in any keywords people might use to find this result
+            sequence:
+              - type: str
+                unique: yes

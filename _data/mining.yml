@@ -1,55 +1,55 @@
-websites:
+rpc:
     - name: getblocktemplate
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: getblockversion
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: getminercomment
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: getmininginfo
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: getminingmaxblock
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: getnetworkhashps
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: prioritisetransaction
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: setblockversion
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: setminercomment
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: setminingmaxblock
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: submitblock
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes

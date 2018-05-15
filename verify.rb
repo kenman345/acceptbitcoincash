@@ -1,21 +1,10 @@
 require 'yaml'
-require 'fastimage'
 require 'kwalify'
 require 'diffy'
 require 'safe_yaml/load'
 @output = 0
 @warning = 0
 @total_tracked = 0
-@total_support = 0
-
-# Image max size (in bytes)
-@img_recommended_size = 2500
-
-# Image dimensions
-@img_dimensions = [32, 32]
-
-# Image format used for all images in the 'img/' directories.
-@img_extension = '.png'
 
 # Send error message
 def error(msg)
@@ -23,62 +12,18 @@ def error(msg)
   puts "  #{@output}. #{msg}"
 end
 
-# rubocop:disable AbcSize
-def test_img(img, name, imgs, section)
-  # Exception if image file not found
-  raise "#{section}: #{name} image not found." unless File.exist?(img)
-  # Remove img from array unless it doesn't exist (double reference case)
-  imgs.delete_at(imgs.index(img)) unless imgs.index(img).nil?
-
-  # Check image dimensions
-  error("#{img} is not #{@img_dimensions.join('x')} pixels.")\
-    unless FastImage.size(img) == @img_dimensions
-
-  # Check image file extension and type
-  error("#{img} is not using the #{@img_extension} format.")\
-    unless File.extname(img) == @img_extension && FastImage.type(img) == :png
-
-  # Check image file size
-  test_img_size(img)
-end
-
-def test_img_size(img)
-  file_size = File.size(img)
-  return unless file_size > @img_recommended_size
-
-  error("#{img} should not be larger than #{@img_recommended_size} bytes. "\
-          "It is currently #{file_size} bytes.")
-
-  @warning += 1
-end
-
-# rubocop:disable MethodLength
+# rubocop:disable AbcSize, MethodLength
 def process_section(section, validator)
   section_file = "_data/#{section['id']}.yml"
   data = SafeYAML.load_file(File.join(__dir__, section_file))
-  websites = data['websites']
-  validate_data(validator, data, section_file, 'name', websites)
+  calls = data['rpc']
+  validate_data(validator, data, section_file, 'name', calls)
 
   # Check section alphabetization
-  validate_alphabetical(websites, 'name', section_file)
+  validate_alphabetical(calls, 'name', section_file)
 
-  # Collect list of all images for section
-  imgs = Dir["img/#{section['id']}/*"]
-
-  websites.each do |website|
+  calls.each do |call|
     @total_tracked += 1
-    @total_support += 1 if website['bch'] == true
-
-    next if website['img'].nil?
-    test_img("img/#{section['id']}/#{website['img']}", \
-             website['name'], imgs, section_file)
-  end
-
-  # After removing images associated with entries in test_img, alert
-  # for unused or orphaned images
-  imgs.each do |img|
-    next unless img.nil?
-    error("#{img} is not used")
   end
 end
 # rubocop:enable MethodLength
@@ -150,14 +95,13 @@ begin
   validate_data(validator, sections, file_name, 'id')
   validate_alphabetical(sections, 'id', file_name)
 
-  validator = get_validator('websites_schema.yml')
+  validator = get_validator('rpc_schema.yml')
 
   sections.each do |section|
     process_section(section, validator)
   end
 
-  puts "<--------- Total websites listed: #{@total_tracked} --------->\n"
-  puts "<--------- Total accepting BCH: #{@total_support} --------->\n"
+  puts "<--------- Total calls listed: #{@total_tracked} --------->\n"
 
   @output -= @warning
 
