@@ -10,9 +10,9 @@
 		{%- assign current_section = site.data[section.id] -%}
 		{%- assign rowend = forloop.index | modulo: 5 -%}
 		{%- assign count_bch = 0 -%}
-		{%- for website in current_section.websites -%}
+		{%- for call in current_section.rpc -%}
 			{%- assign page_total = page_total | plus: '1' -%}
-			{%- if website.bch -%}
+			{%- if call.abc or call.bu or call.xt or call.bitprim -%}
 				{%- assign count_bch = count_bch | plus: '1' -%}
 			{%- endif -%}
 		{%- endfor -%}

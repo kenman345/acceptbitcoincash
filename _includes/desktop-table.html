@@ -5,7 +5,7 @@
 {%- assign count_listings = 0 -%}
 {%- for call in section_file.rpc -%}
   {%- assign count_listings = count_listings | plus: '1' -%}
-  {%- if call.abc -%}
+  {%- if call.abc or call.bu or call.xt or call.bitprim -%}
     {%- assign count_bch = count_bch | plus: '1' -%}
   {%- endif -%}
 {%- endfor -%}
