@@ -3,86 +3,104 @@ rpc:
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: clearbanned
       abc: yes
       bu: yes
       xt: no
+      bitprim: no
 
     - name: disconnectnode
       abc: yes
       bu: yes
       xt: no
+      bitprim: no
 
     - name: expedited
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: getaddednodeinfo
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: getconnectioncount
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: getexcessiveblock
       abc: yes
       bu: yes
       xt: no
+      bitprim: no
 
     - name: getnettotals
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: getnetworkinfo
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: getpeerinfo
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: gettrafficshaping
       abc: no
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: listbanned
       abc: yes
       bu: yes
       xt: no
+      bitprim: no
 
     - name: ping
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: pushtx
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: setban
       abc: yes
       xt: no
+      bitprim: no
 
     - name: setexcessiveblock
       abc: yes
       xt: no
+      bitprim: no
 
     - name: setnetworkactive
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: settrafficshaping
       abc: yes
       bu: no
       xt: yes
+      bitprim: no

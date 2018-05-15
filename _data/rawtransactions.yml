@@ -3,28 +3,34 @@ rpc:
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: decoderawtransaction
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: decodescript
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: getrawtransaction
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: sendrawtransaction
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: signrawtransaction
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no

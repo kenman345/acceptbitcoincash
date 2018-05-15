@@ -28,6 +28,11 @@
   icon: exchange
   page: home
 
+- id: wallet
+  title: Wallet
+  icon: bitcoin
+  page: home
+
 - id: util
   title: Util
   icon: cogs

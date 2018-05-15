@@ -3,53 +3,64 @@ rpc:
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getblockversion
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: getminercomment
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: getmininginfo
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getminingmaxblock
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: getnetworkhashps
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: prioritisetransaction
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: setblockversion
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: setminercomment
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: setminingmaxblock
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: submitblock
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes

@@ -1,0 +1,30 @@
+rpc:
+    - name: getaddressbalance
+      abc: no
+      bu: no
+      xt: no
+      bitprim: yes
+
+    - name: getaddresstxids
+      abc: no
+      bu: no
+      xt: no
+      bitprim: yes
+
+    - name: getaddressdeltas
+      abc: no
+      bu: no
+      xt: no
+      bitprim: yes
+
+    - name: getaddressutxos
+      abc: no
+      bu: no
+      xt: no
+      bitprim: yes
+
+    - name: getaddressmempool
+      abc: no
+      bu: no
+      xt: no
+      bitprim: yes  

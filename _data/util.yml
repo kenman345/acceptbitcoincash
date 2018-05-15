@@ -3,73 +3,88 @@ rpc:
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: estimatefee
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: estimatepriority
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: estimatesmartfee
       abc: yes
       bu: yes
       xt: no
+      bitprim: no
 
     - name: estimatesmartpriority
       abc: yes
       bu: yes
       xt: no
+      bitprim: no
 
     - name: get
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: getaddressforms
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: getstat
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: getstatlist
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: log
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: set
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: signmessagewithprivkey
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: validateaddress
       abc: yes
       bu: yes
       xt: no
+      bitprim: yes
 
     - name: validatechainhistory
       abc: no
       bu: yes
       xt: no
+      bitprim: no
 
     - name: verifymessage
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no

@@ -3,103 +3,124 @@ rpc:
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getblock
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getblockchaininfo
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getblockcount
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getblockhash
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getblockheader
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getchaintips
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getchaintxstats
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: getdifficulty
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: getmempoolancestors
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: getmempooldescendants
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: getmempoolentry
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: getmempoolinfo
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: getrawmempool
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: gettxout
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: gettxoutproof
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: gettxoutsetinfo
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: preciousblock
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: pruneblockchain
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: verifychain
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: verifytxoutproof
       abc: no
       bu: yes
       xt: yes
+      bitprim: no

@@ -3,23 +3,28 @@ rpc:
       abc: yes
       bu: yes
       xt: yes
+      bitprim: yes
 
     - name: getmemoryinfo
       abc: yes
       bu: no
       xt: no
+      bitprim: no
 
     - name: help
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: stop
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: uptime
       abc: yes
       bu: no
       xt: no
+      bitprim: no

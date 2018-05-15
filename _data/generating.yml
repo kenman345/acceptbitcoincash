@@ -3,18 +3,22 @@ rpc:
       abc: no
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: generatetoaddress
       abc: yes
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: getgenerate
       abc: no
       bu: yes
       xt: yes
+      bitprim: no
 
     - name: setgenerate
       abc: no
       bu: yes
       xt: yes
+      bitprim: no
