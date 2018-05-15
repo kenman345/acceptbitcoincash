@@ -2,19 +2,24 @@ websites:
     - name: getinfo
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: getmemoryinfo
       bch: yes
       btc: no
+      othercrypto: no
 
     - name: help
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: stop
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: uptime
       bch: yes
       btc: no
+      othercrypto: no

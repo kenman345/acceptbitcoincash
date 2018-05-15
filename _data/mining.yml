@@ -2,43 +2,54 @@ websites:
     - name: getblocktemplate
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: getblockversion
       bch: no
       btc: yes
+      othercrypto: no
 
     - name: getminercomment
       bch: no
       btc: yes
+      othercrypto: no
 
     - name: getmininginfo
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: getminingmaxblock
       bch: no
       btc: yes
+      othercrypto: no
 
     - name: getnetworkhashps
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: prioritisetransaction
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: setblockversion
       bch: no
       btc: yes
+      othercrypto: no
 
     - name: setminercomment
       bch: no
       btc: yes
+      othercrypto: no
 
     - name: setminingmaxblock
       bch: no
       btc: yes
+      othercrypto: no
 
     - name: submitblock
       bch: yes
       btc: yes
+      othercrypto: yes

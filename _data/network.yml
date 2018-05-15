@@ -2,69 +2,87 @@ websites:
     - name: addnode
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: clearbanned
       bch: yes
       btc: yes
+      othercrypto: no
 
     - name: disconnectnode
       bch: yes
       btc: yes
+      othercrypto: no
 
     - name: expedited
       bch: no
       btc: yes
+      othercrypto: no
 
     - name: getaddednodeinfo
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: getconnectioncount
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: getexcessiveblock
       bch: yes
       btc: yes
+      othercrypto: no
 
     - name: getnettotals
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: getnetworkinfo
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: getpeerinfo
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: gettrafficshaping
       bch: no
       btc: yes
+      othercrypto: yes
 
     - name: listbanned
       bch: yes
       btc: yes
+      othercrypto: no
 
     - name: ping
       bch: yes
       btc: yes
+      othercrypto: yes
 
     - name: pushtx
       bch: no
       btc: yes
+      othercrypto: no
 
     - name: setban
       bch: yes
+      othercrypto: no
 
     - name: setexcessiveblock
       bch: yes
+      othercrypto: no
 
     - name: setnetworkactive
       bch: yes
       btc: no
+      othercrypto: no
 
     - name: settrafficshaping
       bch: yes
       btc: no
+      othercrypto: yes

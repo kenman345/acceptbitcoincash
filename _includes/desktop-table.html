@@ -74,7 +74,10 @@
 			  <td class="{% if website.othercrypto %}positive{% else %}negative{% endif %} icon">
 				{%- if website.othercrypto -%}
 				<span data-tooltip="Other cryptocurrencies are accepted at {{ website.name }}" data-position="top center" data-inverted="">
-				  <i class="checkmark large icon"></i>
+				  <noscript>
+				    <img src="/img/coin-bch.png" alt="Bitcoin Cash" height="40">
+				  </noscript>
+				  <img src="{{ page.img_placeholder }}" data-src="/img/coin-bch.png" alt="Bitcoin Cash" height="40">
 				</span>
 			    {%- endif -%}
 			  </td>
