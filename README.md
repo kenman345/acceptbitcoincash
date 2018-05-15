@@ -5,15 +5,15 @@ A community-curated list of sites/merchants that accept [**Bitcoin Cash**](https
 
 Add a site that's not listed, or provide any updates/corrections by submitting a pull request, or [creating an issue](https://github.com/acceptbitcoincash/acceptbitcoincash/issues). Learn how to do either by reading [our contribution guidelines](CONTRIBUTING.md).
 
-[![Build Status](https://travis-ci.org/acceptbitcoincash/acceptbitcoincash.svg?branch=master)](https://travis-ci.org/acceptbitcoincash/acceptbitcoincash)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/acceptbitcoincash/acceptbitcoincash.svg)](https://github.com/acceptbitcoincash/acceptbitcoincash/pulls/)
-[![GitHub issues-closed](https://img.shields.io/github/issues-closed/acceptbitcoincash/acceptbitcoincash.svg)](https://github.com/acceptbitcoincash/acceptbitcoincash/issues?q=is%3Aissue+is%3Aclosed)
+[![Build Status](https://travis-ci.org/bigearth/spec.consortium.cash.svg?branch=master)](https://travis-ci.org/acceptbitcoincash/acceptbitcoincash)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/bigearth/spec.consortium.cash.svg)](https://github.com/bigearth/spec.consortium.cash/pulls/)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/bigearth/spec.consortium.cash.svg)](https://github.com/bigearth/spec.consortium.cash/issues?q=is%3Aissue+is%3Aclosed)
 [![Twitter](https://img.shields.io/badge/Twitter-@useBitcoinCash-blue.svg)](https://twitter.com/useBitcoinCash)
 [![License](https://img.shields.io/badge/license-mit-blue.svg?style=flat)](/LICENSE)
 
 ## The Goal
 
-The goal is to build a website ([https://acceptBitcoin.cash](https://acceptBitcoin.Cash)) with a comprehensive list of sites that accept or support Bitcoin Cash, as well as Bitcoin (Legacy).
+The goal is to build a website ([https://spec.consortium.cash](https://spec.consortium.cash)) with a comprehensive list of sites that accept or support Bitcoin Cash, as well as Bitcoin (Legacy).
 
 Our hope is to connect consumers and merchants, while spreading awareness and promoting global adoption of [Bitcoin Cash](https://www.bitcoincash.org).
 
@@ -26,42 +26,42 @@ If you'd like to contribute to the list, please read the entire guidelines here 
 
 ## Running Locally
 
-acceptBitcoin.cash is built upon [Jekyll](https://jekyllrb.com/), using the [github-pages](https://github.com/github/pages-gem) gem.
+spec.consortium.cash is built upon [Jekyll](https://jekyllrb.com/), using the [github-pages](https://github.com/github/pages-gem) gem.
 In order to run the site locally, it is necessary to install bundler, install all dependencies, and then use Jekyll to serve
 the site. If the `gem` command is not available to you, it is necessary to install Ruby with RubyGems.
 Once Ruby and RubyGems are installed and available from the command line, acceptBitcoin.cash can be setup using the following commands.
 
 ```
 gem install bundler
-cd ~/acceptbitcoincash
+cd ~/spec.consortium.cash
 bundle install
 bundle exec jekyll serve
 ```
 
-The acceptBitcoin.cash website should then be accessible from `http://localhost:4000`.
+The spec.consortium.cash website should then be accessible from `http://localhost:4000`.
 
 ## Docker
 
-acceptBitcoin.cash also includes a Docker image for easy deployment. You can build and run the Docker image using the following commands.
+spec.consortium.cash also includes a Docker image for easy deployment. You can build and run the Docker image using the following commands.
 
 ```
-cd ~/acceptbitcoincash
+cd ~/spec.consortium.cash
 gem install bundler
 bundle install
 bundle exec jekyll build
-docker build -t acceptbitcoincash .
-docker run -p 4000:80 acceptbitcoincash
+docker build -t spec.consortium.cash .
+docker run -p 4000:80 spec.consortium.cash
 ```
 
 If you are doing development, and want to launch a jekyll server which can track your changes. Then you can use the following commands.
 
 ```
-cd ~/acceptbitcoincash
+cd ~/spec.consortium.cash
 docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll:z \
   -it -p 127.0.0.1:4000:4000 jekyll/jekyll:latest jekyll s
 ```
 
-The acceptBitcoin.cash website should then be accessible from `http://localhost:4000`.
+The spec.consortium.cash website should then be accessible from `http://localhost:4000`.
 
 ## License
 
