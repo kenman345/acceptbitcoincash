@@ -3,7 +3,7 @@
 
 A community-curated list of sites/merchants that accept [**Bitcoin Cash**](https://www.bitcoincash.org), _a peer-to-peer electronic cash system_ suitable for the digital age, and the future of online commerce.
 
-Add a site that's not listed, or provide any updates/corrections by submitting a pull request, or [creating an issue](https://github.com/acceptbitcoincash/acceptbitcoincash/issues). Learn how to do either by reading [our contribution guidelines](CONTRIBUTING.md).
+Add a site that's not listed, or provide any updates/corrections by submitting a pull request, or [creating an issue](https://github.com/bigearth/spec.consortium.cash/issues). Learn how to do either by reading [our contribution guidelines](CONTRIBUTING.md).
 
 [![Build Status](https://travis-ci.org/bigearth/spec.consortium.cash.svg?branch=master)](https://travis-ci.org/acceptbitcoincash/acceptbitcoincash)
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/bigearth/spec.consortium.cash.svg)](https://github.com/bigearth/spec.consortium.cash/pulls/)
