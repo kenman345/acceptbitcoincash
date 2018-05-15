@@ -1,8 +1,8 @@
 require 'rubocop/rake_task'
 require 'safe_yaml/load'
 
-task default: %w[verify rubocop proof]
-task external: %w[verify rubocop proof_external]
+task default: %w[assets:verify rubocop proof]
+task external: %w[assets:verify rubocop proof_external]
 
 namespace :assets do
   task :precompile do
