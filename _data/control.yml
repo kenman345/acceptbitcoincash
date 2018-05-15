@@ -1,4 +1,4 @@
-websites:
+rpc:
     - name: getinfo
       abc: yes
       bu: yes

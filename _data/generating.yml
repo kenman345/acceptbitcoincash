@@ -1,4 +1,4 @@
-websites:
+rpc:
     - name: generate
       abc: no
       bu: yes

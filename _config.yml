@@ -53,6 +53,7 @@ exclude:
     - nginx.conf
     - scripts
     - Dockerfile
+    - static.json
     - sections_schema.yml
     - websites_schema.yml
 

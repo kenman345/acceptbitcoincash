@@ -1,4 +1,4 @@
-websites:
+rpc:
     - name: getblocktemplate
       abc: yes
       bu: yes

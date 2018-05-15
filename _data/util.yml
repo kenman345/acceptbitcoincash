@@ -1,4 +1,4 @@
-websites:
+rpc:
     - name: createmultisig
       abc: yes
       bu: yes

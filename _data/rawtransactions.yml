@@ -1,4 +1,4 @@
-websites:
+rpc:
     - name: createrawtransaction
       abc: yes
       bu: yes

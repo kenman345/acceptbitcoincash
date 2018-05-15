@@ -1,4 +1,4 @@
-websites:
+rpc:
     - name: getbestblockhash
       abc: yes
       bu: yes
