@@ -41,7 +41,7 @@
 			<td class="main positive">
               {% include segment/table-row-title.html section=section_id rpc=call type='desktop' %}
 			</td>
-			{%- if call.abc or call.bu -%}
+			{%- if call.abc or call.bu or call.xt or call.bitprim -%}
 			  <td class="{% if call.abc %}positive{% else %}negative{% endif %} icon">
 				{%- if call.abc -%}
 				<div class="coin-wrap green-coin-wrap">
