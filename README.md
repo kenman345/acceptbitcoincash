@@ -29,7 +29,7 @@ If you'd like to contribute to the list, please read the entire guidelines here 
 spec.consortium.cash is built upon [Jekyll](https://jekyllrb.com/), using the [github-pages](https://github.com/github/pages-gem) gem.
 In order to run the site locally, it is necessary to install bundler, install all dependencies, and then use Jekyll to serve
 the site. If the `gem` command is not available to you, it is necessary to install Ruby with RubyGems.
-Once Ruby and RubyGems are installed and available from the command line, acceptBitcoin.cash can be setup using the following commands.
+Once Ruby and RubyGems are installed and available from the command line, spec.consortium.cash can be setup using the following commands.
 
 ```
 gem install bundler
