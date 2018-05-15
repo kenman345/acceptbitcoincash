@@ -5,19 +5,7 @@ rpc:
       xt: no
       bitprim: yes
 
-    - name: getaddresstxids
-      abc: no
-      bu: no
-      xt: no
-      bitprim: yes
-
     - name: getaddressdeltas
-      abc: no
-      bu: no
-      xt: no
-      bitprim: yes
-
-    - name: getaddressutxos
       abc: no
       bu: no
       xt: no
@@ -28,3 +16,15 @@ rpc:
       bu: no
       xt: no
       bitprim: yes  
+
+    - name: getaddresstxids
+      abc: no
+      bu: no
+      xt: no
+      bitprim: yes
+
+    - name: getaddressutxos
+      abc: no
+      bu: no
+      xt: no
+      bitprim: yes
