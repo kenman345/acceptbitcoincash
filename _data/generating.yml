@@ -1,20 +1,20 @@
 websites:
     - name: generate
-      bch: no
-      btc: yes
-      othercrypto: yes
+      abc: no
+      bu: yes
+      xt: yes
 
     - name: generatetoaddress
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: getgenerate
-      bch: no
-      btc: yes
-      othercrypto: yes
+      abc: no
+      bu: yes
+      xt: yes
 
     - name: setgenerate
-      bch: no
-      btc: yes
-      othercrypto: yes
+      abc: no
+      bu: yes
+      xt: yes

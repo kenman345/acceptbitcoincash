@@ -1,88 +1,88 @@
 websites:
     - name: addnode
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: clearbanned
-      bch: yes
-      btc: yes
-      othercrypto: no
+      abc: yes
+      bu: yes
+      xt: no
 
     - name: disconnectnode
-      bch: yes
-      btc: yes
-      othercrypto: no
+      abc: yes
+      bu: yes
+      xt: no
 
     - name: expedited
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: getaddednodeinfo
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: getconnectioncount
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: getexcessiveblock
-      bch: yes
-      btc: yes
-      othercrypto: no
+      abc: yes
+      bu: yes
+      xt: no
 
     - name: getnettotals
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: getnetworkinfo
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: getpeerinfo
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: gettrafficshaping
-      bch: no
-      btc: yes
-      othercrypto: yes
+      abc: no
+      bu: yes
+      xt: yes
 
     - name: listbanned
-      bch: yes
-      btc: yes
-      othercrypto: no
+      abc: yes
+      bu: yes
+      xt: no
 
     - name: ping
-      bch: yes
-      btc: yes
-      othercrypto: yes
+      abc: yes
+      bu: yes
+      xt: yes
 
     - name: pushtx
-      bch: no
-      btc: yes
-      othercrypto: no
+      abc: no
+      bu: yes
+      xt: no
 
     - name: setban
-      bch: yes
-      othercrypto: no
+      abc: yes
+      xt: no
 
     - name: setexcessiveblock
-      bch: yes
-      othercrypto: no
+      abc: yes
+      xt: no
 
     - name: setnetworkactive
-      bch: yes
-      btc: no
-      othercrypto: no
+      abc: yes
+      bu: no
+      xt: no
 
     - name: settrafficshaping
-      bch: yes
-      btc: no
-      othercrypto: yes
+      abc: yes
+      bu: no
+      xt: yes
