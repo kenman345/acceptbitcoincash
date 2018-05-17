@@ -43,8 +43,6 @@ function ticker() {
   });
 }
 
-
-
 if (window.addEventListener)
 	window.addEventListener("load", ticker, false);
 else if (window.attachEvent)
