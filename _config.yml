@@ -41,8 +41,9 @@ defaults:
       hash: "acceptBitcoinCash, BCHforEveryone"
       has_search: yes
       list_of: "merchant"
-      encoded_img_placeholder: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+      # encoded_img_placeholder: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
       img_placeholder: "/img/placeholder.png"
+      encoded_img_placeholder: "/img/placeholder.png"
       
 exclude:
     - CNAME
