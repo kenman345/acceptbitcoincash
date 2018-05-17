@@ -11,6 +11,7 @@ twitter_url: https://usebitcoin.cash
 repo: https://github.com/kenman345/kenman345.github.io
 img: img/logo.png
 baseurl: ""
+SSLProvider: http://ocsp.digicert.com
 
 lang: en-US
 twitter:
