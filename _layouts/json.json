@@ -1,3 +1,0 @@
-{ {{ content }}{%- if page.show_generated_date -%},
-	"generated": "{{ site.time }}"{% endif %}
-}
